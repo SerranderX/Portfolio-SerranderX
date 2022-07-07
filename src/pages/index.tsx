@@ -11,8 +11,7 @@ import { AboutMe } from '@containers/AboutMe/AboutMe';
 
 const Home: NextPage = () => {
   return (
-    <>
-      <div className={styles.container}>
+      <div id="app-portfolio" className={styles.container}>
         <Head>
           <title>Portfolio SerranderX</title>
           <meta name="description" content="This is a portfolio proyect about the author SerranderX" />
@@ -29,9 +28,6 @@ const Home: NextPage = () => {
         </main>
         <Footer />
       </div>
-
-      
-    </>
   )
 }
 
