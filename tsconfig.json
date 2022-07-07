@@ -13,8 +13,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": "src",
+    "paths": {
+        "@pages/*": ["pages/*"],
+        "@components/*": ["components/*"],
+        "@containers/*": ["containers/*"],
+        "@logos/*": ["assets/logos/*"],
+        "@icons/*": ["assets/icons/*"],
+        "@images/*": ["assets/images/*"],
+        "@styles/*": ["styles/*"],
+        "@interfaces/*": ["interfaces/*"],
+        "@hooks/*": ["hooks/*"],
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/hooks/useWindowsDimensions.js"],
   "exclude": ["node_modules"]
 }

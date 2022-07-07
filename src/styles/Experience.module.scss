@@ -1,0 +1,100 @@
+@import '_vars.scss';
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "content" "icons";
+    padding: 2rem 3rem;
+    row-gap: 2rem;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "title" "description";
+}
+
+.icons {
+    grid-area: icons;
+    text-align: center;
+    display: inline-flex;
+}
+
+.content h1 {
+    grid-area: title;
+    font-size: $second-title-size;
+    font-weight: bold;
+    color: $primary-color;
+    text-align: center;
+    margin: $margin-title-section;
+    padding: 0;
+}
+
+.content p {
+    grid-area: description;
+    font-size: $text-base-size;
+    color: $primary-color;
+    margin: 0;
+    padding: 0;
+    text-align: $text-alignment;
+}
+
+
+.icons div {
+    display: inline-flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+    width: 58px;
+    height: 58px;
+}
+
+.icons div button {
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+    min-width: 32px;
+    min-height: 58px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 0;
+    background-color: unset;
+}
+
+.icons div button svg {
+    transition: all 0.3s ease-in-out;
+    filter: $svg-filter-red;
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.icons ul {
+    display: inline-flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 2rem;
+}
+
+.icons ul li {
+    border-radius: '50%';
+    background-color: $tertiary-color;
+    margin: '1rem';
+    width: '58px';
+    height: '58px';
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: $mobile-main-title-size;
+    }
+
+    .content p {
+        font-size: $mobile-text-base-size;
+    }
+}

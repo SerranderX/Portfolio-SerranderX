@@ -1,0 +1,35 @@
+@import '@styles/_vars.scss';
+
+.container{
+    display: block;
+    text-align: center;
+}
+
+.button {
+    width: 75%;
+    margin: 2% 12.5%;
+    padding: 13px;
+    border: 2px solid $tertiary-color;
+    font-size: $text-base-size;
+    background-color: $background-color-light-opac;
+    color: $primary-color;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
+
+    &:hover {
+        background: $neon-green-background;
+        border-radius: 5px;
+        box-shadow: 0 0 5px $neon-green-border,
+                    0 0 25px $neon-green-border,
+                    0 0 5px $neon-green-border,
+                    0 0 100px $neon-green-border;
+    }
+}
+
+@media (max-width: 768px) {
+    .button {
+        width: 65%;
+        font-size: $mobile-text-base-size;
+    }
+}

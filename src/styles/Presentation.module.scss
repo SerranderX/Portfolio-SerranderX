@@ -1,0 +1,94 @@
+@import '_vars.scss';
+
+.container-presentation {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: auto;
+    grid-template-areas: "Title Image";
+    padding: 2rem 3rem;
+}
+
+.title {
+  margin: 0 0 1rem 0;
+  line-height: 1.15;
+  font-size: $main-title-size;
+}
+
+.title-container a {
+    color: $tertiary-color;
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    cursor: auto;
+}
+
+.description {
+    margin: 3rem 0;
+    line-height: 1.5;
+    font-size: $text-base-size;
+}
+
+.title,
+.description {
+    text-align: left;
+    color: $primary-color;
+}
+
+.title-container {
+    grid-area: Title;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-container p {
+    margin: 0;
+    font-size: $text-base-size;
+}
+
+.photo-container {
+    grid-area: Image;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    border-radius: 30%;
+}
+
+.authorName {
+    width: fit-content;
+    height: fit-content;
+    
+    background: -webkit-linear-gradient($tertiary-color, $quaternary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .container-presentation {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+        grid-template-areas: "Image" "Title" ;
+        row-gap: 2rem;
+        padding: 2rem 3rem;
+    }
+
+    .title {
+        font-size: $mobile-main-title-size;
+        text-align: center;
+    }
+
+    .description {
+        font-size: $mobile-text-base-size;
+        text-align: center;
+    }
+
+    .title-container p {
+        font-size: $mobile-text-base-size;
+    }
+    
+}

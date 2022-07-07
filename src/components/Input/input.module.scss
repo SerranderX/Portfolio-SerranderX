@@ -1,0 +1,99 @@
+@import '@styles/_vars.scss';
+
+.container {
+    position: relative;
+    margin: .5rem 2rem;
+}
+
+.labelText {
+    margin: 20px 0 0 20px;
+    padding: 0 0 0 20px;
+    cursor: initial;
+    border-radius: 2%;
+    position: absolute;
+    top: 0;
+    font-size: $text-base-size;
+    color: $primary-color;
+    background-color: $background-color-light-opac;
+    -webkit-transition: top .2s ease-in-out, 
+    font-size .2s ease-in-out;
+    transition: top .2s ease-in-out, 
+    font-size .2s ease-in-out;
+}
+
+
+.input {
+    width: 100%;
+    margin: 10px;
+    padding: 13px;
+    border: 2px solid $tertiary-color;
+    font-size: $text-base-size;
+    background-color: $background-color-light-opac;
+    color: $primary-color;
+
+    &:focus {
+        outline: none;
+    }
+} 
+
+.active {
+    padding: 0 10px 0 10px;
+    border-radius: 50%;
+    margin-left: 30px;
+    top: -25px;
+    font-size: 20px;
+}
+
+.textarea {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid $tertiary-color;
+    font-size: $text-base-size;
+    background-color: $background-color-light-opac;
+    color: $primary-color;
+    height: 200px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        position: relative;
+        text-align: center;
+        margin: 1rem 2rem;
+    }
+    
+    .labelText {
+        margin: 20px 0 0 20px;
+        padding: 0 0 0 20px;
+        font-size: $mobile-text-base-size;
+    }
+    
+    .input {
+        width: 70%;
+        margin: 10px;
+        padding: 13px;
+        font-size: $mobile-text-base-size;
+    } 
+    
+    .textarea {
+        width: 70%;
+        margin: 10px;
+        padding: 13px;
+        border: 2px solid $tertiary-color;
+        font-size: $mobile-text-base-size;
+        color: $primary-color;
+        height: 200px;
+    }
+
+    .active {
+        font-size: $mobile-text-min-size;
+        background-color: $background-color-light;
+        padding: 0 10px 0 10px;
+        margin-left: 30px;
+        color: $quaternary-color;
+        top: -45px;
+    }
+}

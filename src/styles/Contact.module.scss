@@ -1,0 +1,60 @@
+@import '_vars.scss';
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 85%;
+    grid-template-areas: "title title" "content form";
+    padding: 2rem 3rem;
+}
+
+.title {
+    grid-area: title;
+}
+
+.content {
+    grid-area: content;
+}
+
+.formContainer {
+    grid-area: form;
+}
+
+.container h1, .container p {
+    color: $primary-color;
+}
+
+.container h1 {
+    font-size: $second-title-size;
+    margin: $margin-title-section;
+    text-align: center;
+}
+
+.container p {
+    font-size: $text-base-size;
+    text-align: $text-alignment;
+    margin: 0;
+}
+
+.formContainer form {
+    display: grid;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "title" "content" "form";
+        row-gap: 2rem;
+    }
+
+    .container h1 {
+        font-size: $mobile-main-title-size;
+    }
+
+    .container p {
+        font-size: $mobile-text-base-size;
+    }
+
+
+}

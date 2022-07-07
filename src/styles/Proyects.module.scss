@@ -1,0 +1,74 @@
+@import '_vars.scss';
+
+.container h1 {
+    color: $primary-color;
+    font-size: $second-title-size;
+    margin: $margin-title-section;
+    text-align: center;
+}
+
+.proyects-container {
+    display: flex;
+    place-content: center;
+    padding: 2rem 3rem;
+}
+
+.proyects-container li {
+    background-color: $tertiary-color;
+    border-radius: 10%;
+    margin: 0 1rem;
+    width: 100%;
+    height: 35rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50% 35% 15%;
+}
+
+.proyect-foto-conainer {
+    background-color: $background-color-light;
+    border-radius: 10%;
+    width: 80%;
+    margin: 7.5% 10% 7.5% 10%; 
+    height: 85%;
+}
+
+.proyect-info-container {
+    width: 80%;
+    height: 80%;
+    margin: 5% 10% 5% 10%;
+    background-color: $background-color-light;
+    border-radius: 10%;
+}
+
+.proyect-button-container {
+    width: 65%;
+    height: 75%;
+    margin: 0% 17.5% 7.5% 17.5%;
+    background-color: $background-color-light;
+    border-radius: 15px;
+}
+
+.buttom-slide {
+    width: 8.5rem;
+    height: auto;
+    padding: 0 0.5rem;
+    position: inherit;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: $background-color-dark-opac;
+    }
+}
+
+.buttom-slide svg {
+    filter: $svg-filter-red;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: $mobile-main-title-size;
+    }
+}

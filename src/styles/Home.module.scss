@@ -1,0 +1,36 @@
+@import '_vars.scss';
+
+.container {
+  max-width: 68rem;
+  margin: 0 auto;
+  display: grid;
+}
+
+.textColor {
+  color: $primary-color;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 3rem 0;
+  flex: 1;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-gap: 2rem;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
