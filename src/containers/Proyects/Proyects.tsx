@@ -1,6 +1,6 @@
 import React from 'react';
-import { ArrowLeft } from '@icons/arrow-left';
-import { ArrowRight } from '@icons/arrow-right';
+import { ArrowLeft } from '@iconos/ArrowLeft';
+import { ArrowRight } from '@iconos/ArrowRight';
 import styles from '@styles/Proyects.module.scss';
 
 export const Proyects = () => {

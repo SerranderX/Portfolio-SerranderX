@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from '@styles/Experience.module.scss';
-import { ArrowLeft } from '@icons/ArrowLeft';
-import { ArrowRight } from '@icons/ArrowRight';
+import { ArrowLeft } from '@iconos/ArrowLeft';
+import { ArrowRight } from '@iconos/ArrowRight';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
 
 export const Experience = () => {

@@ -20,7 +20,7 @@
         "@components/*": ["components/*"],
         "@containers/*": ["containers/*"],
         "@logos/*": ["assets/logos/*"],
-        "@icons/*": ["assets/icons/*"],
+        "@iconos/*": ["assets/iconos/*"],
         "@images/*": ["assets/images/*"],
         "@styles/*": ["styles/*"],
         "@interfaces/*": ["interfaces/*"],
