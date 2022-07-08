@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import { Button } from "@components/Button"; 
+import { Button } from "@components/Button/Button"; 
 import { ButtonProps } from "@interfaces/button.props";
-import { Input } from "@components/Input";
+import { Input } from "@components/Input/Input";
 import { InputProps } from "@interfaces/input.props";
 import styles from "@styles/Contact.module.scss";
 

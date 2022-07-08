@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { InputProps } from '@interfaces/input.props';
-import styles from '@components/input/input.module.scss';
+import styles from '@styles/input.module.scss';
 
 export const Input: React.FC<InputProps> = ({type, value, labelText, name, handleValue, rows, cols}: InputProps) => {
     const [onFocus, setOnFocus] = useState(false);
