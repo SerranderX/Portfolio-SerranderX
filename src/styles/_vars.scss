@@ -4,6 +4,7 @@ $tertiary-color: rgb(19, 185, 169);
 $quaternary-color: #1bb3ff;
 $background-color-light: rgb(20, 1, 82);
 $background-color-light-opac: rgb(20, 1, 82, .6);
+$background-color-light-opac-two: rgb(20, 1, 82, .3);
 $background-color-dark: rgb(2, 1, 10);
 $background-color-dark-opac: rgb(2, 1, 10, .6);
 $font-family: 'Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif';
@@ -14,11 +15,14 @@ $main-title-size: 4em;
 $second-title-size: 2.5em;
 $text-base-size: 1.5em;
 $text-min-size: 1.2em;
+$grid-gap-content-title: 2em;
 // [ Mobile ]
+$mobile-author-name-size: 5em;
 $mobile-main-title-size: 4.5em;
 $mobile-second-title-size: 3em;
 $mobile-text-base-size: 2.5em;
 $mobile-text-min-size: 2.2em;
+$mobile-grid-gap-content-title: 4em;
 
 $margin-title-section: 1rem 0 2rem 0;
 $svg-filter-red: brightness(0) saturate(100%) invert(25%) sepia(62%) saturate(3233%) hue-rotate(314deg) brightness(98%) contrast(99%);
@@ -27,5 +31,6 @@ $svg-filter-red: brightness(0) saturate(100%) invert(25%) sepia(62%) saturate(32
 $neon-green-background: rgba(4, 170, 109);
 $neon-green-border: #04aa6dd0;
 $neon-blue-background: rgb(8, 139, 204);
+$neon-blue-background-opac:rgba(8, 139, 204, .2);
 $neon-blue-border: rgb(8, 139, 204, .8);
 

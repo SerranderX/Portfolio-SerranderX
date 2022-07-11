@@ -27,6 +27,6 @@
         "@hooks/*": ["hooks/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/hooks/useWindowsDimensions.js", "src/components/Button/Buttontsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/hooks/useWindowsDimensions.js", "src/components/Button/Button.tsx"],
   "exclude": ["node_modules"]
 }

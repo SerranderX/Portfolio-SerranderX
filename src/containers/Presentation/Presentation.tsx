@@ -45,17 +45,16 @@ export const Presentation = () => {
         <section className={`${styles['container-presentation']}`}>
             <article className={`${styles['title-container']}`}>
                 <h1 className={`${styles.title}`}>
-                    Bienvenido, mi nombre es{' '}
-                    <motion.a 
-                        variants={titleNameVariants}
-                        initial="enter"
-                        animate={state ? 'exit' : 'enter'}
-                        exit="exit"
-                        transition={{ duration: 0.2, ease: [0.04, 0.62, 0.23, 0.98] }}
-                        href="#"
-                        className={styles.authorName}
-                    >{name[nameIndex]}</motion.a>
+                    Bienvenido, mi nombre es
                 </h1>
+                <motion.h1
+                    variants={titleNameVariants}
+                    initial="enter"
+                    animate={state ? 'exit' : 'enter'}
+                    exit="exit"
+                    transition={{ duration: 0.2, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    className={styles.authorName}
+                >{name[nameIndex]}</motion.h1>
                 <p className={`${styles.description}`}>
                     This is a simple example of a Next.js App.
                     {windowDimenion.winWidth} and {windowDimenion.winHeight}

@@ -29,7 +29,8 @@
     font-weight: bold;
     color: $primary-color;
     text-align: center;
-    margin: $margin-title-section;
+    grid-gap: $grid-gap-content-title;
+    margin: 0;
     padding: 0;
 }
 
@@ -50,6 +51,7 @@
     margin: 1rem 0;
     width: 58px;
     height: 58px;
+    justify-content: center;
 }
 
 .icons div button {
@@ -96,5 +98,13 @@
 
     .content p {
         font-size: $mobile-text-base-size;
+    }
+
+    .container {
+        grid-gap: $mobile-grid-gap-content-title;
+    }
+
+    .content {
+        grid-gap: $mobile-grid-gap-content-title;
     }
 }
