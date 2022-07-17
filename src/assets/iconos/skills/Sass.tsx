@@ -6,9 +6,6 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
     {...props}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 122.88 92.11"
-    style={{
-      enableBackground: "new 0 0 122.88 92.11",
-    }}
     xmlSpace="preserve"
   >
     <path
