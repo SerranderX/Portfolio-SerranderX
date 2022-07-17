@@ -1,23 +1,136 @@
 @import '_vars.scss';
 
-.footer {
-    display: flex;
-    flex: 1;
-    padding: 2rem 0;
+  .Footer-distributed {
+    background-color: rgba(0,0,0,.54);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px sans-serif;
+    padding: 45px 50px;
+  }
+  
+  .Footer-distributed .Footer-left p {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .Footer-distributed p.Footer-links {
+    font-size: $text-base-size;
+    font-weight: bold;
+    color: white;
+    margin: 0 0 10px;
+    padding: 0;
+    transition: ease .25s;
+  }
+  
+  .Footer-distributed p.Footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    transition: ease .25s;
+  }
+  
+  .Footer-distributed p.Footer-links a:hover {
     color: $primary-color;
-    justify-content: center;
-    align-items: center;
+    transition: ease .25s;
+  }
+  
+  .Footer-distributed .Footer-links a:before {
+    content: "·";
+    font-size: 20px;
+    left: 0;
+    margin: 0 0 0 .5rem;
+    color: white;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .Footer-distributed .Footer-links .link-1:before {
+    content: none;
+  }
+  
+  .Footer-distributed .Footer-right {
+    float: right;
+    margin-top: 6px;
+    max-width: 180px;
+  }
+  
+  .Footer-distributed .Footer-right a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-color: $background-color-dark-opac;
+    border-radius: 2px;
+    font-size: 20px;
+    color: $primary-color;
+    text-align: center;
+    line-height: 35px;
+    margin: 5px 3px;
+    transition:all .25s;
+    border-radius: 50%;
+  }
 
-    a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
-        font-size: $text-min-size;
-        font-family: $font-family;
+  .fa svg {
+    filter: invert(91%) sepia(24%) saturate(122%) hue-rotate(193deg) brightness(99%) contrast(98%);
+  }
+
+  .Footer-powered {
+    font-size: $text-min-size;
+  }
+  
+  //TODO me3dia phone footer
+
+  /* Media Queries */
+  @media (max-width: 769px) {
+    .Footer-distributed .Footer-left, .Footer-distributed .Footer-right {
+      text-align: center;
     }
-}
+  
+    .Footer-distributed .Footer-right {
+      float: none;
+      margin: 1.4rem auto;
+      max-width: 25.5rem;
+    }
+  
+    .Footer-distributed .Footer-left p.Footer-links {
+      line-height: 2.5;
+    }
 
-.logo {
-    margin-left: 0.5rem;
-}
+    .Footer-distributed p.Footer-links {
+        font-size: $mobile-third-title-size;
+        margin: 0;
+    }
+
+    .Footer-distributed p.Footer-powered {
+        font-size: 1.7em;
+    }
+
+    .Footer-distributed .Footer-right a {
+        width: 5rem;
+        height: 5rem;
+        line-height: 35px;
+        margin: .4rem .5rem;
+        transition:all .25s;
+        border-radius: 50%;
+    }
+
+
+    .Footer-distributed {
+      display: table;
+      height: 25rem;
+      padding: 45px 50px;
+    }
+
+    .Footer-distributed .Footer-links a:before {
+      font-size: 40px;
+      margin: 0 0 0 1rem;
+    }
+
+    .fa svg {
+        width: 5rem;
+        height: 5rem;
+    }
+  }

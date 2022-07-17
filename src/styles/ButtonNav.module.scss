@@ -1,0 +1,33 @@
+@import '_vars.scss';
+
+.button-nav {
+    background-color: unset;
+    width: 6.5rem;
+    height: 6.5rem;
+    position: fixed;
+    background: -webkit-linear-gradient(180deg, $tertiary-color 0%, $quaternary-color 70%);
+    border: none;
+    bottom: 4rem;
+    right: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.button-nav svg {
+    width: 2.5rem;
+    vertical-align: middle;
+    opacity: .8;
+}
+
+@media (max-width: 1200px) { 
+    .button-nav {
+        width: 12rem;
+        height: 12rem;
+        bottom: 3rem;
+        right: 2rem;
+    }
+    
+    .button-nav svg {
+        width: 4rem;
+    }
+}

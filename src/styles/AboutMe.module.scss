@@ -1,0 +1,133 @@
+@import '_vars.scss';
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    padding: 2rem 3rem;
+    row-gap: 2rem;
+    grid-template-areas: "title" "generalInfo" "hobbiesInfo";
+}
+
+.title-container {
+    grid-area: title;
+}
+
+.title-container h1 {
+    font-size: $second-title-size;
+    font-weight: bold;
+    color: $primary-color;
+    text-align: center;
+    grid-gap: $grid-gap-content-title;
+    margin: 0;
+    padding: 0;
+}
+
+.general-container {
+    grid-area: generalInfo;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: "image info";
+}
+
+.general-info-container {
+    margin: 2rem 0;
+}
+
+.general-info-container p {
+    grid-area: info;
+    font-size: $text-base-size;
+    color: $primary-color;
+    margin: 0;
+    padding: 0;
+    text-align: $text-alignment;
+}
+
+.general-info-container h2 {
+    text-align: center;
+    font-size: $third-title-size;
+    margin: $margin-title-section;
+    color: $primary-color;
+}
+
+.general-image-container {
+    grid-area: image;
+    background-color: aqua;
+    margin: 2rem;
+}
+
+.hobbies-container {
+    grid-area: hobbiesInfo;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "info image";
+    grid-template-rows: auto;
+}
+
+.hobbies-image-container {
+    grid-area: image;
+    background-color: aqua;
+    margin: 2rem;
+}
+
+.hobbies-info-container {
+    margin: 2rem 0;
+}
+
+.hobbies-info-container p {
+    grid-area: info;
+    font-size: $text-base-size;
+    color: $primary-color;
+    margin: 0;
+    padding: 0;
+    text-align: $text-alignment;
+}
+
+.hobbies-info-container h2 {
+    text-align: center;
+    font-size: $third-title-size;
+    margin: $margin-title-section;
+    color: $primary-color;
+}
+
+@media (max-width: 1200px) {
+    .title-container h1 {
+        font-size: $mobile-main-title-size;
+        grid-gap: $mobile-grid-gap-content-title;
+    }
+
+    .general-container p {
+        font-size: $mobile-text-base-size;
+    }
+    
+    .hobbies-container p{
+        font-size: $mobile-text-base-size;
+    }
+
+    .general-info-container h2 {
+        font-size: $mobile-third-title-size;
+        margin: $mobile-margin-title-section;
+    }
+
+    .hobbies-info-container h2 {
+        font-size: $mobile-third-title-size;
+        margin: $mobile-margin-title-section;
+    }
+
+    .general-container {
+        grid-area: generalInfo;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "image" "info";
+    }
+    
+    .hobbies-container {
+        grid-area: hobbiesInfo;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "info" "image";
+    }
+}

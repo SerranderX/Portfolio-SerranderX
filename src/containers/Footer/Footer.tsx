@@ -1,18 +1,58 @@
-import React from 'react';
-import Image from 'next/image';
-import LogoComplete from '@logos/logo-complete.png';
+import React, { LegacyRef } from 'react';
 import styles from '@styles/Footer.module.scss';
+import { motion } from 'framer-motion';
+import { ENV } from '@config/config';
+import FacebookIcon from '@iconos/social/facebook';
+import TwitterIcon from '@iconos/social/twitter';
+import LinkedinIcon from '@iconos/social/linkedin';
+import GitHubIcon from '@iconos/social/github';
 
-export const Footer = () => {
+interface FooterProps {
+  reference: LegacyRef<HTMLElement> | undefined
+}
+
+export const Footer: React.FC<FooterProps> = ({reference}) => {
     return (
-        <footer className={styles.footer}>
-        <a href="#" target="_blank"  rel="noopener noreferrer">
-          {'{ Powered by '}
-          <span className={styles.logo}>
-            <Image src={LogoComplete} alt="SerranderX-logo" width={150} height={31} style={{backgroundColor: 'white'}} />
-          </span>
-          {' }'}
-        </a>
+      <footer className={`${styles['Footer-distributed']}`} ref={reference}>
+        <div className={`${styles['Footer-right']}`}>
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            href={ENV.developerData.facebook}
+          >
+            <i className={`${styles['fa-facebook']} ${styles.fa}`}>{FacebookIcon()}</i>
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            href={ENV.developerData.twitter}
+          >
+            <i className={`${styles['fa-twitter']} ${styles.fa}`}>{TwitterIcon()}</i>
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            href={ENV.developerData.linkedin}
+          >
+            <i className={`${styles['fa-linkedin']} ${styles.fa}`}>{LinkedinIcon()}</i>
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            href={ENV.developerData.gitHub}
+          >
+            <i className={`${styles['fa-github']} ${styles.fa}`}>{GitHubIcon()}</i>
+          </motion.a>
+        </div>
+        <div className={`${styles['Footer-left']}`}>
+          <p className={`${styles['Footer-links']}`}>
+            <a>About</a>
+            <a>Experience</a>
+            <a>Projects</a>
+            <a>Contact</a>
+          </p>
+          <p className={`${styles['Footer-powered']}`}>{ENV.developerData.signature}</p>
+        </div>
       </footer>
     );
 };

@@ -8,17 +8,23 @@ import { Proyects } from 'containers/Proyects/Proyects';
 import { Experience } from '@containers/Experience/Experience';
 import { Contact } from '@containers/Contact/Contact';
 import { AboutMe } from '@containers/AboutMe/AboutMe';
+import { ButtonNav } from '@components/ButtonNav/ButtonNav'; 
+import { useNearScreen } from '@hooks/useNearScreen';
+import { useEffect } from 'react';
 
 const Home: NextPage = () => {
+  const [showHeader, refHeader] = useNearScreen();
+  const [showFooter, refFooter] = useNearScreen();
+
   return (
       <div id="app-portfolio" className={styles.container}>
-        <Head>
+        <Head >
           <title>Portfolio SerranderX</title>
           <meta name="description" content="This is a portfolio proyect about the author SerranderX" />
           <link rel="icon" href="favicon.ico" />
         </Head>
-
-        <Header />
+        
+        <Header reference={refHeader} />
         <main className={styles.main}>
           <Presentation />
           <Experience />
@@ -26,7 +32,8 @@ const Home: NextPage = () => {
           <Contact />
           <AboutMe />
         </main>
-        <Footer />
+        <Footer reference={refFooter}/>
+        <ButtonNav showHeader={showHeader} showFooter={showFooter}/>
       </div>
   )
 }

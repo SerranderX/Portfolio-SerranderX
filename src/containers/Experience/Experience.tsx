@@ -1,26 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '@styles/Experience.module.scss';
 import { ArrowLeft } from '@iconos/ArrowLeft';
 import { ArrowRight } from '@iconos/ArrowRight';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
+import { ExperienceItems } from '@interfaces/ExperienceItems';
+import { ExperienceIcons } from '@utils/Utils'
 
 export const Experience = () => {
     const windowDimenion = useWindowsDimensions();
-    const [currentIndex, setCurrentIndex] = React.useState(new Array(10).fill(0));
-
-    useEffect(() => {
-        if(windowDimenion.winWidth <= 1100){
-            setCurrentIndex(new Array(9).fill(0));
-        }
-
-        if(windowDimenion.winWidth <= 1050){
-            setCurrentIndex(new Array(8).fill(0));
-        }
-        
-        if(windowDimenion.winWidth > 1100) {
-            setCurrentIndex(new Array(10).fill(0));
-        }
-    }, [windowDimenion.winWidth]);
+    const [currentIndex, setCurrentIndex] = useState(new Array(10).fill(0));
+    const [experienceItems, setExperienceItems]: Array<ExperienceItems> = useState(ExperienceIcons);
 
     return (
         <section className={styles.container}>
@@ -35,9 +24,18 @@ export const Experience = () => {
                     </button>
                 </div>
                 <ul>
-                    {currentIndex.map((item, key) => (
-                        <li key={key} style={{borderRadius: '50%', margin: '1rem', width: '58px', height: '58px'}}></li>
-                    ))}
+                    {experienceItems.map((item:ExperienceItems, key:number) => 
+                        {
+                            if(key < 9){
+                                return (
+                                    <li key={key}>
+                                        <item.icon />
+                                    </li>
+                                )
+                            } 
+                        }
+                        
+                    )}
                 </ul>
                 <div>
                     <button>

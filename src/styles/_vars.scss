@@ -11,20 +11,24 @@ $font-family: 'Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid San
 $text-alignment: center;
 // The size of text never will be minus than 16px or in this case 1rem.
 // [ Desktop ]
-$main-title-size: 4em;
-$second-title-size: 2.5em;
-$text-base-size: 1.5em;
-$text-min-size: 1.2em;
+$author-name-size: 4.5em;  //TODO Set it
+$main-title-size: 3.5em;
+$second-title-size: 2em;
+$third-title-size: 1.8em;
+$text-base-size: 1.2em;
+$text-min-size: 1em;
 $grid-gap-content-title: 2em;
+$margin-title-section: 1rem 0 2rem 0;
 // [ Mobile ]
 $mobile-author-name-size: 5em;
 $mobile-main-title-size: 4.5em;
 $mobile-second-title-size: 3em;
+$mobile-third-title-size: 2.8em;
 $mobile-text-base-size: 2.5em;
 $mobile-text-min-size: 2.2em;
 $mobile-grid-gap-content-title: 4em;
+$mobile-margin-title-section: 2rem 0 3rem 0;
 
-$margin-title-section: 1rem 0 2rem 0;
 $svg-filter-red: brightness(0) saturate(100%) invert(25%) sepia(62%) saturate(3233%) hue-rotate(314deg) brightness(98%) contrast(99%);
 
 //Neon ligths

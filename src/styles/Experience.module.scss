@@ -28,9 +28,9 @@
     font-size: $second-title-size;
     font-weight: bold;
     color: $primary-color;
+    margin: $margin-title-section;
     text-align: center;
     grid-gap: $grid-gap-content-title;
-    margin: 0;
     padding: 0;
 }
 
@@ -84,14 +84,19 @@
 }
 
 .icons ul li {
-    border-radius: '50%';
-    background-color: $tertiary-color;
-    margin: '1rem';
-    width: '58px';
-    height: '58px';
+    border-radius: 50%;
+    margin: 1rem;
+    width: 3.6em;
+    height: 3.6em;
 }
 
-@media (max-width: 768px) {
+.icons ul li svg {
+    width: 3.6em; 
+    height: 3.6em; 
+    display: 'flex';
+}
+
+@media (max-width: 1200px) {
     .content h1 {
         font-size: $mobile-main-title-size;
     }
@@ -106,5 +111,15 @@
 
     .content {
         grid-gap: $mobile-grid-gap-content-title;
+    }
+
+    .icons ul li {
+        width: 4.5em;
+        height: 4.5em;
+    }
+
+    .icons ul li svg {
+        width: 4.5em; 
+        height: 4.5em; 
     }
 }

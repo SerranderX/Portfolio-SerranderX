@@ -1,11 +1,5 @@
 @import '_vars.scss';
 
-.container {
-  max-width: 68rem;
-  margin: 0 auto;
-  display: grid;
-}
-
 .textColor {
   color: $primary-color;
 }
@@ -28,8 +22,24 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .main {
     grid-gap: 3rem;
   }
+
+  .container {
+    max-width: 68rem;
+    margin: 0 auto;
+    display: grid;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 3000px) {
+  .main {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: grid;
+    min-width: 65rem;
+  }
+
 }
