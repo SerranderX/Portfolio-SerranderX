@@ -4,12 +4,15 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Photo from '@images/photo1.jpg';
 import { titleNameVariants } from '@containers/Presentation/animations';
+import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
+import { WindowSize } from '@interfaces/windowSize.interface';
 
 export const Presentation = () => {
     const name = ['Felipe Diaz', 'SerranderX'];
     const [nameIndex, setNameIndex] = React.useState(0);
     const [state, setState] = React.useState(false);
     const [animationTimer, setAnimationTimer] = React.useState(false);
+    const widnowsDimensions: WindowSize = useWindowsDimensions();
 
     useEffect(() => {
         if (!animationTimer) {
@@ -55,6 +58,7 @@ export const Presentation = () => {
                 </h1>
                 <p className={`${styles.description}`}>
                     This is a simple example of a Next.js App.
+                    width: {widnowsDimensions.winWidth} height: {widnowsDimensions.winHeight}
                 </p>
             </article>
             <article className={`${styles['photo-container']}`}>

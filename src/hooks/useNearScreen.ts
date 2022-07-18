@@ -1,26 +1,26 @@
-import { useEffect, useState, useRef, useLayoutEffect, LegacyRef } from 'react';
+import { useEffect, useState, useRef, LegacyRef, MutableRefObject, RefObject } from 'react';
+import { nearScreenInterface } from '@interfaces/nearScreen.interface';
 
-export const useNearScreen = () => {
-    const ref = useRef<LegacyRef<HTMLElement> | undefined>(null);
-    const [show, setShow] = useState(false);
+export const useNearScreen = (): nearScreenInterface => {
+    const ref = useRef<LegacyRef<HTMLElement>>(null);
+    const [show, setShow] = useState<Boolean>(false);
 
-    useLayoutEffect(() => {
-        console.log(ref); // { current: <h1_object> }
-    })
 
     useEffect(() => {
         Promise.resolve(
-            typeof window.IntersectionObserver !== 'undefined' ? window.IntersectionObserver : import('intersection-observer')
+            window.IntersectionObserver
         ).then(() => {
             const observer = new IntersectionObserver(entries => {
                 const { isIntersecting } = entries[0];
                 setShow(isIntersecting);
             })
             if(ref !== null && ref.current !== undefined ) {
-                observer.observe(ref.current);
+                observer.observe(ref.current as unknown as Element);
             }
         })
     },[ref, show]);
 
-    return [show, ref];
+    const nearScreen:nearScreenInterface = [show, ref as LegacyRef<HTMLElement>];
+
+    return nearScreen;
 }

@@ -1,4 +1,4 @@
-import React, {LegacyRef, MutableRefObject, useState} from 'react';
+import React, {LegacyRef, MutableRefObject, RefObject, useState} from 'react';
 import Image from 'next/image';
 import styles from '@styles/Header.module.scss';
 import LogoComplete from '@logos/logo-complete.png';
@@ -12,7 +12,7 @@ const variantsSection = {
 }
 
 interface HeaderProps {
-  reference: LegacyRef<HTMLElement> | undefined
+  reference: LegacyRef<HTMLElement>
 }
 
 export const Header: React.FC<HeaderProps> = ({reference}) => {

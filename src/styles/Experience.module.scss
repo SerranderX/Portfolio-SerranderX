@@ -18,6 +18,7 @@
 }
 
 .icons {
+    justify-content: center;
     grid-area: icons;
     text-align: center;
     display: inline-flex;
@@ -48,21 +49,15 @@
     display: inline-flex;
     list-style-type: none;
     padding: 0;
-    margin: 1rem 0;
-    width: 58px;
-    height: 58px;
     justify-content: center;
 }
 
 .icons div button {
     margin: 0;
-    width: fit-content;
-    height: fit-content;
-    min-width: 32px;
-    min-height: 58px;
+    width: 53px;
+    height: 100%;
     border: none;
     border-radius: 5px;
-    padding: 5px 0;
     background-color: unset;
 }
 
@@ -85,15 +80,13 @@
 
 .icons ul li {
     border-radius: 50%;
-    margin: 1rem;
-    width: 3.6em;
-    height: 3.6em;
+    margin: .5em 1em;
 }
 
 .icons ul li svg {
-    width: 3.6em; 
-    height: 3.6em; 
-    display: 'flex';
+    width: 4em;
+    height: 4em;
+    display: flex;
 }
 
 @media (max-width: 1200px) {

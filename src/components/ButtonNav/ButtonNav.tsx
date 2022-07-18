@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from '@iconos/ArrowRight';
 
 interface ButtonNavProps {
-    showHeader: boolean | MutableRefObject<LegacyRef<HTMLElement> | undefined>;
-    showFooter: boolean | MutableRefObject<LegacyRef<HTMLElement> | undefined>;
+    showHeader: Boolean;
+    showFooter: Boolean;
 }
 
 const variants = {

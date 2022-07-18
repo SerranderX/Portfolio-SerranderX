@@ -22,8 +22,9 @@ import SassIcon from "@iconos/skills/Sass";
 import MysqlIcon from "@iconos/skills/Mysql";
 import WebpackIcon from "@iconos/skills/Webpack";
 import PythonIcon from "@iconos/skills/Python";
+import { ExperienceItems } from '@interfaces/experienceItems.interface';
 
-export const ExperienceIcons = [
+export const ExperienceIcons: ExperienceItems[] = [
     {
         name: "android",
         url: "https://developer.android.com",

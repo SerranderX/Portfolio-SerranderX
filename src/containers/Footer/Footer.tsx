@@ -1,4 +1,4 @@
-import React, { LegacyRef } from 'react';
+import React, { LegacyRef, MutableRefObject, RefObject } from 'react';
 import styles from '@styles/Footer.module.scss';
 import { motion } from 'framer-motion';
 import { ENV } from '@config/config';
@@ -6,9 +6,10 @@ import FacebookIcon from '@iconos/social/facebook';
 import TwitterIcon from '@iconos/social/twitter';
 import LinkedinIcon from '@iconos/social/linkedin';
 import GitHubIcon from '@iconos/social/github';
+import { nearScreenInterface } from '@interfaces/nearScreen.interface';
 
 interface FooterProps {
-  reference: LegacyRef<HTMLElement> | undefined
+  reference: LegacyRef<HTMLElement>
 }
 
 export const Footer: React.FC<FooterProps> = ({reference}) => {

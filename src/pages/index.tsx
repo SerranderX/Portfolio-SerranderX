@@ -10,7 +10,7 @@ import { Contact } from '@containers/Contact/Contact';
 import { AboutMe } from '@containers/AboutMe/AboutMe';
 import { ButtonNav } from '@components/ButtonNav/ButtonNav'; 
 import { useNearScreen } from '@hooks/useNearScreen';
-import { useEffect } from 'react';
+
 
 const Home: NextPage = () => {
   const [showHeader, refHeader] = useNearScreen();

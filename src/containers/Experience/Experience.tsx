@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Dispatch, SetStateAction, useState } from 'react';
 import styles from '@styles/Experience.module.scss';
 import { ArrowLeft } from '@iconos/ArrowLeft';
 import { ArrowRight } from '@iconos/ArrowRight';
@@ -8,8 +8,7 @@ import { ExperienceIcons } from '@utils/Utils'
 
 export const Experience = () => {
     const windowDimenion = useWindowsDimensions();
-    const [currentIndex, setCurrentIndex] = useState(new Array(10).fill(0));
-    const [experienceItems, setExperienceItems] = useState(ExperienceIcons);
+    const [experienceItems, setExperienceItems] = useState<ExperienceItems[]>(ExperienceIcons);
 
     return (
         <section className={styles.container}>
@@ -24,7 +23,7 @@ export const Experience = () => {
                     </button>
                 </div>
                 <ul>
-                    {experienceItems.map((item, key) => 
+                    {experienceItems.map((item:ExperienceItems, key:number) => 
                         {
                             if(key < 9){
                                 return (
