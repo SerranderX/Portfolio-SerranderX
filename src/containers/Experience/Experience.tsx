@@ -56,7 +56,7 @@ export const Experience = () => {
                         <ArrowLeft />
                     </button>
                 </div>
-                <ul ref={ulRef} style={{width: childWidth * 8}}>
+                <ul ref={ulRef} style={{ width: childWidth * 8 }}>
                     {experienceItems.map((item:ExperienceItems, key:number) => 
                         <IconSkill key={key} index={key} Icon={item.icon} childWidth={childWidth} currentPosition={currentPosition} rightArrow={rightArrow}/>
                     )}
