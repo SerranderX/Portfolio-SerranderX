@@ -9,6 +9,7 @@ export const useNearScreen = (): nearScreenInterface => {
     useEffect(() => {
         Promise.resolve(
             window.IntersectionObserver
+            
         ).then(() => {
             const observer = new IntersectionObserver(entries => {
                 const { isIntersecting } = entries[0];

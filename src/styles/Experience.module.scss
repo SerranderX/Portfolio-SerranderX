@@ -53,7 +53,7 @@
 }
 
 .icons div button {
-    margin: 0;
+    margin: 0 1rem;
     width: 53px;
     height: 100%;
     border: none;
@@ -72,15 +72,19 @@
 }
 
 .icons ul {
-    display: inline-flex;
     list-style-type: none;
     padding: 0;
-    margin: 0 2rem;
+    margin: 0;
+    display: inline-flex;
+    position: relative;
+    max-width: 915px;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 .icons ul li {
     border-radius: 50%;
-    margin: .5em 1em;
+    padding: .5em 1em;
 }
 
 .icons ul li svg {
@@ -106,13 +110,4 @@
         grid-gap: $mobile-grid-gap-content-title;
     }
 
-    .icons ul li {
-        width: 4.5em;
-        height: 4.5em;
-    }
-
-    .icons ul li svg {
-        width: 4.5em; 
-        height: 4.5em; 
-    }
 }

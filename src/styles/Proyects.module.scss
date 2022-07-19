@@ -1,5 +1,9 @@
 @import '_vars.scss';
 
+.container {
+    padding: 2rem 3rem;
+}
+
 .container h1 {
     color: $primary-color;
     font-size: $second-title-size;
