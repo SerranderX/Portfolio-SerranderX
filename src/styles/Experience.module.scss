@@ -54,7 +54,7 @@
 
 .icons div button {
     margin: 0 1rem;
-    width: 53px;
+    width: 4em;
     height: 100%;
     border: none;
     border-radius: 5px;
@@ -107,6 +107,11 @@
 
     .content {
         grid-gap: $mobile-grid-gap-content-title;
+    }
+
+    .icons ul li svg {
+        width: 5em;
+        height: 5em;
     }
 
 }

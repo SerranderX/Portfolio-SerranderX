@@ -14,16 +14,14 @@ const adjustVisibleItems = (width:number, moreThan:number, firstValue:number, Se
 
 export const Experience: React.FC<ExperienceProps> = ({windowDimenion}) => {
     const [experienceItems, setExperienceItems] = useState<Array<(props: SVGProps<SVGSVGElement>) => JSX.Element>>(ExperienceIcons.map(item => item.icon));
-    const [visibleItemsAdjust, setVisibleItemsAdjust] = useState<number>(adjustVisibleItems(windowDimenion.winWidth, 1300, 9, 8));
+    const [visibleItemsAdjust, setVisibleItemsAdjust] = useState<number>(adjustVisibleItems(windowDimenion.winWidth, 1300, 9, 6));
 
     useEffect(() => {
-        const visibleItemsToAdjust = adjustVisibleItems(windowDimenion.winWidth, 1300, 9, 8)
+        const visibleItemsToAdjust = adjustVisibleItems(windowDimenion.winWidth, 1300, 9, 6)
         if(visibleItemsToAdjust !== visibleItemsAdjust){
             setVisibleItemsAdjust(visibleItemsToAdjust);
         }
     }, [windowDimenion]);
-
-    console.log(9);
 
     return (
         <section className={styles.container}>

@@ -22,9 +22,7 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
     const [childWidth, setChildWidth] = useState<number>(0);
     const [currentPosition, setCurrentPosition] = useState<number>(0);
     const [rightArrow, setRightArrow] = useState<boolean>(false);
-    const [visibleElements, setVisibleElements] = useState<number>(visibleItems);
-    const [ulWidth, setUlWidth] = useState<number>(resizeVisibleElements(childWidth, visibleElements));
-    const [intervalInstance, setintervalInstance] = useState<any>(null);
+    const [ulWidth, setUlWidth] = useState<number>(resizeVisibleElements(childWidth, visibleItems));
 
     useEffect(() => {
         if(autoPlay){
@@ -37,8 +35,8 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
     }, [currentPosition]);
 
     useEffect(() => {
-        setUlWidth(resizeVisibleElements(childWidth, visibleElements));
-    }, [childWidth, visibleElements]);
+        setUlWidth(resizeVisibleElements(childWidth, visibleItems));
+    }, [childWidth, visibleItems]);
 
     useEffect(() => {
         const children = ulRef?.current?.children;
@@ -63,7 +61,7 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
 
     const handleClickRight = () => {
         setRightArrow(true);
-        if(currentPosition + 1 >= (items.length - visibleElements)){
+        if(currentPosition + 1 >= (items.length - visibleItems)){
             setCurrentPosition(0);
         } else {
             setCurrentPosition(currentPosition + 1);
