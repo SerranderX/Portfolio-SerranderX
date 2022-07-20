@@ -12,11 +12,11 @@ const variantsSection = {
 }
 
 interface HeaderProps {
-  reference: LegacyRef<HTMLElement>
+  reference: LegacyRef<HTMLElement>,
+  windowDimenion:WindowSize
 }
 
-export const Header: React.FC<HeaderProps> = ({reference}) => {
-    const windowDimenion:WindowSize = useWindowsDimensions();
+export const Header: React.FC<HeaderProps> = ({reference, windowDimenion}) => {
     const [navState, setNavState] = useState(false);
 
     const handleNavButton = () => {

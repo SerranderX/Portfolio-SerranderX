@@ -10,11 +10,14 @@ import { Contact } from '@containers/Contact/Contact';
 import { AboutMe } from '@containers/AboutMe/AboutMe';
 import { ButtonNav } from '@components/ButtonNav/ButtonNav'; 
 import { useNearScreen } from '@hooks/useNearScreen';
+import { WindowSize } from '@interfaces/windowSize.interface';
+import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
 
 
 const Home: NextPage = () => {
   const [showHeader, refHeader] = useNearScreen();
   const [showFooter, refFooter] = useNearScreen();
+  const windowDimenion:WindowSize = useWindowsDimensions();
 
   return (
       <div id="app-portfolio" className={styles.container}>
@@ -24,10 +27,10 @@ const Home: NextPage = () => {
           <link rel="icon" href="favicon.ico" />
         </Head>
         
-        <Header reference={refHeader} />
+        <Header reference={refHeader} windowDimenion={windowDimenion}/>
         <main className={styles.main}>
           <Presentation />
-          <Experience />
+          <Experience windowDimenion={windowDimenion} />
           <Proyects />
           <Contact />
           <AboutMe />

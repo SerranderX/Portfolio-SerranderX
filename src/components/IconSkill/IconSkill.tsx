@@ -3,29 +3,14 @@ import { motion } from 'framer-motion';
 
 interface IconSkillProps {
     index: number;
-    Icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
-    childWidth: number;
-    currentPosition: number;
-    rightArrow: boolean;
+    Item: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+    xPosition: number;
 } 
 
-export const IconSkill:React.FC<IconSkillProps> = ({index, Icon, childWidth, currentPosition, rightArrow}) => {
-    
-    const xPosition = () => {
-        if(currentPosition > 0){
-            const x = currentPosition * childWidth;
-            if(rightArrow){
-                return x * -1;
-            } else {
-                return x;
-            }
-        }
-        return 0;
-    }
-
+export const IconSkill:React.FC<IconSkillProps> = ({index, Item, xPosition}) => {
     return (
-        <motion.li key={index} animate={{x:xPosition()}}>
-            <Icon />
+        <motion.li key={index} animate={{x:xPosition}} transition={{ duration: .2 }}>
+            <Item />
         </motion.li> 
     );
 };
