@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import { Button } from '@components/Button/Button'; 
-import { ButtonProps } from '@interfaces/button.interface';
+import { ButtonProps } from '@interfaces/buttona.interface';
 import { Input } from '@components/Input/Input';
-import { InputProps } from '@interfaces/input.interface';
+import { InputProps } from '@interfaces/inputa.interface';
 import styles from '@styles/Contact.module.scss';
 
 export const Contact = () => {
