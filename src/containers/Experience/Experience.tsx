@@ -2,8 +2,7 @@ import React, { SVGProps, useEffect, useState } from 'react';
 import styles from '@styles/Experience.module.scss';
 import { ExperienceIcons } from '@utils/Utils'
 import { Carousel } from '@components/Carousel/Carousel';
-import { WindowSize } from '@interfaces/WindowSize.interface';
-
+import { WindowSize } from '@interfaces/windowSize.interface';
 interface ExperienceProps {
     windowDimenions:WindowSize
 }

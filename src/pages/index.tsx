@@ -10,7 +10,7 @@ import { Contact } from '@containers/Contact/Contact';
 import { AboutMe } from '@containers/AboutMe/AboutMe';
 import { ButtonNav } from '@components/ButtonNav/ButtonNav'; 
 import { useNearScreen } from '@hooks/useNearScreen';
-import { WindowSize } from '@interfaces/WindowSize.interface';
+import { WindowSize } from '@interfaces/windowSize.interface';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
 
 

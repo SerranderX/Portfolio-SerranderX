@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Photo from '@images/photo1.jpg';
 import { titleNameVariants } from '@containers/Presentation/animations';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
-import { WindowSize } from '@interfaces/WindowSize.interface';
+import { WindowSize } from '@interfaces/windowSize.interface';
 
 export const Presentation = () => {
     const name = ['Felipe Diaz', 'SerranderX'];

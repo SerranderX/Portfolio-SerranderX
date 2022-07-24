@@ -2,7 +2,7 @@ import React, {LegacyRef, MutableRefObject, RefObject, useState} from 'react';
 import Image from 'next/image';
 import styles from '@styles/Header.module.scss';
 import LogoComplete from '@logos/logo-complete.png';
-import { WindowSize } from '@interfaces/WindowSize.interface';  
+import { WindowSize } from '@interfaces/windowSize.interface';  
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
 import { AnimatePresence, motion } from 'framer-motion'; 
 

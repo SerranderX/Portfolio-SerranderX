@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react' 
-import { WindowSize } from '@interfaces/WindowSize.interface'
+import { WindowSize } from '@interfaces/windowSize.interface'
 
 export const useWindowsDimensions = (): WindowSize => {
     const [windowDimenion, detectHW] = useState<WindowSize>({winWidth: 0, winHeight: 0})
