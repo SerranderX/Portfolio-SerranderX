@@ -1,5 +1,5 @@
 export interface ButtonProps {
     text: string
     classes?: string
-    handleButton: () => any
+    handleButton: () => any | void
 }

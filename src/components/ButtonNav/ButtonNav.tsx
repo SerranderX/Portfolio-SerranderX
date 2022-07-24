@@ -21,7 +21,8 @@ export const ButtonNav: React.FC<ButtonNavProps> = ({showHeader, showFooter}) =>
             exit="hidden"
             variants={variants}
             transition={{duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98]}}
-            className={`${styles['button-nav']}`} whileTap={{scale: [0.80, 1]}}>
+            className={`${styles['button-nav']}`} 
+            whileTap={{scale: [1, 0.80, 1]}}>
             <ArrowRight />
         </motion.button>
     );

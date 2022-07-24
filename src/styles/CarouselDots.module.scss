@@ -1,0 +1,29 @@
+@import '_vars.scss';
+
+.active {
+    background: $quaternary-color;
+    box-shadow: 0 0 5px rgb(8, 139, 204, .8),
+    0 0 25px rgb(8, 139, 204, .8),
+    0 0 5px rgb(8, 139, 204, .8),
+    0 0 100px rgb(8, 139, 204, .8);
+}
+
+.inactive {
+    background: $quaternary-color-dark;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dotsContainer {
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+}

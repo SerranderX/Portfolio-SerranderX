@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { InputProps } from '@interfaces/input.props';
+import { InputProps } from '@interfaces/Input.interface';
 import styles from '@styles/input.module.scss';
 
 export const Input: React.FC<InputProps> = ({type, value, labelText, name, handleValue, rows, cols}: InputProps) => {

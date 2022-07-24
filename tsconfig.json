@@ -31,6 +31,7 @@
         "@hooks/*": ["hooks/*"],
         "@config/*": ["config/*"],
         "@utils/*": ["utils/*"],
+        "@context/*": ["context/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/hooks/useWindowsDimensions.js", "src/components/Button/Button.tsx", "src/hooks/useNearScreen.js"],

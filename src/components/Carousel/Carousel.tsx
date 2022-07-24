@@ -2,8 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from '@iconos/ArrowLeft';
 import { ArrowRight } from '@iconos/ArrowRight';
-import { ExperienceItems } from '@interfaces/experienceItems.interface';
+import { ExperienceItems } from '@interfaces/ExperienceItems.interface';
 import { IconSkill } from '@components/IconSkill/IconSkill';
+import { WindowSize } from '@interfaces/WindowSize.interface';
 
 interface CarouselProps {
     items: Array<any>;
@@ -21,7 +22,6 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
     const ulRef = useRef<HTMLUListElement>(null);
     const [childWidth, setChildWidth] = useState<number>(0);
     const [currentPosition, setCurrentPosition] = useState<number>(0);
-    const [rightArrow, setRightArrow] = useState<boolean>(false);
     const [ulWidth, setUlWidth] = useState<number>(resizeVisibleElements(childWidth, visibleItems));
 
     useEffect(() => {
@@ -32,7 +32,7 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
 
             return () => clearInterval(intervalInst);
         }
-    }, [currentPosition]);
+    }, [currentPosition, autoPlay]);
 
     useEffect(() => {
         setUlWidth(resizeVisibleElements(childWidth, visibleItems));
@@ -40,7 +40,7 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
 
     useEffect(() => {
         const children = ulRef?.current?.children;
-
+        
         if (children) {
             const childrenLength = children.length;
             if(childrenLength > 0){
@@ -48,19 +48,17 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
                 setChildWidth(childWidth);
             }
         }
-    },[ulRef]);
+    },[ulRef, visibleItems]);
 
     const handleClickLeft = () => {
-        setRightArrow(false);
-        if(currentPosition - 1 <= 0){
-            setCurrentPosition(0);
+        if(currentPosition <= 0){
+            setCurrentPosition((items.length - 1) - visibleItems);
         } else {
             setCurrentPosition(currentPosition - 1);
         }
     }
 
     const handleClickRight = () => {
-        setRightArrow(true);
         if(currentPosition + 1 >= (items.length - visibleItems)){
             setCurrentPosition(0);
         } else {
@@ -84,7 +82,7 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
             </div>
             <ul ref={ulRef} style={{ width: ulWidth}}>
                 {items.map((item:(props:any) => JSX.Element, key:number) => 
-                    <IconSkill Item={item} key={key} index={key} xPosition={xPosition()}/>
+                    <IconSkill Item={item} key={key} index={key} xPosition={xPosition()} />
                 )}
             </ul>
             <div>

@@ -6,7 +6,7 @@ import FacebookIcon from '@iconos/social/facebook';
 import TwitterIcon from '@iconos/social/twitter';
 import LinkedinIcon from '@iconos/social/linkedin';
 import GitHubIcon from '@iconos/social/github';
-import { nearScreenInterface } from '@interfaces/nearScreen.interface';
+import { nearScreenInterface } from '@interfaces/NearScreen.interface';
 
 interface FooterProps {
   reference: LegacyRef<HTMLElement>

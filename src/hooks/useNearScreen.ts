@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef, LegacyRef, MutableRefObject, RefObject } from 'react';
-import { nearScreenInterface } from '@interfaces/nearScreen.interface';
+import { nearScreenInterface } from '@interfaces/NearScreen.interface';
 
 export const useNearScreen = (): nearScreenInterface => {
     const ref = useRef<LegacyRef<HTMLElement>>(null);

@@ -4,20 +4,20 @@ import styles from '@styles/Home.module.scss'
 import { Presentation } from 'containers/Presentation/Presentation';
 import { Footer } from 'containers/Footer/Footer';
 import { Header } from 'containers/Header/Header';
-import { Proyects } from 'containers/Proyects/Proyects';
+import { Projects } from '@containers/Projects/Projects';
 import { Experience } from '@containers/Experience/Experience';
 import { Contact } from '@containers/Contact/Contact';
 import { AboutMe } from '@containers/AboutMe/AboutMe';
 import { ButtonNav } from '@components/ButtonNav/ButtonNav'; 
 import { useNearScreen } from '@hooks/useNearScreen';
-import { WindowSize } from '@interfaces/windowSize.interface';
+import { WindowSize } from '@interfaces/WindowSize.interface';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
 
 
 const Home: NextPage = () => {
   const [showHeader, refHeader] = useNearScreen();
   const [showFooter, refFooter] = useNearScreen();
-  const windowDimenion:WindowSize = useWindowsDimensions();
+  const windowDimenions:WindowSize = useWindowsDimensions();
 
   return (
       <div id="app-portfolio" className={styles.container}>
@@ -27,11 +27,11 @@ const Home: NextPage = () => {
           <link rel="icon" href="favicon.ico" />
         </Head>
         
-        <Header reference={refHeader} windowDimenion={windowDimenion}/>
+        <Header reference={refHeader} windowDimenion={windowDimenions}/>
         <main className={styles.main}>
           <Presentation />
-          <Experience windowDimenion={windowDimenion} />
-          <Proyects />
+          <Experience windowDimenions={windowDimenions} />
+          <Projects />
           <Contact />
           <AboutMe />
         </main>
