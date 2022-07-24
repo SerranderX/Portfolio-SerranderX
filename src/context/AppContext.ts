@@ -1,5 +1,5 @@
 import { ToolsTypes } from '@hooks/useCarouselFilters/ToolsTypes';
-import { AppInitialState } from '@interfaces/appInitialState.interface';
+import { AppInitialState } from '@interfaces/appInitialStatea.interface';
 import { createContext } from 'react';
 
 const initialState: AppInitialState = {
