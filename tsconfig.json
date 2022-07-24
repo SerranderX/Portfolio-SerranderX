@@ -34,6 +34,6 @@
         "@context/*": ["context/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/hooks/useWindowsDimensions.js", "src/components/Button/Button.tsx", "src/hooks/useNearScreen.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
