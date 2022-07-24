@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
 import { ArrowLeft } from '@iconos/ArrowLeft';
 import { ArrowRight } from '@iconos/ArrowRight';
-import { ExperienceItems } from '@interfaces/ExperienceItems.interface';
 import { IconSkill } from '@components/IconSkill/IconSkill';
-import { WindowSize } from '@interfaces/WindowSize.interface';
 
 interface CarouselProps {
     items: Array<any>;
