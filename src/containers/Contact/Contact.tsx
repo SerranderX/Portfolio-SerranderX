@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import { Button } from "@components/Button/Button"; 
-import { ButtonProps } from "@interfaces/button.interface";
-import { Input } from "@components/Input/Input";
-import { InputProps } from "@interfaces/input.interface";
-import styles from "@styles/Contact.module.scss";
+import { Button } from '@components/Button/Button'; 
+import { ButtonProps } from '@interfaces/button.interface';
+import { Input } from '@components/Input/Input';
+import { InputProps } from '@interfaces/input.interface';
+import styles from '@styles/Contact.module.scss';
 
 export const Contact = () => {
     const [name, setName] = useState("");

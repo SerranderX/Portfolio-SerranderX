@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '@styles/button.module.scss';
-import { ButtonProps } from "@interfaces/button.interface";
+import { ButtonProps } from '@interfaces/button.interface';
 
 export const Button: React.FC<ButtonProps> = ({text, classes = "", handleButton}) => {
     return (

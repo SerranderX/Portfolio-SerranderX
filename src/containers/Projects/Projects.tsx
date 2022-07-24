@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useRef } from "react";
-import styles from "@styles/Projects.module.scss";
-import Carousel from "framer-motion-carousel";
-import { Project } from "@components/Project/Project";
-import { ButtonCarousel } from "@components/ButtonCarousel/ButtonCarousel";
-import { CarouselDots } from "@components/CarouselDots/CarouselDots";
-import { Button } from "@components/Button/Button";
-import { AppContext } from "@context/AppContext";
+import styles from '@styles/Projects.module.scss';
+import Carousel from 'framer-motion-carousel';
+import { Project } from '@components/Project/Project';
+import { ButtonCarousel } from '@components/ButtonCarousel/ButtonCarousel';
+import { CarouselDots } from '@components/CarouselDots/CarouselDots';
+import { Button } from '@components/Button/Button';
+import { AppContext } from '@context/AppContext';
 
 export const Projects = () => {
     const [autoPlay, setAutoPlay] = React.useState(true);
