@@ -1,7 +1,7 @@
 import React, { Reducer, useReducer } from "react";
 import { initialState } from "@hooks/useCarouselFilters/initialState";
 import { reducer } from "@hooks/useCarouselFilters/reducer";
-import { CarouselStateInterface, ReducerStateInterface, CarouselFiltersInterface } from "@interfaces/carouselFilters.interface";
+import { CarouselStateInterface, ReducerStateInterface, CarouselFiltersInterface } from "@interfaces/carouselFiltersa.interface";
 import { ActionTypes } from "@hooks/useCarouselFilters/actionTypes";
 import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
 

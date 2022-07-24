@@ -1,6 +1,6 @@
 import { ActionTypes } from "@hooks/useCarouselFilters/actionTypes";
 import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
-import { CarouselStateInterface, ReducerStateInterface, ReducerObjectInterface } from "@interfaces/carouselFilters.interface";
+import { CarouselStateInterface, ReducerStateInterface, ReducerObjectInterface } from "@interfaces/carouselFiltersa.interface";
 import { Reducer } from "react";
 
 const reducerObject = (state:CarouselStateInterface, payload: boolean): ReducerObjectInterface => ({

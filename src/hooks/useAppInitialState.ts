@@ -1,5 +1,5 @@
 import React from 'react';
-import { CarouselFiltersInterface } from '@interfaces/carouselFilters.interface';
+import { CarouselFiltersInterface } from '@interfaces/carouselFiltersa.interface';
 import { useCarouselFilters } from './useCarouselFilters/useCarouselFilters';
 import { AppInitialState } from '@interfaces/appInitialStatea.interface'; 
 

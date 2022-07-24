@@ -1,5 +1,5 @@
 import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
-import { CarouselStateInterface } from "@interfaces/carouselFilters.interface";
+import { CarouselStateInterface } from "@interfaces/carouselFiltersa.interface";
 
 export const initialState:CarouselStateInterface = {
     [ToolsTypes.react]: false,
