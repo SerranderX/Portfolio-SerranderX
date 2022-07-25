@@ -24,14 +24,14 @@ export const Header: React.FC<HeaderProps> = ({reference, windowDimenion}) => {
     }
 
     return (
-      <>
         <header className={styles.header} ref={reference}>
+          <h1 className={`${styles['header-title']}`}>Portfolio</h1>
           <nav className={styles.nav}>
             <div className={styles.container}>
               {windowDimenion.winWidth < 1200 && 
                 <>
-                  <div style={{padding: '2rem 3rem', height: '12rem', display: 'flex', margin: '3rem 0', alignSelf: 'center'}}>
-                    <Image src={LogoComplete} alt="LogoComplete" width={'600rem'} height={'150rem'} style={{backgroundColor: 'white'}}/>
+                  <div style={{display: 'flex', margin: '1rem 0 3rem 0', alignSelf: 'center'}}>
+                    <Image src={LogoComplete} alt="LogoComplete" width={525} height={112} style={{backgroundColor: 'white'}}/>
                   </div>
                   <motion.a 
                     href="#" 
@@ -71,6 +71,5 @@ export const Header: React.FC<HeaderProps> = ({reference, windowDimenion}) => {
             {windowDimenion.winWidth >= 1200 && <Image src={LogoComplete} alt="LogoComplete" width={200} height={41} style={{backgroundColor: 'white'}}/> }
           </nav>
         </header>
-      </>
     );
 };

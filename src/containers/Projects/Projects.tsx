@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import styles from '@styles/Projects.module.scss';
 import Carousel from 'framer-motion-carousel';
 import { Project } from '@components/Project/Project';
@@ -6,16 +6,17 @@ import { ButtonCarousel } from '@components/ButtonCarousel/ButtonCarousel';
 import { CarouselDots } from '@components/CarouselDots/CarouselDots';
 import { Button } from '@components/Button/Button';
 import { AppContext } from '@context/AppContext';
+import { filterButtonVariantsKeys, filterButtonVariants, filterButtonWhileHover } from '@containers/Projects/variants';
+import { AppInitialState } from "@interfaces/appInitialStatea.interface";
 
 export const Projects = () => {
-    const [autoPlay, setAutoPlay] = React.useState(true);
-    const [carouselStop, setCarouselStop] = React.useState(false);
-    const refContainer = useRef<HTMLDivElement>(null);
+    const [autoPlay, setAutoPlay] = useState(true);
+    const [carouselStop, setCarouselStop] = useState(false);
     const refCarousel = useRef<HTMLDivElement>(null);
-    const [focus, setFocus] = React.useState(false);
-    const state = useContext(AppContext);
+    const [focus, setFocus] = useState(false);
+    const { filters } = useContext<AppInitialState>(AppContext);
 
-    const handleFocusProyect = () => {
+    const handleFocusProject = () => {
         handleAutoPlay();
         setFocus(!focus);
         setCarouselStop(!carouselStop);
@@ -27,33 +28,33 @@ export const Projects = () => {
 
     useEffect(() => {
         const handleClickOutside = (event:any) => {
-            if (refContainer.current && !refContainer.current.contains(event.target) && focus) {
-                handleFocusProyect();
+            if (refCarousel.current && !refCarousel.current.contains(event.target) && focus) {
+                handleFocusProject();
             }
         };
         document.addEventListener("click", handleClickOutside, true);
         return () => {
             document.removeEventListener("click", handleClickOutside, true);
         };
-    }, [refContainer, focus]);
-
-    console.log(state);
+    }, [refCarousel, focus]);
 
     return (
-        <section className={styles.container} ref={refContainer}>
+        <section className={styles.container} >
             <h1>Proyectos</h1>
             <section>
                 <div className={`${styles['filter-container']}`}>
-                    <Button text={'Angular'} handleButton={() => state.handleAngularFilter() } classes={`${styles['filter-button']} ${(state.Angular) ? styles['filter-button-on']: styles['filter-button-off'] }`}/>
-                    <Button text={'React'} handleButton={() => state.handleReactFilter() } classes={`${styles['filter-button']} ${(state.React) ? styles['filter-button-on']: styles['filter-button-off'] }`}/>
-                    <Button text={'Javascript'} handleButton={() => state.handleJavascriptFilter() } classes={`${styles['filter-button']} ${(state.JavaScript) ? styles['filter-button-on']: styles['filter-button-off'] }`}/>
-                    <Button text={'Typescript'} handleButton={() => state.handleTypescriptFilter() } classes={`${styles['filter-button']} ${(state.TypeScript) ? styles['filter-button-on']: styles['filter-button-off'] }`}/>
-                    <Button text={'Java'} handleButton={() => state.handleJavaFilter() } classes={`${styles['filter-button']} ${(state.Java) ? styles['filter-button-on']: styles['filter-button-off'] }`}/>
-                    <Button text={'Nestjs'} handleButton={() => state.handleNestFilter() } classes={`${styles['filter-button']} ${(state.Nest) ? styles['filter-button-on']: styles['filter-button-off'] }`}/>
-                    <Button text={'Nextjs'} handleButton={() => state.handleNextFilter() } classes={`${styles['filter-button']} ${(state.Next) ? styles['filter-button-on']: styles['filter-button-off'] }`}/>
-                    <Button text={'Nodejs'} handleButton={() => state.handleNodeFilter() } classes={`${styles['filter-button']} ${(state.Node) ? styles['filter-button-on']: styles['filter-button-off'] }`}/>
-                    <Button text={'Framer Motion'} handleButton={() => state.handleFramerMotionFilter() } classes={`${styles['filter-button']} ${(state.FramerMotion) ? styles['filter-button-on']: styles['filter-button-off'] }`}/>
-                    <Button text={'Spring'} handleButton={() => state.handleSpringFilter() } classes={`${styles['filter-button']} ${(state.Spring) ? styles['filter-button-on']: styles['filter-button-off'] }`}/>
+                    {filters && filters.map(filter => (
+                        <Button 
+                            key={filter.name}
+                            text={filter.name} 
+                            handleButton={filter.handleFilter} 
+                            stateVariants={filter.state} 
+                            classes={`${styles['filter-button']}`} 
+                            variants={filterButtonVariants} 
+                            variantsKeys={filterButtonVariantsKeys} 
+                            whileHover={filterButtonWhileHover}
+                        />
+                    ))}
                 </div>
                 <div className={styles.carouselContainer} ref={refCarousel}>
                     <Carousel
@@ -87,8 +88,8 @@ export const Projects = () => {
                         {[1, 2, 3, 4, 5, 6].map((num) => (
                             <Project
                                 key={num}
-                                handleFocusProyect={handleFocusProyect}
-                                proyectFocus={focus}
+                                handleFocusProject={handleFocusProject}
+                                projectFocus={focus}
                             />
                         ))}
                     </Carousel>

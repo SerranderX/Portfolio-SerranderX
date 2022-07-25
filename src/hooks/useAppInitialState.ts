@@ -4,9 +4,9 @@ import { useCarouselFilters } from './useCarouselFilters/useCarouselFilters';
 import { AppInitialState } from '@interfaces/appInitialStatea.interface'; 
 
 export const useAppInitialState = ():AppInitialState => {
-    const carouselFiltersState: CarouselFiltersInterface = useCarouselFilters();
+    const carouselFiltersState: CarouselFiltersInterface[] = useCarouselFilters();
 
     return {
-        ...carouselFiltersState
+        filters: carouselFiltersState
     }
 };

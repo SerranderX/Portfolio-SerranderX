@@ -5,7 +5,7 @@ import { CarouselStateInterface, ReducerStateInterface, CarouselFiltersInterface
 import { ActionTypes } from "@hooks/useCarouselFilters/actionTypes";
 import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
 
-export const useCarouselFilters = (): CarouselFiltersInterface => {
+export const useCarouselFilters = (): CarouselFiltersInterface[] => {
     const [state, dispatch] = useReducer<Reducer<CarouselStateInterface, ReducerStateInterface>>(reducer, initialState);
     
     const { Angular, FramerMotion, Java, JavaScript, Nest, Next, Node, React, Spring, TypeScript } = state;
@@ -34,17 +34,56 @@ export const useCarouselFilters = (): CarouselFiltersInterface => {
     const handleNestFilter = () => actionNestFilter(!Nest);
     const handleSpringFilter = () => actionSpringFilter(!Spring);
 
-    return {
-        ...state,
-        handleReactFilter,
-        handleAngularFilter,
-        handleFramerMotionFilter,
-        handleJavascriptFilter,
-        handleTypescriptFilter,
-        handleJavaFilter,
-        handleNextFilter,
-        handleNodeFilter,
-        handleNestFilter,
-        handleSpringFilter
-    };
+    return [
+        {
+            name: ToolsTypes.react,
+            state: React,
+            handleFilter: handleReactFilter
+        },
+        {
+            name: ToolsTypes.angular,
+            state: Angular,
+            handleFilter: handleAngularFilter
+        },
+        {
+            name: ToolsTypes.framerMotion,
+            state: FramerMotion,
+            handleFilter: handleFramerMotionFilter
+        },
+        {
+            name: ToolsTypes.javascript,
+            state: JavaScript,
+            handleFilter: handleJavascriptFilter
+        },
+        {
+            name: ToolsTypes.typescript,
+            state: TypeScript,
+            handleFilter: handleTypescriptFilter
+        },
+        {
+            name: ToolsTypes.java,
+            state: Java,
+            handleFilter: handleJavaFilter
+        },
+        {
+            name: ToolsTypes.next,
+            state: Next,
+            handleFilter: handleNextFilter
+        },
+        {
+            name: ToolsTypes.node,
+            state: Node,
+            handleFilter: handleNodeFilter
+        },
+        {
+            name: ToolsTypes.nest,
+            state: Nest,
+            handleFilter: handleNestFilter
+        }, 
+        {
+            name: ToolsTypes.spring,
+            state: Spring,
+            handleFilter: handleSpringFilter
+        }
+    ];
 }

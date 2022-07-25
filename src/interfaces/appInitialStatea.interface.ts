@@ -1,6 +1,12 @@
 import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
+import { CarouselFiltersInterface } from "./carouselFiltersa.interface";
 
 export interface AppInitialState {
+    filters: CarouselFiltersInterface[]
+}
+
+/*
+interface  {
     // CarouselFiltersInterface
     // States
     [ToolsTypes.react]: boolean;
@@ -24,4 +30,4 @@ export interface AppInitialState {
     handleNodeFilter: () => void;
     handleNestFilter: () => void;
     handleSpringFilter: () => void;
-}
+}*/

@@ -7,7 +7,7 @@
 
 .labelText {
     margin: 20px 0 0 20px;
-    padding: 0 0 0 20px;
+    padding: 0 20px 0 20px;
     cursor: initial;
     border-radius: 2%;
     position: absolute;
@@ -38,7 +38,7 @@
 
 .active {
     padding: 0 10px 0 10px;
-    border-radius: 50%;
+    border-radius: 50% 50% 0 0;
     margin-left: 30px;
     top: -25px;
     font-size: 20px;

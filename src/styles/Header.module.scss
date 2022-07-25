@@ -4,6 +4,14 @@
     display: flex;
     padding: 1rem;
     width: 100%;
+    place-content: center;
+}
+
+.header-title {
+    font-size: $second-title-size;
+    color: $primary-color;
+    margin: 0 3rem; 
+    align-self: center;
 }
 
 .container {
@@ -16,8 +24,7 @@
     display: inline-flex;
     justify-content: flex-end;
     height: fit-content;
-    margin: 1rem 3rem;
-    width: 100%;
+    margin: 1rem 3rem 1rem 8rem;
     text-align-last: end;
 }
 
@@ -106,6 +113,19 @@
 }
 
 @media (max-width: 1200px) {
+
+    .header-title {
+        font-size: 5rem;
+        text-align: center;
+        margin: 0 3rem; 
+        align-self: center;
+    }
+
+    .header {
+        margin-top: 2rem;
+        display: block;
+    }
+
     .nav a {
         font-size: $mobile-second-title-size;
         text-align: center;
@@ -114,7 +134,7 @@
 
     .nav {
         display: block;
-        margin: 0 3rem 1rem 3rem;
+        margin: 0;
     }
 
     .container {
