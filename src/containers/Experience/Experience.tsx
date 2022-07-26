@@ -23,7 +23,7 @@ export const Experience: React.FC<ExperienceProps> = ({windowDimenions}) => {
     }, [windowDimenions]);
 
     return (
-        <section className={styles.container}>
+        <section className={styles.container} id="experience">
             <article className={styles.content}>
                 <h1>Experiencia</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quidem reprehenderit iure doloribus nobis sunt quisquam cumque commodi ut, alias fuga, quibusdam minima iusto. Dolor facilis blanditiis voluptas quisquam hic!</p>

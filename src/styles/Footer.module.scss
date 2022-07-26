@@ -55,20 +55,17 @@
   .Footer-distributed .Footer-right {
     float: right;
     margin-top: 6px;
-    max-width: 180px;
+    max-width: 250px;
   }
   
   .Footer-distributed .Footer-right a {
     display: inline-block;
-    width: 36px;
-    height: 36px;
-    background-color: $background-color-dark-opac;
     border-radius: 2px;
     font-size: 20px;
     color: $primary-color;
     text-align: center;
     line-height: 35px;
-    margin: 5px 3px;
+    margin: 5px 5px;
     transition:all .25s;
     border-radius: 50%;
   }

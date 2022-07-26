@@ -6,8 +6,8 @@ function Icon() {
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
       viewBox="4 3 256 256"
-      height="35"
-      width="35"
+      height="45"
+      width="45"
     >
       <path
         fill="#000"

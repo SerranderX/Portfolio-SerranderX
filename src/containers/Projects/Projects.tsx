@@ -39,7 +39,7 @@ export const Projects = () => {
     }, [refCarousel, focus]);
 
     return (
-        <section className={styles.container} >
+        <section className={styles.container} id="projects">
             <h1>Proyectos</h1>
             <section>
                 <div className={`${styles['filter-container']}`}>

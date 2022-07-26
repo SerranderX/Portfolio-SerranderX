@@ -53,7 +53,7 @@ export const Contact = () => {
     }
 
     return (
-        <section className={styles.container}>
+        <section className={styles.container} id="contact">
             <h1 className={styles.title}>Contact me</h1>
             <article className={styles.content}>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatum doloribus nam doloremque itaque pariatur delectus nihil, sed consectetur eveniet vero inventore soluta placeat, quis sit nesciunt cupiditate. Nobis, aspernatur!</p>

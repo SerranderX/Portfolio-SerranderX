@@ -47,10 +47,10 @@ export const Footer: React.FC<FooterProps> = ({reference}) => {
         </div>
         <div className={`${styles['Footer-left']}`}>
           <p className={`${styles['Footer-links']}`}>
-            <a>About</a>
-            <a>Experience</a>
-            <a>Projects</a>
-            <a>Contact</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
           </p>
           <p className={`${styles['Footer-powered']}`}>{ENV.developerData.signature}</p>
         </div>
