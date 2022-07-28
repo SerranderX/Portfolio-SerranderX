@@ -2,10 +2,11 @@ import React, {LegacyRef, MutableRefObject, RefObject, useState} from 'react';
 import Image from 'next/image';
 import styles from '@styles/Header.module.scss';
 import LogoComplete from '@logos/logo-complete.png';
-import { WindowSize } from '@interfaces/windowSize.interface';  
-import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
+import { WindowSize } from '@interfaces/windowSize.interface';
 import { AnimatePresence, motion } from 'framer-motion'; 
 import { MenuToggle } from '@containers/MenuToggle/MenuToggle';
+import { LenguageButton } from "@components/LenguageButton/LenguageButton";
+
 
 const variantsSection = {
   open: { opacity: 1, height: 'auto' },
@@ -26,7 +27,8 @@ export const Header: React.FC<HeaderProps> = ({reference, windowDimenion}) => {
 
     return (
         <header className={styles.header} ref={reference} id="header">
-          <h1 className={`${styles['header-title']}`}>Portfolio</h1>
+          {windowDimenion.winWidth < 1200 && <h1 className={`${styles['header-title']}`}>Portfolio</h1>}
+          <LenguageButton />
           <nav className={styles.nav}>
             <div className={styles.container}>
               {windowDimenion.winWidth < 1200 && 
@@ -51,7 +53,6 @@ export const Header: React.FC<HeaderProps> = ({reference, windowDimenion}) => {
                         animate={navState ? "open" : "collapsed"}
                         exit="collapsed"
                         variants={variantsSection}
-                        
                         transition={{ duration: .6, ease: [0.04, 0.62, 0.23, 0.98] }}
                       >
                         <motion.a href="#about" animate={{opacity: [0, 1]}} className={`${styles['button-mobile']} ${styles['button-mobile-text-center']}`}>About</motion.a>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '@styles/Presentation.module.scss';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -9,9 +9,9 @@ import { WindowSize } from '@interfaces/windowSize.interface';
 
 export const Presentation = () => {
     const name = ['Felipe Diaz', 'SerranderX'];
-    const [nameIndex, setNameIndex] = React.useState(0);
-    const [state, setState] = React.useState(false);
-    const [animationTimer, setAnimationTimer] = React.useState(false);
+    const [nameIndex, setNameIndex] = useState(0);
+    const [state, setState] = useState(false);
+    const [animationTimer, setAnimationTimer] = useState(false);
     const widnowsDimensions: WindowSize = useWindowsDimensions();
 
     useEffect(() => {
@@ -44,6 +44,7 @@ export const Presentation = () => {
     return (
         <section className={`${styles['container-presentation']}`}>
             <article className={`${styles['title-container']}`}>
+                {widnowsDimensions.winWidth > 1200 && <h3 style={{color: 'white', margin: ".6em 0 .6em .5em"}}>Portafolio de proyectos</h3>}
                 <h1 className={`${styles.title}`}>
                     Bienvenido, <br/>
                     mi nombre es {' '}
@@ -61,9 +62,13 @@ export const Presentation = () => {
                     width: {widnowsDimensions.winWidth} height: {widnowsDimensions.winHeight}
                 </p>
             </article>
-            <article className={`${styles['photo-container']}`}>
+            <motion.article 
+                className={`${styles['photo-container']}`}
+                animate={{ opacity: [0, 1], boxShadow: `0 0 5px rgba(8, 139, 204, .8), 0 0 25px rgba(8, 139, 204, .8), 0 0 5px rgba(8, 139, 204, .8), 0 0 100px rgba(8, 139, 204, .8)`}}
+                transition={{ duration: 1, delay: .3, ease: [0.04, 0.62, 0.23, 0.98] }}
+            >
                 <Image src={Photo} alt="Picture of the author" width={480} height={480} className={styles.photo} />
-            </article>
+            </motion.article>
         </section>
     );
 };
