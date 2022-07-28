@@ -12,7 +12,7 @@ interface ProjectProps {
 
 export const Project: React.FC<ProjectProps> = ({handleFocusProject: handleFocusProject, projectFocus: projectFocus}) => {
     const goToProject = () => {
-        window.open('https://pokecardexjs.com', '_blank');
+        window.open('https://pokecarddexjs.com', '_blank');
     }
 
     return (
