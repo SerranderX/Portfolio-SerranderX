@@ -1,6 +1,9 @@
-export const es = {
-    language: "es",
-    languageName: "Español",
+import { ESIcon } from '@iconos/lenguage/es';
+import { AppLenguageData, AppHeaderData } from '@interfaces/appLenguageData.interface';
+
+export const es: AppLenguageData = {
+    lenguage: "es",
+    lenguageName: "Español",
     data:{
         header: {},
         presentation: {},
@@ -9,5 +12,10 @@ export const es = {
         contact: {},
         aboutme: {},
         footer: {},
-    }
+    },
+    flagIcon: ESIcon,
+}
+
+const headerData: AppHeaderData = {
+    
 }

@@ -4,7 +4,6 @@ body {
   margin: 0;
   font-family: Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: linear-gradient(180deg, rgb(2 1 10) 25%, 75%, rgb(20 1 82));
-
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

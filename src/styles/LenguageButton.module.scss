@@ -1,0 +1,72 @@
+@import '_vars.scss';
+
+.lenguage-container {
+    display: block;
+    height: 2.5rem;
+    width: fit-content;
+    right: 3em;
+    margin: 1.2em 0;
+    align-self: center;
+}
+
+.lenguage-button svg {
+    margin-left: 0.5rem;
+    margin-right: 3px;
+}
+
+.lenguage-container ul {
+    margin: 0;
+    padding: 2px 0 0 0;
+    display: block;
+    list-style: none;
+    position: relative;
+    top: -2px;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+
+.lenguage-container ul li{
+    margin: 0 0 0 .2em;
+    padding: 0.2em 0.3em;
+    color: $primary-color;
+    text-transform: uppercase;
+    font-size: $text-min-size;
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.lenguage-container ul li svg {
+    margin-left: auto;
+    margin-right: 3px;
+}
+
+.lenguage-button {
+    padding: 0.2em 0.3em;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    text-transform: uppercase;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: $text-base-size;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+    .lenguage-container {
+        top: 1em;
+        left: 2em;
+        position: absolute;
+        height: 4rem;
+    }
+
+    .lenguage-button {
+        font-size: $mobile-text-base-size;
+    }
+
+    .lenguage-container ul li {
+        font-size: $mobile-text-min-size;
+    } 
+}

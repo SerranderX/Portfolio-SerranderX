@@ -1,6 +1,6 @@
 import { ToolsTypes } from '@hooks/useCarouselFilters/ToolsTypes';
 import { AppInitialState } from '@interfaces/appInitialStatea.interface';
-import { createContext } from 'react';
+import { createContext, SVGProps } from 'react';
 
 const initialState: AppInitialState = {
     filters: [
@@ -45,7 +45,41 @@ const initialState: AppInitialState = {
             state: false,
             handleFilter: function(){}
         }
-    ]
+    ],
+    lenguageState: {
+        lenguageSelected: "",
+        changeLenguageSelected: (lenguage:string) => {},
+        lenguageSelectedData: {
+            lenguage: "",
+            lenguageName: "",
+            data: {
+                header: {},
+                presentation: {},
+                experience: {},
+                projects: {},
+                contact: {},
+                aboutme: {},
+                footer: {},
+            },
+            flagIcon: (props: SVGProps<SVGSVGElement>) => { return <></> },
+        },
+        lenguageList: [
+            {
+                lenguage: "",
+                lenguageName: "",
+                data: {
+                    header: {},
+                    presentation: {},
+                    experience: {},
+                    projects: {},
+                    contact: {},
+                    aboutme: {},
+                    footer: {},
+                },
+                flagIcon: (props: SVGProps<SVGSVGElement>) => { return <></> },
+            }
+        ]
+    }
 }
 
 export const AppContext = createContext(initialState);
