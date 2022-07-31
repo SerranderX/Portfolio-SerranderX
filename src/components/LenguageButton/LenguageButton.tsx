@@ -39,7 +39,7 @@ export const LenguageButton = () => {
                                 <motion.li 
                                     key={item.lenguage}
                                     whileHover={{ 
-                                        backgroundColor: "rgba(238, 35, 130, .7)", 
+                                        backgroundColor: "#ee234fb2", 
                                         boxShadow: `0 0 5px rgba(238, 35, 130, 0.6),
                                                     0 0 25px rgba(238, 35, 130, 0.6),
                                                     0 0 5px rgba(238, 35, 130, 0.6),

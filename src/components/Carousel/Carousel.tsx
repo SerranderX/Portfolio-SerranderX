@@ -2,9 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ArrowLeft } from '@iconos/ArrowLeft';
 import { ArrowRight } from '@iconos/ArrowRight';
 import { IconSkill } from '@components/IconSkill/IconSkill';
+import { ExperienceItems } from '@interfaces/experienceItems.interface';
 
 interface CarouselProps {
-    items: Array<any>;
+    items: Array<ExperienceItems>;
     containerClass?: string;
     visibleItems: number;
     autoPlay?: boolean;
@@ -78,8 +79,8 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
                 </button>
             </div>
             <ul ref={ulRef} style={{ width: ulWidth}}>
-                {items.map((item:(props:any) => JSX.Element, key:number) => 
-                    <IconSkill Item={item} key={key} index={key} xPosition={xPosition()} />
+                {items.map((item:ExperienceItems, key:number) => 
+                    <IconSkill Item={item} key={item.name} index={key} xPosition={xPosition()} />
                 )}
             </ul>
             <div>

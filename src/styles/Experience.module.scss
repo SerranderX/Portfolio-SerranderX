@@ -39,7 +39,7 @@
     grid-area: description;
     font-size: $text-base-size;
     color: $primary-color;
-    margin: 0;
+    margin: 0 8rem;
     padding: 0;
     text-align: $text-alignment;
 }
@@ -98,6 +98,7 @@
     }
 
     .content p {
+        margin: 0;
         font-size: $mobile-text-base-size;
     }
 

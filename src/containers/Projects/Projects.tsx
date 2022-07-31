@@ -15,6 +15,7 @@ export const Projects = () => {
     const refCarousel = useRef<HTMLDivElement>(null);
     const [focus, setFocus] = useState(false);
     const { filters } = useContext<AppInitialState>(AppContext);
+    const { lenguageState: { lenguageSelectedData: { data: { projects }} } } = useContext(AppContext);
 
     const handleFocusProject = () => {
         handleAutoPlay();
@@ -40,12 +41,12 @@ export const Projects = () => {
 
     return (
         <section className={styles.container} id="projects">
-            <h1>Proyectos</h1>
+            <h1>{projects.title}</h1>
             <section>
                 <div className={`${styles['filter-container']}`}>
                     {filters && filters.map(filter => (
                         <Button 
-                            key={filter.name}
+                            key={`${filter.name}-filters`}
                             text={filter.name} 
                             handleButton={filter.handleFilter} 
                             stateVariants={filter.state} 
@@ -87,7 +88,7 @@ export const Projects = () => {
                     >
                         {[1, 2, 3, 4, 5, 6].map((num) => (
                             <Project
-                                key={num}
+                                key={`${num}-project`}
                                 handleFocusProject={handleFocusProject}
                                 projectFocus={focus}
                             />

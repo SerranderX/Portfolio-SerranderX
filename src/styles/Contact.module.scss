@@ -14,6 +14,7 @@
 
 .content {
     grid-area: content;
+    text-align: center;
 }
 
 .formContainer {
@@ -33,7 +34,7 @@
 .container p {
     font-size: $text-base-size;
     text-align: $text-alignment;
-    margin: 0;
+    margin: 3rem;
 }
 
 .formContainer form {

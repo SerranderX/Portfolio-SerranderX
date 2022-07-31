@@ -1,27 +1,31 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import { Button } from '@components/Button/Button'; 
 import { ButtonProps } from '@interfaces/buttona.interface';
 import { Input } from '@components/Input/Input';
 import { InputProps } from '@interfaces/inputa.interface';
 import styles from '@styles/Contact.module.scss';
+import { AppContext } from "@context/AppContext";
+import Image from "next/image";
+import EmailSticker from '@images/news.png';
 
 export const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
+    const { lenguageState: { lenguageSelectedData: { data: { contact }} } } = useContext(AppContext);
 
     const handleButton = () => {}
 
     const submitProps:ButtonProps = {
-        text: "Enviar",
+        text: contact.inputSubmit,
         handleButton
     }
 
     const nameINPProps:InputProps = {
         type: "text",
         name: "name",
-        labelText: "Nombre",
+        labelText: contact.inputName,
         value: name,
         handleValue: setName
     }
@@ -29,7 +33,7 @@ export const Contact = () => {
     const emailINPProps:InputProps = {
         type: "email",
         name: "email",
-        labelText: "Email",
+        labelText: contact.inputEmail,
         value: email,
         handleValue: setEmail
     }
@@ -37,7 +41,7 @@ export const Contact = () => {
     const subjectINPProps:InputProps = {
         type: "text",
         name: "subject",
-        labelText: "Asunto",
+        labelText: contact.inputSubject,
         value: subject,
         handleValue: setSubject,
     }
@@ -45,7 +49,7 @@ export const Contact = () => {
     const messageINPProps:InputProps = {
         type: "textarea",
         name: "message",
-        labelText: "Mensaje",
+        labelText: contact.inputMessage,
         value: message,
         handleValue: setMessage,
         rows: 8,
@@ -54,9 +58,10 @@ export const Contact = () => {
 
     return (
         <section className={styles.container} id="contact">
-            <h1 className={styles.title}>Contact me</h1>
+            <h1 className={styles.title}>{contact.title}</h1>
             <article className={styles.content}>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatum doloribus nam doloremque itaque pariatur delectus nihil, sed consectetur eveniet vero inventore soluta placeat, quis sit nesciunt cupiditate. Nobis, aspernatur!</p>
+                <Image src={EmailSticker} alt="" width={250} height={250}/>
+                <p>{contact.description}</p>
             </article>
             <article className={styles.formContainer}>
                 <form action="">

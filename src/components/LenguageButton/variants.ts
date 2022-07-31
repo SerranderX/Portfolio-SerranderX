@@ -15,12 +15,12 @@ export const variantsList: Variants = {
 export const buttonVariants: Variants = {
     on: {
         border: "1px solid rgb(238, 35, 130)",
-        backgroundColor: "rgba(128, 19, 85)",
+        backgroundColor: "rgba(128, 19, 85, .4)",
         borderRadius: "5px",
         transition:{ duration: .6, ease: [0.04, 0.62, 0.23, 0.98] }
     },
     off: {
-        border: "none",
+        border: "1px solid rgb(238, 35, 130, 0)",
         backgroundColor: "rgba(0, 0, 0, 0)",
         borderRadius: "5px",
         transition:{ duration: .6, ease: [0.04, 0.62, 0.23, 0.98] }

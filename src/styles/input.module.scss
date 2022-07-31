@@ -9,16 +9,16 @@
     margin: 20px 0 0 20px;
     padding: 0 20px 0 20px;
     cursor: initial;
-    border-radius: 2%;
     position: absolute;
     top: 0;
     font-size: $text-base-size;
     color: $primary-color;
-    background-color: $background-color-light-opac;
+    background-color: $background-color-light;
     -webkit-transition: top .2s ease-in-out, 
     font-size .2s ease-in-out;
     transition: top .2s ease-in-out, 
     font-size .2s ease-in-out;
+    border-radius: 50% 50% 0 0;
 }
 
 
@@ -28,7 +28,7 @@
     padding: 13px;
     border: 2px solid $tertiary-color;
     font-size: $text-base-size;
-    background-color: $background-color-light-opac;
+    background-color: $background-color-light;
     color: $primary-color;
 
     &:focus {
@@ -38,7 +38,6 @@
 
 .active {
     padding: 0 10px 0 10px;
-    border-radius: 50% 50% 0 0;
     margin-left: 30px;
     top: -25px;
     font-size: 20px;
@@ -50,7 +49,7 @@
     margin: 10px;
     border: 2px solid $tertiary-color;
     font-size: $text-base-size;
-    background-color: $background-color-light-opac;
+    background-color: $background-color-light;
     color: $primary-color;
     height: 200px;
 

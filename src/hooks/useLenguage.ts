@@ -23,7 +23,7 @@ const getLenguage = (lenguageSelected: string) => {
 }
 
 export const useLenguage = (): AppLenguageInterface => {
-    const [lenguageSelected, setLenguageSelected] = useState("us");
+    const [lenguageSelected, setLenguageSelected] = useState("es");
     const [lenguageSelectedData, setLenguageSelectedData] = useState(getLenguage(lenguageSelected));
     const lenguageList = [es, us];
 

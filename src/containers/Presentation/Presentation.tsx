@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styles from '@styles/Presentation.module.scss';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -6,6 +6,7 @@ import Photo from '@images/photo1.jpg';
 import { titleNameVariants } from '@containers/Presentation/animations';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
 import { WindowSize } from '@interfaces/windowSize.interface';
+import { AppContext } from '@context/AppContext';
 
 export const Presentation = () => {
     const name = ['Felipe Diaz', 'SerranderX'];
@@ -13,6 +14,7 @@ export const Presentation = () => {
     const [state, setState] = useState(false);
     const [animationTimer, setAnimationTimer] = useState(false);
     const widnowsDimensions: WindowSize = useWindowsDimensions();
+    const { lenguageState: { lenguageSelectedData: {data: { presentation }} } } = useContext(AppContext);
 
     useEffect(() => {
         if (!animationTimer) {
@@ -44,10 +46,10 @@ export const Presentation = () => {
     return (
         <section className={`${styles['container-presentation']}`}>
             <article className={`${styles['title-container']}`}>
-                {widnowsDimensions.winWidth > 1200 && <h3 style={{color: 'white', margin: ".6em 0 .6em .5em"}}>Portafolio de proyectos</h3>}
+                {widnowsDimensions.winWidth > 1200 && <h3 style={{color: 'white', margin: ".6em 0 .6em .5em"}}>{presentation.title}</h3>}
                 <h1 className={`${styles.title}`}>
-                    Bienvenido, <br/>
-                    mi nombre es {' '}
+                    {presentation.greeting1} <br/>
+                    {presentation.greeting2} {' '}
                     <motion.span
                         variants={titleNameVariants}
                         initial="enter"
@@ -58,8 +60,7 @@ export const Presentation = () => {
                     >{name[nameIndex]}</motion.span>
                 </h1>
                 <p className={`${styles.description}`}>
-                    This is a simple example of a Next.js App.
-                    width: {widnowsDimensions.winWidth} height: {widnowsDimensions.winHeight}
+                    {presentation.description}
                 </p>
             </article>
             <motion.article 

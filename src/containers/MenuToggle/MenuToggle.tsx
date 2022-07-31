@@ -3,6 +3,7 @@ import { motion, Transition, Variants } from "framer-motion";
 
 interface MenuToggleProps {
     show: boolean;
+    handlerClick: () => void;
 }
 
 interface PathProps {
@@ -21,10 +22,10 @@ const Path: React.FC<PathProps> = (props) => (
     />
 );
 
-export const MenuToggle: React.FC<MenuToggleProps> = ({ show }) => {
+export const MenuToggle: React.FC<MenuToggleProps> = ({ show, handlerClick }) => {
     return (
         <>
-            <svg width="1.2em" height="1.2em" viewBox="0 0 23 23" style={{verticalAlign: 'middle', marginRight: '3.5rem'}}>
+            <svg width="1.5em" height="1.5em" viewBox="0 0 23 23" style={{alignSelf: 'center'}} onClick={handlerClick}>
                 <Path
                     stroke={"hsl(0, 100%, 100%)"}
                     variants={{
@@ -49,7 +50,6 @@ export const MenuToggle: React.FC<MenuToggleProps> = ({ show }) => {
                     }}
                 />
             </svg>
-            <span>Menu</span>
         </>
     );
 };

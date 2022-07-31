@@ -1,16 +1,17 @@
 import React, { SVGProps } from 'react';
 import { motion } from 'framer-motion';
+import { ExperienceItems } from '@interfaces/experienceItems.interface';
 
 interface IconSkillProps {
     index: number;
-    Item: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+    Item: ExperienceItems;
     xPosition: number;
 } 
 
 export const IconSkill:React.FC<IconSkillProps> = ({index, Item, xPosition}) => {
     return (
-        <motion.li key={index} animate={{x:xPosition}} transition={{ duration: .2 }}>
-            <Item />
-        </motion.li> 
+        <motion.li animate={{x:xPosition}} transition={{ duration: .2 }}>
+            <Item.icon />
+        </motion.li>
     );
 };

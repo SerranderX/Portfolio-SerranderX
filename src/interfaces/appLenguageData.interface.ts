@@ -17,10 +17,51 @@ export interface AppData {
     footer: AppFooterData;
 }
 
-export interface AppHeaderData {}
-export interface AppPresentationData {}
-export interface AppExperienceData {}
-export interface AppProjectsData {}
-export interface AppContactData {}
-export interface AppAboutmeData {}
+export interface AppHeaderData {
+    navbar: AppNavbarData;
+}
+
+export interface AppNavbarData {
+    about: string;
+    experience: string;
+    projects: string;
+    contact: string;
+}
+
+export interface AppPresentationData {
+    title: string;
+    greeting1: string;
+    greeting2: string;
+    description: string;
+}
+
+
+export interface AppExperienceData {
+    title: string;
+    description: string;
+}
+export interface AppProjectsData {
+    title: string;
+    description: string;
+}
+export interface AppContactData {
+    title: string;
+    description: string;
+    inputName: string;
+    inputEmail: string;
+    inputSubject: string;
+    inputMessage: string;
+    inputSubmit: string;
+}
+export interface AppAboutmeData {
+    title: string;
+    general: {
+        title: string;
+        description: string;
+    },
+    skills: {
+        title: string;
+        description: string;
+    }
+}
 export interface AppFooterData {}
