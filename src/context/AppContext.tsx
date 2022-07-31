@@ -53,12 +53,48 @@ const initialState: AppInitialState = {
             lenguage: "",
             lenguageName: "",
             data: {
-                header: {},
-                presentation: {},
-                experience: {},
-                projects: {},
-                contact: {},
-                aboutme: {},
+                header: {
+                    navbar: {
+                        about: "",
+                        experience: "",
+                        projects: "",
+                        contact: ""
+                    }
+                },
+                presentation: {
+                    title: "",
+                    greeting1: "",
+                    greeting2: "",
+                    description: ""
+                },
+                experience: {
+                    title: "",
+                    description: ""
+                },
+                projects: {
+                    title: "",
+                    description: ""
+                },
+                contact: {
+                    title: "",
+                    description: "",
+                    inputName: "",
+                    inputEmail: "",
+                    inputSubject: "",
+                    inputMessage: "",
+                    inputSubmit: "",
+                },
+                aboutme: {
+                    title: "",
+                    general: {
+                        title: "",
+                        description: ""
+                    },
+                    skills: {
+                        title: "",
+                        description: ""
+                    }
+                },
                 footer: {},
             },
             flagIcon: (props: SVGProps<SVGSVGElement>) => { return <></> },
@@ -68,12 +104,48 @@ const initialState: AppInitialState = {
                 lenguage: "",
                 lenguageName: "",
                 data: {
-                    header: {},
-                    presentation: {},
-                    experience: {},
-                    projects: {},
-                    contact: {},
-                    aboutme: {},
+                    header: {
+                        navbar: {
+                            about: "",
+                            experience: "",
+                            projects: "",
+                            contact: ""
+                        }
+                    },
+                    presentation: {
+                        title: "",
+                        greeting1: "",
+                        greeting2: "",
+                        description: ""
+                    },
+                    experience: {
+                        title: "",
+                        description: ""
+                    },
+                    projects: {
+                        title: "",
+                        description: ""
+                    },
+                    contact: {
+                        title: "",
+                        description: "",
+                        inputName: "",
+                        inputEmail: "",
+                        inputSubject: "",
+                        inputMessage: "",
+                        inputSubmit: "",
+                    },
+                    aboutme: {
+                        title: "",
+                        general: {
+                            title: "",
+                            description: ""
+                        },
+                        skills: {
+                            title: "",
+                            description: ""
+                        }
+                    },
                     footer: {},
                 },
                 flagIcon: (props: SVGProps<SVGSVGElement>) => { return <></> },
