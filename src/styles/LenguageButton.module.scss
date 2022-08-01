@@ -57,13 +57,16 @@
 
 @media (max-width: 1200px) {
     .lenguage-container {
-        top: 1em;
-        left: 2em;
+        top: 3em;
+        right: -31em;
         position: absolute;
         height: 4rem;
+        border: 2px solid rgb(238, 35, 130);
+        border-radius: 10px;
     }
 
     .lenguage-button {
+        padding: 0.2em 0.4em;
         font-size: $mobile-text-base-size;
     }
 

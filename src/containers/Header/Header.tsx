@@ -49,7 +49,11 @@ export const Header: React.FC<HeaderProps> = ({reference, windowDimenion}) => {
   
   return (
     <header className={styles.header} ref={reference} id="header">
-          {windowDimenion.winWidth >= 1200 && <Image src={LogoComplete} alt="LogoComplete" width={200} height={40} /> }
+          {windowDimenion.winWidth >= 1200 && 
+            <div>
+              <Image src={LogoComplete} alt="LogoComplete" width={200} height={75} /> 
+            </div>
+          }
           <nav className={styles.nav}>
             <div className={styles.container}>
               {windowDimenion.winWidth < 1200 && 
@@ -97,7 +101,7 @@ export const Header: React.FC<HeaderProps> = ({reference, windowDimenion}) => {
               }
             </div>
           </nav>
-          {windowDimenion.winWidth >= 1200 && <LenguageButton />}
+          <LenguageButton />
         </header>
     );
 };

@@ -40,7 +40,7 @@ export const us: AppLenguageData = {
             title: "About me",
             general: {
                 title: "General",
-                description: "I am originally from the city of Santiago, Chile. I am 26 years old and since 2019 I work formally as a software developer. Since I was a child I have always liked technology and computing, I had the privilege of studying it at the University, where I obtained the degree of 'Computer Engineer' where I found my vocation. I consider that my greatest strength is perseverance and the ability to overcome any challenge that gets in the way of my goals."
+                description: "I am 26 years old and I am originally from the city of Santiago, Chile. Since 2019 I work formally as a software developer. Since I was a child I have always liked technology and computing, I had the privilege of studying it at the University, where I obtained the degree of 'Computer Engineer' where I found my vocation. I consider that my greatest strength is perseverance and the ability to overcome any challenge that gets in the way of my goals."
             },
             skills: {
                 title: "Hobbies",
