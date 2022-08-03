@@ -22,7 +22,6 @@ export const Projects = () => {
         handleAutoPlay();
         setFocus(!focus);
         setCarouselStop(!carouselStop);
-        console.log("handleFocusProject");
     }
 
     const handleAutoPlay = () => {
