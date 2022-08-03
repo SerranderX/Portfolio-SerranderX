@@ -21,7 +21,7 @@ export const CarouselDots: React.FC<CarouselDotsProps> = ({setActiveIndex, activ
             {new Array(numItem).fill("").map((_, i) => (
                 <span
                     onClick={() => handleDotsClick(i)}
-                    key={i}
+                    key={`${i}-dot`}
                     className={`${styles.dot} ${(i === activeIndex) ? styles.active : styles.inactive}`}
                 ></span>
             ))}

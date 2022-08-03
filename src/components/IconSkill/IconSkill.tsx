@@ -12,7 +12,7 @@ export const IconSkill:React.FC<IconSkillProps> = ({index, Item, xPosition}) => 
     return (
         <motion.li animate={{x:xPosition}} transition={{ duration: .2 }}>
             <Item.icon />
-            <span style={{color: 'white'}}>{Item.name}</span>
+            <span style={{color: 'white', padding: '.1em 0 0 0' }}>{Item.name}</span>
         </motion.li>
     );
 };

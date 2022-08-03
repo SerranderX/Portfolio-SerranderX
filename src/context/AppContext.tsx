@@ -95,7 +95,14 @@ const initialState: AppInitialState = {
                         description: ""
                     }
                 },
-                footer: {},
+                footer: {
+                    navbar: {
+                        about: "",
+                        experience: "",
+                        projects: "",
+                        contact: "",
+                    }
+                },
             },
             flagIcon: (props: SVGProps<SVGSVGElement>) => { return <></> },
         },
@@ -146,7 +153,14 @@ const initialState: AppInitialState = {
                             description: ""
                         }
                     },
-                    footer: {},
+                    footer: {
+                        navbar: {
+                            about: "",
+                            experience: "",
+                            projects: "",
+                            contact: "",
+                        }
+                    },
                 },
                 flagIcon: (props: SVGProps<SVGSVGElement>) => { return <></> },
             }

@@ -23,6 +23,10 @@ import MysqlIcon from "@iconos/skills/Mysql";
 import WebpackIcon from "@iconos/skills/Webpack";
 import PythonIcon from "@iconos/skills/Python";
 import { ExperienceItems } from '@interfaces/experienceItems.interface';
+import { ProjectInterface } from '@interfaces/project.interface';
+import PokecardexjsSS from '@images/projects/pokecardexjs.jpg';
+import PetgramSS from '@images/projects/petgram.jpg';
+import TodoMachineSS from '@images/projects/todo-machine.jpg';
 
 export const ExperienceIcons: ExperienceItems[] = [
     {
@@ -144,5 +148,53 @@ export const ExperienceIcons: ExperienceItems[] = [
         name: "Kubernetes",
         url: "https://kubernetes.io/es/",
         icon: KubernetesIcon,
+    },
+];
+
+export const ProjectsData: ProjectInterface[] = [
+    {
+        name: "PokecarddexJS",
+        description: [
+            {
+                lenguage: "es",
+                data: "Una simple y rapida pokedex inspirada en el juego de cartas de Pokemon."
+            },
+            {
+                lenguage: "us",
+                data: "A simple and fast pokedex inspired in the Pokemon trading card game."
+            }
+        ],
+        url: "https://pokecarddexjs.com",
+        image: PokecardexjsSS,
+    },
+    {
+        name: "Petgram",
+        description: [
+            {
+                lenguage: "es",
+                data: "Un clon de instagram enfocado en mascotas con una API de imagenes."
+            },
+            {
+                lenguage: "us",
+                data: "A clone of instagram focused on pets with an API of images."
+            }
+        ],
+        url: "https://petgram-4tsdddk6c-serranderx.vercel.app",
+        image: PetgramSS,
+    },
+    {
+        name: "ToDo Machine",
+        description: [
+            {
+                lenguage: "es",
+                data: "Una aplicacion que permite crear una lista de tareas y realizarlas."
+            },
+            {
+                lenguage: "us",
+                data: "An application that allows you to create a list of tasks and do them."
+            }
+        ],
+        url: "https://SerranderX.github.io/ToDo-Machine",
+        image: TodoMachineSS,
     },
 ];

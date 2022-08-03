@@ -28,6 +28,8 @@
   .Footer-distributed p.Footer-links a {
     display: inline-block;
     line-height: 1.8;
+    padding: 5px;
+    margin: 0 .3em;
     text-decoration: none;
     color: inherit;
     transition: ease .25s;
@@ -36,16 +38,6 @@
   .Footer-distributed p.Footer-links a:hover {
     color: $primary-color;
     transition: ease .25s;
-  }
-  
-  .Footer-distributed .Footer-links a:before {
-    content: "·";
-    font-size: 20px;
-    left: 0;
-    margin: 0 0 0 .5rem;
-    color: white;
-    display: inline-block;
-    padding-right: 5px;
   }
   
   .Footer-distributed .Footer-links .link-1:before {
@@ -94,6 +86,7 @@
   
     .Footer-distributed .Footer-left p.Footer-links {
       line-height: 2.5;
+      margin: 2rem 0 2rem 0;
     }
 
     .Footer-distributed p.Footer-links {
@@ -118,7 +111,7 @@
     .Footer-distributed {
       display: table;
       height: 25rem;
-      padding: 45px 50px;
+      padding: 45px 20px;
     }
 
     .Footer-distributed .Footer-links a:before {

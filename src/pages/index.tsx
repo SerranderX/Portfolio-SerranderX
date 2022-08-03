@@ -13,7 +13,6 @@ import { useNearScreen } from '@hooks/useNearScreen';
 import { WindowSize } from '@interfaces/windowSize.interface';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
 
-
 const Home: NextPage = () => {
   const [showHeader, refHeader] = useNearScreen();
   const [showFooter, refFooter] = useNearScreen();

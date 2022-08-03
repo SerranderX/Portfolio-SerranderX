@@ -64,4 +64,6 @@ export interface AppAboutmeData {
         description: string;
     }
 }
-export interface AppFooterData {}
+export interface AppFooterData {
+    navbar: AppNavbarData;
+}

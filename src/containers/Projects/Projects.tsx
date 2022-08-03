@@ -8,6 +8,7 @@ import { Button } from '@components/Button/Button';
 import { AppContext } from '@context/AppContext';
 import { filterButtonVariantsKeys, filterButtonVariants, filterButtonWhileHover } from '@containers/Projects/variants';
 import { AppInitialState } from "@interfaces/appInitialStatea.interface";
+import { ProjectsData } from "@utils/Utils";
 
 export const Projects = () => {
     const [autoPlay, setAutoPlay] = useState(true);
@@ -21,6 +22,7 @@ export const Projects = () => {
         handleAutoPlay();
         setFocus(!focus);
         setCarouselStop(!carouselStop);
+        console.log("handleFocusProject");
     }
 
     const handleAutoPlay = () => {
@@ -81,14 +83,15 @@ export const Projects = () => {
                         renderDots={(props) => (
                             <CarouselDots
                                 {...props}
-                                numItem={6}
+                                numItem={ProjectsData.length}
                                 carouselStop={carouselStop}
                             />
                         )}
                     >
-                        {[1, 2, 3, 4, 5, 6].map((num) => (
+                        {ProjectsData.map(project => (
                             <Project
-                                key={`${num}-project`}
+                                key={`${project.name}-project`}
+                                project={project}
                                 handleFocusProject={handleFocusProject}
                                 projectFocus={focus}
                             />

@@ -52,18 +52,6 @@
     border-radius: 30%;
 }
 
-.authorName {
-    margin: 0 0 1rem 0;
-    line-height: 1.15;
-    color: $tertiary-color;
-    text-decoration: none;
-    font-family: 'Segoe UI';
-    font-weight: bold;
-    background: -webkit-linear-gradient($tertiary-color, $quaternary-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 @media (max-width: 1200px) {
     .container-presentation {
         display: grid;

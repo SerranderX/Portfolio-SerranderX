@@ -37,7 +37,7 @@ export const LenguageButton = () => {
                         if(item.lenguage !== lenguageSelected) {
                             return (
                                 <motion.li 
-                                    key={item.lenguage}
+                                    key={`${item.lenguage}-lenguage`}
                                     whileHover={{ 
                                         backgroundColor: "#ee234fb2", 
                                         boxShadow: `0 0 5px rgba(238, 35, 130, 0.6),

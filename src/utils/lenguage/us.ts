@@ -47,7 +47,14 @@ export const us: AppLenguageData = {
                 description: "I am passionate about video games for as long as I can remember, my favorites are the RPGs. I really like reading and the fantasy genre, as well as literature in general. I also like music and since I was a teenager I like to consider myself an amateur musician, in my Instagram you can see some of the songs I have recorded. ",
             }
         },
-        footer: {},
+        footer: {
+            navbar: {
+                about: "About",
+                experience: "Experience",
+                projects: "Projects",
+                contact: "Contact",
+            }
+        },
     },
     flagIcon: USIcon,
 }

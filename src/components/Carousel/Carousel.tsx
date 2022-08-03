@@ -80,7 +80,7 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
             </div>
             <ul ref={ulRef} style={{ width: ulWidth}}>
                 {items.map((item:ExperienceItems, key:number) => 
-                    <IconSkill Item={item} key={item.name} index={key} xPosition={xPosition()} />
+                    <IconSkill Item={item} key={`${item.name}-${key}`} index={key} xPosition={xPosition()} />
                 )}
             </ul>
             <div>

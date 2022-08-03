@@ -1,4 +1,4 @@
-import React, { LegacyRef, MutableRefObject, RefObject } from 'react';
+import React, { LegacyRef, MutableRefObject, RefObject, useContext } from 'react';
 import styles from '@styles/Footer.module.scss';
 import { motion } from 'framer-motion';
 import { ENV } from '@config/config';
@@ -7,12 +7,15 @@ import TwitterIcon from '@iconos/social/twitter';
 import LinkedinIcon from '@iconos/social/linkedin';
 import GitHubIcon from '@iconos/social/github';
 import { nearScreenInterface } from '@interfaces/nearScreen.interface';
+import { AppContext } from '@context/AppContext';
 
 interface FooterProps {
   reference: LegacyRef<HTMLElement>
 }
 
 export const Footer: React.FC<FooterProps> = ({reference}) => {
+    const { lenguageState: { lenguageSelectedData: {data: { footer }} } } = useContext(AppContext);
+
     return (
       <footer className={`${styles['Footer-distributed']}`} ref={reference}>
         <div className={`${styles['Footer-right']}`}>
@@ -47,10 +50,10 @@ export const Footer: React.FC<FooterProps> = ({reference}) => {
         </div>
         <div className={`${styles['Footer-left']}`}>
           <p className={`${styles['Footer-links']}`}>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#about">{footer.navbar.about}</a>
+            <a href="#experience">{footer.navbar.experience}</a>
+            <a href="#projects">{footer.navbar.projects}</a>
+            <a href="#contact">{footer.navbar.contact}</a>
           </p>
           <p className={`${styles['Footer-powered']}`}>{ENV.developerData.signature}</p>
         </div>

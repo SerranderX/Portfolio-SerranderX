@@ -1,27 +1,32 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import PokecardexjsSS from '@images/projects/pokecardexjs.jpg';
 import styles from '@styles/Project.module.scss';
 import { motion } from 'framer-motion';
 import { Button } from '@components/Button/Button';
 import { imageVariants } from '@components/Project/variants'; 
+import { ProjectInterface } from '@interfaces/project.interface';
+import { AppContext } from '@context/AppContext';
 
 interface ProjectProps {
     handleFocusProject: () => void;
     projectFocus: boolean;
+    project: ProjectInterface;
 }
 
-export const Project: React.FC<ProjectProps> = ({handleFocusProject: handleFocusProject, projectFocus: projectFocus}) => {
+export const Project: React.FC<ProjectProps> = ({handleFocusProject, projectFocus, project}) => {
+    const { lenguageState: { lenguageSelected } } = useContext(AppContext);
+
     const goToProject = () => {
-        window.open('https://pokecarddexjs.com', '_blank');
+        window.open(project.url, '_blank');
     }
 
     return (
         <div>
             <motion.div  
                 className={styles.container}
-                onClick={handleFocusProject} 
+                onClick={handleFocusProject}
                 animate={projectFocus ? "focus" : "blur"}
-                variants={imageVariants(PokecardexjsSS.src)}
+                variants={imageVariants(project.image.src)}
             >
             </motion.div>
             {projectFocus &&
@@ -32,13 +37,15 @@ export const Project: React.FC<ProjectProps> = ({handleFocusProject: handleFocus
                     transition={{duration: 0.5}}
                 >
                     <div className={`${styles['info-description']}`}>
-                        <h1>Pokecardexjs</h1>
-                        <p>
-                            Una simple y rapida pokedex inspirada en el juego de cartas de Pokemon.
-                        </p>
+                        <h1>{project.name}</h1>
+                        <p>{project.description.map(desc => {
+                            if(desc.lenguage === lenguageSelected){
+                                return desc.data;
+                            }
+                        })}</p>
                     </div>
                     <div className={`${styles['info-button']}`} >
-                        <Button classes={`${styles['project-button']}`} text={"Visitar"} handleButton={goToProject} />
+                        <Button classes={`${styles['project-button']}`} text={lenguageSelected === "es" ? "Visitar" : "Access"} handleButton={goToProject} />
                     </div>
                 </motion.div>
             }

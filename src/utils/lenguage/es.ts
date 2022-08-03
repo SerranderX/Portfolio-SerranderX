@@ -12,7 +12,6 @@ export const es: AppLenguageData = {
                 projects: "Proyectos",
                 contact: "Contacto",
             },
-
         },
         presentation: {
             title: "Portafolio de proyectos",
@@ -48,7 +47,14 @@ export const es: AppLenguageData = {
                 description: "Soy un apasionado por los videojuegos desde que tengo memoria, mis favoritos son los RPG. Me gusta mucho leer y el genero de la fantasía, así como la literatura en general. también me gusta la música y desde mi adolescencia me gusta considerarme musico amateur, en mi Instagram podrán ver algunas de las canciones que he grabado. ",
             }
         },
-        footer: {},
+        footer: {
+            navbar: {
+                about: "Sobre mi",
+                experience: "Experiencia",
+                projects: "Proyectos",
+                contact: "Contacto",
+            },
+        },
     },
     flagIcon: ESIcon,
 }
