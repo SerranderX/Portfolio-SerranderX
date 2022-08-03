@@ -112,8 +112,16 @@
     }
 
     .icons ul li svg {
-        width: 5em;
-        height: 5em;
+        width: 6em;
+        height: 6em;
+        margin-bottom: 1rem;
+    }
+
+    .icons ul li span {
+        color: $primary-color;
+        padding: 0;
+        margin: 0;
+        font-size: 1.5em;
     }
 
 }

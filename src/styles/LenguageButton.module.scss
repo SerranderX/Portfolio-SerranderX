@@ -57,20 +57,31 @@
 
 @media (max-width: 1200px) {
     .lenguage-container {
-        top: 3em;
+        top: 2.3em;
         right: -31em;
         position: absolute;
-        height: 4rem;
+        height: auto;
         border: 2px solid rgb(238, 35, 130);
         border-radius: 10px;
     }
 
     .lenguage-button {
-        padding: 0.2em 0.4em;
+        padding: .4em .5em;
         font-size: $mobile-text-base-size;
     }
 
     .lenguage-container ul li {
         font-size: $mobile-text-min-size;
     } 
+
+    .lenguage-button svg {
+        width: 42px;
+        height: 42px;
+    }
+
+    .lenguage-container ul li svg {
+        width: 42px;
+        height: 42px;
+        margin-left: .6em;
+    }
 }

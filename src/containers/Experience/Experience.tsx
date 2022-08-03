@@ -16,11 +16,11 @@ const adjustVisibleItems = (width:number, moreThan:number, firstValue:number, Se
 
 export const Experience: React.FC<ExperienceProps> = ({windowDimenions}) => {
     const [experienceItems, setExperienceItems] = useState<ExperienceItems[]>(ExperienceIcons);
-    const [visibleItemsAdjust, setVisibleItemsAdjust] = useState<number>(adjustVisibleItems(windowDimenions.winWidth, 1300, 9, 7));
+    const [visibleItemsAdjust, setVisibleItemsAdjust] = useState<number>(adjustVisibleItems(windowDimenions.winWidth, 1300, 9, 6));
     const { lenguageState: { lenguageSelectedData: {data: { experience }} } } = useContext(AppContext);
 
     useEffect(() => {
-        const visibleItemsToAdjust = adjustVisibleItems(windowDimenions.winWidth, 1300, 9, 7)
+        const visibleItemsToAdjust = adjustVisibleItems(windowDimenions.winWidth, 1300, 9, 6)
         if(visibleItemsToAdjust !== visibleItemsAdjust){
             setVisibleItemsAdjust(visibleItemsToAdjust);
         }
@@ -32,7 +32,7 @@ export const Experience: React.FC<ExperienceProps> = ({windowDimenions}) => {
                 <h1>{experience.title}</h1>
                 <p>{experience.description}</p>
             </article>
-            <Carousel items={experienceItems} visibleItems={visibleItemsAdjust} containerClass={styles.icons} autoPlay={true} interval={3000}/>
+            <Carousel items={experienceItems} visibleItems={visibleItemsAdjust} containerClass={styles.icons} autoPlay={true} interval={3000} />
         </section>
     );
 };
