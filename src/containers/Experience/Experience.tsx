@@ -32,7 +32,7 @@ export const Experience: React.FC<ExperienceProps> = ({windowDimenions}) => {
                 <h1>{experience.title}</h1>
                 <p>{experience.description}</p>
             </article>
-            <Carousel items={experienceItems} visibleItems={visibleItemsAdjust} containerClass={styles.icons} autoPlay={true} interval={30000} />
+            <Carousel items={experienceItems} visibleItems={visibleItemsAdjust} containerClass={styles.icons} autoPlay={true} interval={3000} />
         </section>
     );
 };
