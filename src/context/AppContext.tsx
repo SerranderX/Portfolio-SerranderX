@@ -5,43 +5,43 @@ import { createContext, SVGProps } from 'react';
 const initialState: AppInitialState = {
     filters: [
         {
-            name: ToolsTypes.react,
+            name: ToolsTypes.REACTJS,
             state: false,
             handleFilter: function(){}
         },{
-            name: ToolsTypes.angular,
+            name: ToolsTypes.ANGULAR,
             state: false,
             handleFilter: function(){}
         },{
-            name: ToolsTypes.framerMotion,
+            name: ToolsTypes.FRAMERMOTION,
             state: false,
             handleFilter: function(){}
         },{
-            name: ToolsTypes.javascript,
+            name: ToolsTypes.JAVASCRIPT,
             state: false,
             handleFilter: function(){}
         },{
-            name: ToolsTypes.typescript,
+            name: ToolsTypes.TYPESCRIPT,
             state: false,
             handleFilter: function(){}
         },{
-            name: ToolsTypes.java,
+            name: ToolsTypes.JAVA,
             state: false,
             handleFilter: function(){}
         },{
-            name: ToolsTypes.next,
+            name: ToolsTypes.NEXTJS,
             state: false,
             handleFilter: function(){}
         },{
-            name: ToolsTypes.node,
+            name: ToolsTypes.NODEJS,
             state: false,
             handleFilter: function(){}
         },{
-            name: ToolsTypes.nest,
+            name: ToolsTypes.NESTJS,
             state: false,
             handleFilter: function(){}
         },{
-            name: ToolsTypes.spring,
+            name: ToolsTypes.SPRING,
             state: false,
             handleFilter: function(){}
         }
