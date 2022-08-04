@@ -27,6 +27,7 @@ import { ProjectInterface } from '@interfaces/project.interface';
 import PokecardexjsSS from '@images/projects/pokecardexjs.jpg';
 import PetgramSS from '@images/projects/petgram.jpg';
 import TodoMachineSS from '@images/projects/todo-machine.jpg';
+import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
 
 export const ExperienceIcons: ExperienceItems[] = [
     {
@@ -166,6 +167,7 @@ export const ProjectsData: ProjectInterface[] = [
         ],
         url: "https://pokecarddexjs.com",
         image: PokecardexjsSS,
+        technologies: [ToolsTypes.REACTJS, ToolsTypes.TYPESCRIPT, ToolsTypes.JAVASCRIPT, ToolsTypes.FRAMERMOTION]
     },
     {
         name: "Petgram",
@@ -181,6 +183,7 @@ export const ProjectsData: ProjectInterface[] = [
         ],
         url: "https://petgram-4tsdddk6c-serranderx.vercel.app",
         image: PetgramSS,
+        technologies: [ToolsTypes.REACTJS, ToolsTypes.JAVASCRIPT, ToolsTypes.STYLEDCOMPONENTS]
     },
     {
         name: "ToDo Machine",
@@ -196,5 +199,6 @@ export const ProjectsData: ProjectInterface[] = [
         ],
         url: "https://SerranderX.github.io/ToDo-Machine",
         image: TodoMachineSS,
+        technologies: [ToolsTypes.REACTJS, ToolsTypes.JAVASCRIPT]
     },
 ];

@@ -9,14 +9,17 @@ import { AppContext } from '@context/AppContext';
 import { filterButtonVariantsKeys, filterButtonVariants, filterButtonWhileHover } from '@containers/Projects/variants';
 import { AppInitialState } from "@interfaces/appInitialStatea.interface";
 import { ProjectsData } from "@utils/Utils";
+import { ProjectInterface } from "@interfaces/project.interface";
 
 export const Projects = () => {
     const [autoPlay, setAutoPlay] = useState(true);
     const [carouselStop, setCarouselStop] = useState(false);
+    const [resetPosition, setResetPosition] = useState(false);
     const refCarousel = useRef<HTMLDivElement>(null);
     const [focus, setFocus] = useState(false);
-    const { filters } = useContext<AppInitialState>(AppContext);
     const { lenguageState: { lenguageSelectedData: { data: { projects }} } } = useContext(AppContext);
+    const [proyectsList, setProyectsList] = useState<ProjectInterface[]>(ProjectsData);
+    const { filters } = useContext<AppInitialState>(AppContext);
 
     const handleFocusProject = () => {
         handleAutoPlay();
@@ -39,6 +42,22 @@ export const Projects = () => {
             document.removeEventListener("click", handleClickOutside, true);
         };
     }, [refCarousel, focus]);
+
+    useEffect(() => {
+        const activeFilters = filters.filter(filter => filter.state === true);
+
+        if(activeFilters.length > 0){
+            const filteredProjects = proyectsList.filter(project => {
+                return activeFilters.some(filter => project.technologies.includes(filter.name));
+            })
+
+            setProyectsList(filteredProjects);
+            setResetPosition(true);
+        } else {
+            setProyectsList(ProjectsData);
+            setResetPosition(true);
+        }
+    }, [filters]);
 
     return (
         <section className={styles.container} id="projects">
@@ -82,12 +101,14 @@ export const Projects = () => {
                         renderDots={(props) => (
                             <CarouselDots
                                 {...props}
-                                numItem={ProjectsData.length}
+                                numItem={proyectsList.length}
                                 carouselStop={carouselStop}
+                                resetPosition={resetPosition}
+                                setResetPosition={setResetPosition}
                             />
                         )}
                     >
-                        {ProjectsData.map(project => (
+                        {proyectsList.map(project => (
                             <Project
                                 key={`${project.name}-project`}
                                 project={project}

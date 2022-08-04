@@ -8,7 +8,7 @@ import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
 export const useCarouselFilters = (): CarouselFiltersInterface[] => {
     const [state, dispatch] = useReducer<Reducer<CarouselStateInterface, ReducerStateInterface>>(reducer, initialState);
     
-    const { Angular, FramerMotion, Java, JavaScript, Nest, Next, Node, React, Spring, TypeScript } = state;
+    const { ReactJS, NextJS, NodeJS, NestJS, TypeScript, Spring, Java, JavaScript, FramerMotion, Angular, StyledComponents} = state;
 
     //Action Creators
     const actionReactFilter = (payload: boolean) => dispatch({type: ActionTypes.SET_REACT_FILTER, payload});
@@ -21,69 +21,76 @@ export const useCarouselFilters = (): CarouselFiltersInterface[] => {
     const actionNodeFilter = (payload: boolean) => dispatch({type: ActionTypes.SET_NODE_FILTER, payload});
     const actionNestFilter = (payload: boolean) => dispatch({type: ActionTypes.SET_NEST_FILTER, payload});
     const actionSpringFilter = (payload: boolean) => dispatch({type: ActionTypes.SET_SPRING_FILTER, payload});
+    const actionStyledComponentsFilter = (payload: boolean) => dispatch({type: ActionTypes.SET_STYLED_COMPONENTS_FILTER, payload});
 
     //Action Handlers
-    const handleReactFilter = () => actionReactFilter(!React);
+    const handleReactFilter = () => actionReactFilter(!ReactJS);
     const handleAngularFilter = () => actionAngularFilter(!Angular);
     const handleFramerMotionFilter = () => actionFramerMotionFilter(!FramerMotion);
     const handleJavascriptFilter = () => actionJavascriptFilter(!JavaScript);
     const handleTypescriptFilter = () => actionTypescriptFilter(!TypeScript);
     const handleJavaFilter = () => actionJavaFilter(!Java);
-    const handleNextFilter = () => actionNextFilter(!Next);
-    const handleNodeFilter = () => actionNodeFilter(!Node);
-    const handleNestFilter = () => actionNestFilter(!Nest);
+    const handleNextFilter = () => actionNextFilter(!NextJS);
+    const handleNodeFilter = () => actionNodeFilter(!NodeJS);
+    const handleNestFilter = () => actionNestFilter(!NestJS);
     const handleSpringFilter = () => actionSpringFilter(!Spring);
+    const handleStyledComponentsFilter = () => actionStyledComponentsFilter(!StyledComponents);
 
     return [
         {
-            name: ToolsTypes.react,
-            state: React,
+            name: ToolsTypes.REACTJS,
+            state: ReactJS,
             handleFilter: handleReactFilter
         },
         {
-            name: ToolsTypes.angular,
+            name: ToolsTypes.ANGULAR,
             state: Angular,
             handleFilter: handleAngularFilter
         },
         {
-            name: ToolsTypes.framerMotion,
+            name: ToolsTypes.FRAMERMOTION,
             state: FramerMotion,
             handleFilter: handleFramerMotionFilter
         },
         {
-            name: ToolsTypes.javascript,
+            name: ToolsTypes.JAVASCRIPT,
             state: JavaScript,
             handleFilter: handleJavascriptFilter
         },
         {
-            name: ToolsTypes.typescript,
+            name: ToolsTypes.TYPESCRIPT,
             state: TypeScript,
             handleFilter: handleTypescriptFilter
         },
         {
-            name: ToolsTypes.java,
+            name: ToolsTypes.JAVA,
             state: Java,
             handleFilter: handleJavaFilter
         },
         {
-            name: ToolsTypes.next,
-            state: Next,
+            name: ToolsTypes.NEXTJS,
+            state: NextJS,
             handleFilter: handleNextFilter
         },
         {
-            name: ToolsTypes.node,
-            state: Node,
+            name: ToolsTypes.NODEJS,
+            state: NodeJS,
             handleFilter: handleNodeFilter
         },
         {
-            name: ToolsTypes.nest,
-            state: Nest,
+            name: ToolsTypes.NESTJS,
+            state: NestJS,
             handleFilter: handleNestFilter
         }, 
         {
-            name: ToolsTypes.spring,
+            name: ToolsTypes.SPRING,
             state: Spring,
             handleFilter: handleSpringFilter
+        },
+        {
+            name: ToolsTypes.STYLEDCOMPONENTS,
+            state: StyledComponents,
+            handleFilter: handleStyledComponentsFilter
         }
     ];
 }

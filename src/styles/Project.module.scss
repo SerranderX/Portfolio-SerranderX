@@ -35,7 +35,7 @@
 }
 
 .info-description p {
-    font-size: 1.5em;
+    font-size: $text-base-size;
     color: $primary-color;
 }
 
@@ -65,4 +65,24 @@
                     0 0 5px $neon-blue-border,
                     0 0 100px $neon-blue-border;
     }
+}
+
+@media (max-width: 1200px) {
+    
+    .info-description h1 {
+        font-size: $mobile-main-title-size;
+    }
+    
+    .info-description p {
+        font-size: $mobile-text-base-size;
+    }
+
+    .project-button {
+        font-size: $mobile-text-min-size;
+    }
+
+    .info-container {
+        margin: 5% 10%;
+    }
+
 }

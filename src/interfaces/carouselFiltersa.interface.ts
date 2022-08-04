@@ -1,18 +1,19 @@
-import {ToolsTypes} from "@hooks/useCarouselFilters/ToolsTypes";
+import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
 import { ActionTypes } from "@hooks/useCarouselFilters/actionTypes";
 
 //State Interfaces
 export interface CarouselStateInterface {
-    [ToolsTypes.react]: boolean;
-    [ToolsTypes.angular]: boolean;
-    [ToolsTypes.framerMotion]: boolean;
-    [ToolsTypes.javascript]: boolean;
-    [ToolsTypes.typescript]: boolean;
-    [ToolsTypes.java]: boolean;
-    [ToolsTypes.next]: boolean;
-    [ToolsTypes.node]: boolean;
-    [ToolsTypes.nest]: boolean;
-    [ToolsTypes.spring]: boolean;
+    [ToolsTypes.REACTJS]: boolean;
+    [ToolsTypes.ANGULAR]: boolean;
+    [ToolsTypes.FRAMERMOTION]: boolean;
+    [ToolsTypes.JAVASCRIPT]: boolean;
+    [ToolsTypes.TYPESCRIPT]: boolean;
+    [ToolsTypes.JAVA]: boolean;
+    [ToolsTypes.NEXTJS]: boolean;
+    [ToolsTypes.NODEJS]: boolean;
+    [ToolsTypes.NESTJS]: boolean;
+    [ToolsTypes.SPRING]: boolean;
+    [ToolsTypes.STYLEDCOMPONENTS]: boolean;
 }
 
 //Reducer Interfaces
@@ -32,11 +33,12 @@ export interface ReducerObjectInterface {
     [ActionTypes.SET_NODE_FILTER]: CarouselStateInterface;
     [ActionTypes.SET_NEST_FILTER]: CarouselStateInterface;
     [ActionTypes.SET_SPRING_FILTER]: CarouselStateInterface;
+    [ActionTypes.SET_STYLED_COMPONENTS_FILTER]: CarouselStateInterface;
 }
 
 //Carousel Filter Interface - useCarouselFilters
 export interface CarouselFiltersInterface {
-    name: string,
+    name: ToolsTypes,
     state: boolean,
     handleFilter: () => void
 }

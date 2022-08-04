@@ -69,26 +69,23 @@ export const Header: React.FC<HeaderProps> = ({reference, windowDimenion}) => {
                     </span>
                     <MenuToggle show={navState} handlerClick={handleNavButton}/>
                   </motion.a> 
-                  <AnimatePresence initial={false}>
-                      <motion.div 
-                        className={`${styles['container-nav-mobile']}`}
-                        initial="collapsed"
-                        animate={navState ? "open" : "collapsed"}
-                        exit="collapsed"
-                        variants={variantsSection}
-                        transition={{ duration: .8, ease: [0.04, 0.62, 0.23, 0.98] }}
-                      >
-                        {navState && 
-                          <>
-                            <motion.a href="#about" animate={{opacity: [0, 1]}} className={`${styles['button-mobile']} ${styles['button-mobile-text-center']}`}>{header.navbar.about}</motion.a>
-                            <motion.a href="#experience" animate={{opacity: [0, 1]}} className={`${styles['button-mobile']} ${styles['button-mobile-text-center']}`}>{header.navbar.experience}</motion.a>
-                            <motion.a href="#projects" animate={{opacity: [0, 1]}} className={`${styles['button-mobile']} ${styles['button-mobile-text-center']}`}>{header.navbar.projects}</motion.a>
-                            <motion.a href="#contact" animate={{opacity: [0, 1]}} className={`${styles['button-mobile']} ${styles['button-mobile-text-center']}`}>{header.navbar.contact}</motion.a>
-                          </>
-                        }
-                      </motion.div>
-                    <motion.path stroke={"hsl(0, 100%, 100%)"} transition={{}}></motion.path>
-                  </AnimatePresence>
+                  <motion.div 
+                    className={`${styles['container-nav-mobile']}`}
+                    initial="collapsed"
+                    animate={navState ? "open" : "collapsed"}
+                    exit="collapsed"
+                    variants={variantsSection}
+                    transition={{ duration: .8, ease: [0.04, 0.62, 0.23, 0.98] }}
+                  >
+                    {navState && 
+                      <>
+                        <motion.a href="#about" animate={{opacity: [0, 1]}} className={`${styles['button-mobile']} ${styles['button-mobile-text-center']}`}>{header.navbar.about}</motion.a>
+                        <motion.a href="#experience" animate={{opacity: [0, 1]}} className={`${styles['button-mobile']} ${styles['button-mobile-text-center']}`}>{header.navbar.experience}</motion.a>
+                        <motion.a href="#projects" animate={{opacity: [0, 1]}} className={`${styles['button-mobile']} ${styles['button-mobile-text-center']}`}>{header.navbar.projects}</motion.a>
+                        <motion.a href="#contact" animate={{opacity: [0, 1]}} className={`${styles['button-mobile']} ${styles['button-mobile-text-center']}`}>{header.navbar.contact}</motion.a>
+                      </>
+                    }
+                  </motion.div>
                 </>
               }
               {windowDimenion.winWidth >= 1200 &&

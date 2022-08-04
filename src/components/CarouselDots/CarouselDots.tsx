@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from '@styles/CarouselDots.module.scss';
 
 interface CarouselDotsProps {
@@ -6,15 +6,24 @@ interface CarouselDotsProps {
     activeIndex: any;
     numItem: number;
     carouselStop: boolean;
+    resetPosition: boolean;
+    setResetPosition: (resetPosition:boolean) => void;
 }
 
-export const CarouselDots: React.FC<CarouselDotsProps> = ({setActiveIndex, activeIndex, numItem, carouselStop}) => {
+export const CarouselDots: React.FC<CarouselDotsProps> = ({setActiveIndex, activeIndex, numItem, carouselStop, resetPosition, setResetPosition}) => {
 
     const handleDotsClick = (index: number) => {
         if(!carouselStop){
             setActiveIndex(index);
         }
     }
+
+    useEffect(() => {
+        if(resetPosition){
+            handleDotsClick(0);
+            setResetPosition(!resetPosition);
+        }
+    }, [resetPosition]);
 
     return (
         <div className={styles.dotsContainer}>

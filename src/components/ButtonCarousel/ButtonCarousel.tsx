@@ -24,7 +24,7 @@ export const ButtonCarousel: React.FC<ButtonCarouselProps> = ({handlePrev, handl
     }
     
     return (
-        <button onClick={handleClick} className={className}>
+        <button onClick={handleClick} className={className} style={{display: `${carouselStop ? 'none' : 'inline-block'}`}}>
             {left && <ArrowLeft/>}
             {right && <ArrowRight/>}
         </button>
