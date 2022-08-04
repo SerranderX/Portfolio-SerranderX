@@ -10,7 +10,9 @@
 .info-container {
     position: absolute;
     top: 0px;
-    margin: 10% 15%;
+    margin: 10% 0%;
+    right: 15%;
+    left: 15%;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
@@ -26,7 +28,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--color-text-primary);
 }
 
 .info-description h1 {
@@ -83,6 +84,8 @@
 
     .info-container {
         margin: 5% 10%;
+        right: 0;
+        left: 0;
     }
 
 }
