@@ -17,7 +17,7 @@ export const Presentation = () => {
     return (
         <section className={`${styles['container-presentation']}`}>
             <article className={`${styles['title-container']}`}>
-                {widnowsDimensions.winWidth > 1200 && <h3 style={{color: 'white', margin: ".6em 0 .6em .5em"}}>{presentation.title}</h3>}
+                {widnowsDimensions.winWidth > 1300 && <h3 style={{color: 'white', margin: ".6em 0 .6em .5em"}}>{presentation.title}</h3>}
                 <h1 className={`${styles.title}`}>
                     {presentation.greeting1} <br/>
                     {presentation.greeting2} {' '}

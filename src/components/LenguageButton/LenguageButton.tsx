@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { variantsList, buttonVariants } from "@components/LenguageButton/variants";
 import styles from "@styles/LenguageButton.module.scss";
@@ -7,6 +7,7 @@ import { AppContext } from "@context/AppContext";
 export const LenguageButton = () => {
     const [listaButtonState, setListaButtonState] = useState(false);
     const { lenguageState: { lenguageList, changeLenguageSelected, lenguageSelected, lenguageSelectedData } } = useContext(AppContext);
+    const [rightPosition, setRightPosition] = useState(0);
 
     const handleSelectLenguage = (lenguage: string) => {
         setListaButtonState(!listaButtonState);
@@ -14,7 +15,7 @@ export const LenguageButton = () => {
     }
 
     return (
-        <div className={`${styles["lenguage-container"]}`}>
+        <div className={`${styles["lenguage-container"]}`} >
             <motion.button
                 onClick={() => setListaButtonState(!listaButtonState)}
                 className={`${styles["lenguage-button"]}`}

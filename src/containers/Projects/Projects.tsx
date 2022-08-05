@@ -30,10 +30,10 @@ export const Projects: React.FC<ProjectsProps> = ({windowDimenions}) => {
     const { lenguageState: { lenguageSelectedData: { data: { projects }} } } = useContext(AppContext);
     const [projectsList, setProjectsList] = useState<ProjectInterface[]>(ProjectsData);
     const { projectsFilters: { filters, activeFiltersCount } } = useContext<AppInitialState>(AppContext);
-    const [gifSize, setGifSize] = useState<number>(windowDimenions.winWidth > 1200 ? 500 : 700);
+    const [gifSize, setGifSize] = useState<number>(windowDimenions.winWidth > 1300 ? 500 : 700);
 
     useEffect(() => {
-        setGifSize(windowDimenions.winWidth > 1200 ? 500 : 700);
+        setGifSize(windowDimenions.winWidth > 1300 ? 500 : 700);
     }, [windowDimenions]);
 
     const handleFocusProject = () => {

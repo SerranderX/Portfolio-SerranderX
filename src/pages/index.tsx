@@ -12,6 +12,7 @@ import { ButtonNav } from '@components/ButtonNav/ButtonNav';
 import { useNearScreen } from '@hooks/useNearScreen';
 import { WindowSize } from '@interfaces/windowSize.interface';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
+import { LenguageButton } from '@components/LenguageButton/LenguageButton';
 
 const Home: NextPage = () => {
   const [showHeader, refHeader] = useNearScreen();

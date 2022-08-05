@@ -40,11 +40,11 @@ export const es: AppLenguageData = {
             title: 'Sobre mi',
             general: {
                 title: 'General',
-                description: "Tengo 26 años y soy originario de la ciudad de Santiago, de Chile. Desde el 2019 me desempeño formalmente como desarrollador de software. Desde pequeño siempre me ha gustado la tecnología y la computación, tuve el privilegio de estudiarla en la Universidad, donde obtuve el grado de 'Ingeniero en informática', en donde mi actual encontré mi vocación. Considero que mi mayor fortaleza es la perseverancia y la capacidad de sobreponerme ante cualquier reto que se interponga ante mis objetivos.",
+                description: "Tengo 26 años y soy originario de la ciudad de Santiago, de Chile. Me desempeño formalmente como desarrollador de software desde el año 2019.\n Desde pequeño siempre me ha gustado la tecnología y la computacion en general. Tuve el privilegio de estudiarla en la Universidad, donde obtuve el grado de 'Ingeniero en informática', en donde encontré mi actual vocación.\n Considero que mi mayor fortaleza es la perseverancia y la capacidad de sobreponerme ante cualquier reto que se interponga ante los objetivos que me propongo.",
             },
             skills: {
                 title: "Hobbies e intereses",
-                description: "Soy un apasionado por los videojuegos desde que tengo memoria, mis favoritos son los RPG. Me gusta mucho leer y el genero de la fantasía, así como la literatura en general. también me gusta la música y desde mi adolescencia me gusta considerarme musico amateur, en mi Instagram podrán ver algunas de las canciones que he grabado. ",
+                description: "Soy un apasionado por los videojuegos en general desde que tengo memoria, sin embargo mis favoritos siempre han sido los RPG.\n Me gusta mucho leer y el genero de la fantasía, así como la literatura en su totalidad cuando encuentro algun libro interesante. También me gusta la música y desde mi adolescencia me gusta considerarme un musico amateur, toco guitarra desde los 12 años de manera autodidacta. En mi Instagram podrán ver algunas de las canciones que he grabado, aunque de todas maneras enesta seccion se encuentra un cover que grabe hace algun tiempo.",
             }
         },
         footer: {
