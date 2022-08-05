@@ -202,3 +202,5 @@ export const ProjectsData: ProjectInterface[] = [
         technologies: [ToolsTypes.REACTJS, ToolsTypes.JAVASCRIPT]
     },
 ];
+
+export const VideoURL:string = "https://youtu.be/PaXH_S2AqDg";

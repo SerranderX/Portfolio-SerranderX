@@ -40,7 +40,7 @@ export const es: AppLenguageData = {
             title: 'Sobre mi',
             general: {
                 title: 'General',
-                description: "Tengo 26 años y soy originario de la ciudad de Santiago, de Chile. Desde el 2019 me desempeño formalmente como desarrollador de software. Desde pequeño siempre me ha gustado la tecnología y la computación, tuve el privilegio de estudiarla en la Universidad, donde obtuve el grado de ‘Ingeniero en informática’ en donde encontré mi vocación. Considero que mi mayor fortaleza es la perseverancia y la capacidad de sobreponerme ante cualquier reto que se interponga ante mis objetivos.",
+                description: "Tengo 26 años y soy originario de la ciudad de Santiago, de Chile. Desde el 2019 me desempeño formalmente como desarrollador de software. Desde pequeño siempre me ha gustado la tecnología y la computación, tuve el privilegio de estudiarla en la Universidad, donde obtuve el grado de 'Ingeniero en informática', en donde mi actual encontré mi vocación. Considero que mi mayor fortaleza es la perseverancia y la capacidad de sobreponerme ante cualquier reto que se interponga ante mis objetivos.",
             },
             skills: {
                 title: "Hobbies e intereses",

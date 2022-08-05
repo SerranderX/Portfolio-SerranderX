@@ -1,12 +1,21 @@
 import React, { useContext } from 'react';
 import styles from '@styles/AboutMe.module.scss';
+import imageGeneralSection from '@images/photo2.jpg';
 import { AppContext } from '@context/AppContext';
 import { motion } from 'framer-motion';
-import imageGeneralSection from '@images/photo2.jpg';
 import Image from 'next/image';
+import YouTube from "react-youtube";
 
 export const AboutMe = () => {
     const { lenguageState: { lenguageSelectedData: {data: { aboutme }} } } = useContext(AppContext);
+
+    const opts = {
+        height: "500",
+        width: "800",
+        playerVars: {
+            autoplay: 1,
+        },
+    };
 
     return (
         <section className={styles.container} id="about">
@@ -27,9 +36,13 @@ export const AboutMe = () => {
                 </div>
             </article>
             <article className={`${styles['hobbies-container']}`}>
-                <div className={`${styles['hobbies-image-container']}`} style={{backgroundColor: 'purple'}}>
-                    
-                </div>
+                <motion.div
+                    animate={{ opacity: [0, 1], boxShadow: `0 0 5px rgba(8, 139, 204, .8), 0 0 25px rgba(8, 139, 204, .8), 0 0 5px rgba(8, 139, 204, .8), 0 0 100px rgba(8, 139, 204, .8)`}}
+                    transition={{ duration: 1, delay: .3, ease: [0.04, 0.62, 0.23, 0.98] }} 
+                    className={`${styles['hobbies-image-container']}`}
+                >
+                    <YouTube videoId="PaXH_S2AqDg" opts={opts} title={"[COVER] Radical Dreamers - Yasunori Mitsuda from Chrono Cross"} />
+                </motion.div>
                 <div className={`${styles['hobbies-info-container']}`}>
                     <h2>{aboutme.skills.title}</h2>
                     <p>{aboutme.skills.description}</p>
