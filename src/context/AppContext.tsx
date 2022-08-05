@@ -1,54 +1,66 @@
-import { ToolsTypes } from '@hooks/useCarouselFilters/ToolsTypes';
-import { AppInitialState } from '@interfaces/appInitialStatea.interface';
-import { createContext, SVGProps } from 'react';
+import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
+import { AppInitialState } from "@interfaces/appInitialStatea.interface";
+import { createContext, SVGProps } from "react";
 
 const initialState: AppInitialState = {
-    filters: [
-        {
-            name: ToolsTypes.REACTJS,
-            state: false,
-            handleFilter: function(){}
-        },{
-            name: ToolsTypes.ANGULAR,
-            state: false,
-            handleFilter: function(){}
-        },{
-            name: ToolsTypes.FRAMERMOTION,
-            state: false,
-            handleFilter: function(){}
-        },{
-            name: ToolsTypes.JAVASCRIPT,
-            state: false,
-            handleFilter: function(){}
-        },{
-            name: ToolsTypes.TYPESCRIPT,
-            state: false,
-            handleFilter: function(){}
-        },{
-            name: ToolsTypes.JAVA,
-            state: false,
-            handleFilter: function(){}
-        },{
-            name: ToolsTypes.NEXTJS,
-            state: false,
-            handleFilter: function(){}
-        },{
-            name: ToolsTypes.NODEJS,
-            state: false,
-            handleFilter: function(){}
-        },{
-            name: ToolsTypes.NESTJS,
-            state: false,
-            handleFilter: function(){}
-        },{
-            name: ToolsTypes.SPRING,
-            state: false,
-            handleFilter: function(){}
-        }
-    ],
+    projectsFilters: {
+        filters: [
+            {
+                name: ToolsTypes.REACTJS,
+                state: false,
+                handleFilter: function () {},
+            },
+            {
+                name: ToolsTypes.ANGULAR,
+                state: false,
+                handleFilter: function () {},
+            },
+            {
+                name: ToolsTypes.FRAMERMOTION,
+                state: false,
+                handleFilter: function () {},
+            },
+            {
+                name: ToolsTypes.JAVASCRIPT,
+                state: false,
+                handleFilter: function () {},
+            },
+            {
+                name: ToolsTypes.TYPESCRIPT,
+                state: false,
+                handleFilter: function () {},
+            },
+            {
+                name: ToolsTypes.JAVA,
+                state: false,
+                handleFilter: function () {},
+            },
+            {
+                name: ToolsTypes.NEXTJS,
+                state: false,
+                handleFilter: function () {},
+            },
+            {
+                name: ToolsTypes.NODEJS,
+                state: false,
+                handleFilter: function () {},
+            },
+            {
+                name: ToolsTypes.NESTJS,
+                state: false,
+                handleFilter: function () {},
+            },
+            {
+                name: ToolsTypes.SPRING,
+                state: false,
+                handleFilter: function () {},
+            },
+        ],
+        activeFiltersCount: 0,
+    },
     lenguageState: {
         lenguageSelected: "",
-        changeLenguageSelected: (lenguage:string) => {},
+        changeLenguageSelected: (lenguage: string) => {},
         lenguageSelectedData: {
             lenguage: "",
             lenguageName: "",
@@ -58,22 +70,22 @@ const initialState: AppInitialState = {
                         about: "",
                         experience: "",
                         projects: "",
-                        contact: ""
-                    }
+                        contact: "",
+                    },
                 },
                 presentation: {
                     title: "",
                     greeting1: "",
                     greeting2: "",
-                    description: ""
+                    description: "",
                 },
                 experience: {
                     title: "",
-                    description: ""
+                    description: "",
                 },
                 projects: {
                     title: "",
-                    description: ""
+                    description: "",
                 },
                 contact: {
                     title: "",
@@ -88,12 +100,12 @@ const initialState: AppInitialState = {
                     title: "",
                     general: {
                         title: "",
-                        description: ""
+                        description: "",
                     },
                     skills: {
                         title: "",
-                        description: ""
-                    }
+                        description: "",
+                    },
                 },
                 footer: {
                     navbar: {
@@ -101,10 +113,12 @@ const initialState: AppInitialState = {
                         experience: "",
                         projects: "",
                         contact: "",
-                    }
+                    },
                 },
             },
-            flagIcon: (props: SVGProps<SVGSVGElement>) => { return <></> },
+            flagIcon: (props: SVGProps<SVGSVGElement>) => {
+                return <></>;
+            },
         },
         lenguageList: [
             {
@@ -116,22 +130,22 @@ const initialState: AppInitialState = {
                             about: "",
                             experience: "",
                             projects: "",
-                            contact: ""
-                        }
+                            contact: "",
+                        },
                     },
                     presentation: {
                         title: "",
                         greeting1: "",
                         greeting2: "",
-                        description: ""
+                        description: "",
                     },
                     experience: {
                         title: "",
-                        description: ""
+                        description: "",
                     },
                     projects: {
                         title: "",
-                        description: ""
+                        description: "",
                     },
                     contact: {
                         title: "",
@@ -146,12 +160,12 @@ const initialState: AppInitialState = {
                         title: "",
                         general: {
                             title: "",
-                            description: ""
+                            description: "",
                         },
                         skills: {
                             title: "",
-                            description: ""
-                        }
+                            description: "",
+                        },
                     },
                     footer: {
                         navbar: {
@@ -159,13 +173,15 @@ const initialState: AppInitialState = {
                             experience: "",
                             projects: "",
                             contact: "",
-                        }
+                        },
                     },
                 },
-                flagIcon: (props: SVGProps<SVGSVGElement>) => { return <></> },
-            }
-        ]
-    }
-}
+                flagIcon: (props: SVGProps<SVGSVGElement>) => {
+                    return <></>;
+                },
+            },
+        ],
+    },
+};
 
 export const AppContext = createContext(initialState);

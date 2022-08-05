@@ -5,7 +5,7 @@ import { CarouselStateInterface, ReducerStateInterface, CarouselFiltersInterface
 import { ActionTypes } from "@hooks/useCarouselFilters/actionTypes";
 import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
 
-export const useCarouselFilters = (): CarouselFiltersInterface[] => {
+export const useCarouselFilters = (): CarouselFiltersInterface => {
     const [state, dispatch] = useReducer<Reducer<CarouselStateInterface, ReducerStateInterface>>(reducer, initialState);
     
     const { ReactJS, NextJS, NodeJS, NestJS, TypeScript, Spring, Java, JavaScript, FramerMotion, Angular, StyledComponents} = state;
@@ -36,7 +36,7 @@ export const useCarouselFilters = (): CarouselFiltersInterface[] => {
     const handleSpringFilter = () => actionSpringFilter(!Spring);
     const handleStyledComponentsFilter = () => actionStyledComponentsFilter(!StyledComponents);
 
-    return [
+    const filters = [
         {
             name: ToolsTypes.REACTJS,
             state: ReactJS,
@@ -92,5 +92,12 @@ export const useCarouselFilters = (): CarouselFiltersInterface[] => {
             state: StyledComponents,
             handleFilter: handleStyledComponentsFilter
         }
-    ];
+    ]
+
+    const activeFiltresCount = filters.filter(filter => filter.state === true).length;
+
+    return  {
+        filters: filters,
+        activeFiltersCount: activeFiltresCount
+    };
 }

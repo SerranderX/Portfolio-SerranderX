@@ -32,7 +32,7 @@ export const Presentation = () => {
                 animate={{ opacity: [0, 1], boxShadow: `0 0 5px rgba(8, 139, 204, .8), 0 0 25px rgba(8, 139, 204, .8), 0 0 5px rgba(8, 139, 204, .8), 0 0 100px rgba(8, 139, 204, .8)`}}
                 transition={{ duration: 1, delay: .3, ease: [0.04, 0.62, 0.23, 0.98] }}
             >
-                <Image src={Photo} alt="Picture of the author" width={480} height={480} className={styles.photo} />
+                <Image src={Photo} alt="Picture of the author" width={450} height={600} className={styles.photo} />
             </motion.article>
         </section>
     );

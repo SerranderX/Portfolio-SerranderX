@@ -43,10 +43,6 @@
 }
 
 .carouselContainer {
-    box-shadow: 0 0 5px $neon-blue-border,
-                0 0 5px $neon-blue-border,
-                0 0 5px $neon-blue-border,
-                0 0 25px $neon-blue-border;
     border-radius: 30px;
 }
 
@@ -116,18 +112,40 @@
     opacity: 0.5;
 }
 
+.project-not-found-container {
+    margin: 2em 0 0 0;
+}
+
+.project-not-found-container p {
+    color: $primary-color;
+    font-size: $text-base-size;
+    margin: 0 0 0 .2em;
+    padding: 0;
+}
+
 @media (max-width: 1200px) {
 
     .container h1 {
         font-size: $mobile-main-title-size;
     }
 
+    
+    .carouselContainer {
+        box-shadow: none;
+    }
+
     .filter-button {
-        font-size: 1.7em;
+        font-size: $mobile-text-base-size;
         margin: 0.3em 0.4em;
     }
 
-    .carouselContainer {
-        box-shadow: none;
+    .filter-container {
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .project-not-found-container p {
+        font-size: $mobile-text-base-size;
+        margin: 0 0 0 .2em;
     }
 }

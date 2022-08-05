@@ -131,7 +131,7 @@ export const ExperienceIcons: ExperienceItems[] = [
         icon: LinuxIcon,
     },
     {
-        name: "Styled components",
+        name: "Styled C",
         url: "https://www.styled-components.com",
         icon: StyledComponentIcon,
     },

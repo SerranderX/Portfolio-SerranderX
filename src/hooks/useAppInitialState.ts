@@ -5,11 +5,11 @@ import { AppInitialState } from '@interfaces/appInitialStatea.interface';
 import { AppLenguageInterface, useLenguage } from '@hooks/useLenguage';
 
 export const useAppInitialState = ():AppInitialState => {
-    const carouselFiltersState: CarouselFiltersInterface[] = useCarouselFilters();
+    const projectsFilters: CarouselFiltersInterface = useCarouselFilters();
     const lenguageState: AppLenguageInterface = useLenguage();
 
     return {
-        filters: carouselFiltersState,
+        projectsFilters: projectsFilters,
         lenguageState: lenguageState
     }
 };

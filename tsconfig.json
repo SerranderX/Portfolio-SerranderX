@@ -27,6 +27,7 @@
         "@logos/*": ["assets/logos/*"],
         "@iconos/*": ["assets/iconos/*"],
         "@images/*": ["assets/images/*"],
+        "@gifs/*": ["assets/gifs/*"],
         "@styles/*": ["styles/*"],
         "@hooks/*": ["hooks/*"],
         "@config/*": ["config/*"],

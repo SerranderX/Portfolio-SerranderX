@@ -26,7 +26,7 @@
 .general-container {
     grid-area: generalInfo;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: auto;
     grid-template-areas: "image info";
 }
@@ -53,8 +53,8 @@
 
 .general-image-container {
     grid-area: image;
-    background-color: aqua;
     margin: 2rem;
+    border-radius: 50px;
 }
 
 .hobbies-container {

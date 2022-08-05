@@ -1,5 +1,5 @@
 export const Enviroments = {
-    proyectName: String(process.env.PROYECT_NAME),
+    projectName: String(process.env.PROJECT_NAME),
     email: String(process.env.EMAIL),
     password: String(process.env.PASSWORD),
     emailjs_service: String(process.env.EMAILJS_SERVICE),

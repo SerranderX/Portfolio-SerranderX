@@ -37,8 +37,13 @@ export interface ReducerObjectInterface {
 }
 
 //Carousel Filter Interface - useCarouselFilters
-export interface CarouselFiltersInterface {
+export interface CarouselFilterInterface {
     name: ToolsTypes,
     state: boolean,
     handleFilter: () => void
+}
+
+export interface CarouselFiltersInterface {
+    filters: CarouselFilterInterface[];
+    activeFiltersCount: number;
 }

@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         <main className={styles.main}>
           <Presentation />
           <Experience windowDimenions={windowDimenions} />
-          <Projects />
+          <Projects windowDimenions={windowDimenions} />
           <Contact />
           <AboutMe />
         </main>
