@@ -86,6 +86,8 @@ const initialState: AppInitialState = {
                 projects: {
                     title: "",
                     description: "",
+                    notFoundMessage1: "",
+                    notFoundMessage2: "",
                 },
                 contact: {
                     title: "",
@@ -146,6 +148,8 @@ const initialState: AppInitialState = {
                     projects: {
                         title: "",
                         description: "",
+                        notFoundMessage1: "",
+                        notFoundMessage2: "",
                     },
                     contact: {
                         title: "",

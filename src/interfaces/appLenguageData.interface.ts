@@ -43,6 +43,8 @@ export interface AppExperienceData {
 export interface AppProjectsData {
     title: string;
     description: string;
+    notFoundMessage1: string;
+    notFoundMessage2: string;
 }
 export interface AppContactData {
     title: string;

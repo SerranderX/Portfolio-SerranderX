@@ -142,8 +142,8 @@ export const Projects: React.FC<ProjectsProps> = ({windowDimenions}) => {
                 }
                 {projectsList.length == 0 && (
                     <motion.div className={`${styles['project-not-found-container']}`} animate={{textAlign: 'center', opacity: [0, 1]}} transition={{ duration: .5, ease: [0.04, 0.62, 0.23, 0.98] }}>
-                        <p>De momento no se encuentran proyectos para los filtros seleccionados</p>
-                        <p>Estoy trabajando en nuevos proyectos para el futuro</p>
+                        <p>{projects.notFoundMessage1}</p>
+                        <p>{projects.notFoundMessage2}</p>
                         <Image src={DevelopGif} width={gifSize} height={gifSize} alt={"developGif"}/>
                     </motion.div>
                 )}

@@ -26,6 +26,8 @@ export const us: AppLenguageData = {
         projects: {
             title: "Projects",
             description: "Some of the projects that I have developed.",
+            notFoundMessage1: "At the moment there are no projects for the selected filters",
+            notFoundMessage2: "I am working on new projects for the future",
         },
         contact: {
             title: "Contact",
