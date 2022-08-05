@@ -11,7 +11,7 @@ export const AboutMe = () => {
 
     const opts = {
         height: "500",
-        width: "800",
+        width: "700",
         playerVars: {
             autoplay: 1,
         },
