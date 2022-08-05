@@ -26,10 +26,12 @@ export const es: AppLenguageData = {
         projects: {
             title: "Proyectos",
             description: "Algunos de los proyectos que he desarrollado.",
+            notFoundMessage1: "De momento no se encuentran proyectos para los filtros seleccionados",
+            notFoundMessage2: "Estoy trabajando en nuevos proyectos para el futuro",
         },
         contact: {
             title: "Contacto",
-            description: "Enviame un mensaje con tu correo electronico si quieres trabajar conmigo. Si quieres saber mas sobre mi, puedes visitar mis redes sociales.",
+            description: "Enviame un mensaje con tu correo electronico si quieres contactar conmigo. Si quieres saber mas sobre mi, te invito a visitar mis redes sociales.",
             inputName: "Nombre",
             inputEmail: "Correo electronico",
             inputSubject: "Asunto",
