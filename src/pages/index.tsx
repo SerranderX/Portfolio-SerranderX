@@ -29,11 +29,11 @@ const Home: NextPage = () => {
         
         <Header reference={refHeader} windowDimenion={windowDimenions}/>
         <main className={styles.main}>
-          <Presentation />
+          <Presentation windowDimenions={windowDimenions} />
           <Experience windowDimenions={windowDimenions} />
           <Projects windowDimenions={windowDimenions} />
           <Contact />
-          <AboutMe />
+          <AboutMe windowDimenions={windowDimenions} />
         </main>
         <Footer reference={refFooter}/>
         <ButtonNav showHeader={showHeader} showFooter={showFooter}/>

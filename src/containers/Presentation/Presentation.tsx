@@ -9,10 +9,23 @@ import { WindowSize } from '@interfaces/windowSize.interface';
 import { AppContext } from '@context/AppContext';
 import { AnimatedText } from '@components/AnimatedText/AnimatedText';
 
-export const Presentation = () => {
+interface PresentationProps {
+    windowDimenions:WindowSize
+}
+
+export const Presentation: React.FC<PresentationProps> = ({windowDimenions}) => {
     const name = ['Felipe Diaz', 'SerranderX'];
     const widnowsDimensions: WindowSize = useWindowsDimensions();
     const { lenguageState: { lenguageSelectedData: {data: { presentation }} } } = useContext(AppContext);
+    const [imageSize, setImageSize] = useState({width: 0, height: 0});
+
+    useEffect(() => {
+        if(windowDimenions.winWidth > 1200 ){
+            setImageSize({width: 370, height: 500});
+        } else {
+            setImageSize({width: 470, height: 600});
+        }
+    } , [windowDimenions]);
 
     return (
         <section className={`${styles['container-presentation']}`}>
@@ -27,13 +40,18 @@ export const Presentation = () => {
                     {presentation.description}
                 </p>
             </article>
-            <motion.article 
-                className={`${styles['photo-container']}`}
-                animate={{ opacity: [0, 1], boxShadow: `0 0 5px rgba(8, 139, 204, .8), 0 0 25px rgba(8, 139, 204, .8), 0 0 5px rgba(8, 139, 204, .8), 0 0 100px rgba(8, 139, 204, .8)`}}
-                transition={{ duration: 1, delay: .3, ease: [0.04, 0.62, 0.23, 0.98] }}
-            >
-                <Image src={Photo} alt="Picture of the author" width={450} height={600} className={styles.photo} />
-            </motion.article>
+            <article className={`${styles['photo-container']}`}>
+                <motion.div
+                    animate={{ 
+                        opacity: [0, 1],
+                        display: 'flex',
+                        borderRadius: '50px', 
+                        boxShadow: `0 0 5px rgba(8, 139, 204, .8), 0 0 25px rgba(8, 139, 204, .8), 0 0 5px rgba(8, 139, 204, .8), 0 0 100px rgba(8, 139, 204, .8)`}}
+                    transition={{ duration: 1, delay: .3, ease: [0.04, 0.62, 0.23, 0.98] }}
+                >
+                    <Image src={Photo} alt="Picture of the author" width={imageSize.width} height={imageSize.height} className={styles.photo} />
+                </motion.div>
+            </article>
         </section>
     );
 };

@@ -66,8 +66,9 @@
     filter: invert(91%) sepia(24%) saturate(122%) hue-rotate(193deg) brightness(99%) contrast(98%);
   }
 
-  .Footer-powered {
-    font-size: $text-min-size;
+  .Footer-distributed p.Footer-powered {
+      font-size: $text-min-size;
+      color: $tertiary-color;
   }
   
   //TODO me3dia phone footer
@@ -90,12 +91,13 @@
     }
 
     .Footer-distributed p.Footer-links {
-        font-size: $mobile-third-title-size;
+        font-size: $mobile-fourth-title-size;
         margin: 0;
     }
 
     .Footer-distributed p.Footer-powered {
-        font-size: 1.7em;
+        font-size: 2em;
+        color: #ffd400
     }
 
     .Footer-distributed .Footer-right a {

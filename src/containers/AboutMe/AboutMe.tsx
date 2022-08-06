@@ -1,17 +1,30 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styles from '@styles/AboutMe.module.scss';
 import imageGeneralSection from '@images/photo2.jpg';
 import { AppContext } from '@context/AppContext';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import YouTube from "react-youtube";
+import { WindowSize } from '@interfaces/windowSize.interface';
 
-export const AboutMe = () => {
+interface AboutMeProps {
+    windowDimenions:WindowSize
+}
+
+export const AboutMe: React.FC<AboutMeProps> = ({windowDimenions}) => {
     const { lenguageState: { lenguageSelectedData: {data: { aboutme }} } } = useContext(AppContext);
-
+    
     const opts = {
-        height: "500",
-        width: "700",
+        height: 480,
+        width: 650,
+        playerVars: {
+            autoplay: 1,
+        },
+    };
+
+    const optsMobile = {
+        height: 600,
+        width: 850,
         playerVars: {
             autoplay: 1,
         },
@@ -41,7 +54,8 @@ export const AboutMe = () => {
                     transition={{ duration: 1, delay: .3, ease: [0.04, 0.62, 0.23, 0.98] }} 
                     className={`${styles['hobbies-image-container']}`}
                 >
-                    <YouTube videoId="PaXH_S2AqDg" opts={opts} title={"[COVER] Radical Dreamers - Yasunori Mitsuda from Chrono Cross"} />
+                    {windowDimenions.winWidth > 1200 && <YouTube videoId="PaXH_S2AqDg" opts={opts} title={"[COVER] Radical Dreamers - Yasunori Mitsuda from Chrono Cross"} />}
+                    {windowDimenions.winWidth <= 1200 && <YouTube videoId="PaXH_S2AqDg" opts={optsMobile} title={"[COVER] Radical Dreamers - Yasunori Mitsuda from Chrono Cross"} />}
                 </motion.div>
                 <div className={`${styles['hobbies-info-container']}`}>
                     <h2>{aboutme.skills.title}</h2>

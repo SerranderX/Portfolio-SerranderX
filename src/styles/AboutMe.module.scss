@@ -59,6 +59,7 @@
     width: fit-content;
     height: fit-content;
     justify-self: center;
+    display: flex;
 }
 
 .hobbies-container {
@@ -136,5 +137,9 @@
         grid-template-rows: auto auto;
         grid-template-areas: "image" "info";
         row-gap: 1.5em;
+    }
+
+    .container {
+        row-gap: 8rem;
     }
 }
