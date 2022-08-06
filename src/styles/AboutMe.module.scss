@@ -29,11 +29,12 @@
     grid-template-columns: 40% 60%;
     grid-template-rows: auto;
     grid-template-areas: "image info";
-    column-gap: 4em;
+    column-gap: 1em;
 }
 
 .general-info-container {
     margin: 2rem 0;
+    align-self: center;
 }
 
 .general-info-container p {
@@ -66,19 +67,23 @@
     grid-area: hobbiesInfo;
     display: grid;
     grid-template-columns: 40% 60%;
-    grid-template-areas: "info image";
+    grid-template-areas: "info video";
     grid-template-rows: auto;
-    column-gap: 4em;
+    column-gap: 1em;
 }
 
-.hobbies-image-container {
-    grid-area: image;
+.hobbies-video-container {
+    grid-area: video;
     margin: 2rem;
-    place-self: center;
+}
+
+.hobbies-video-container div {
+    display: flex;
 }
 
 .hobbies-info-container {
     margin: 2rem 0;
+    align-self: center;
 }
 
 .hobbies-info-container p {

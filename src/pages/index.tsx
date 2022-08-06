@@ -12,7 +12,6 @@ import { ButtonNav } from '@components/ButtonNav/ButtonNav';
 import { useNearScreen } from '@hooks/useNearScreen';
 import { WindowSize } from '@interfaces/windowSize.interface';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
-import { LenguageButton } from '@components/LenguageButton/LenguageButton';
 
 const Home: NextPage = () => {
   const [showHeader, refHeader] = useNearScreen();
@@ -24,7 +23,7 @@ const Home: NextPage = () => {
         <Head >
           <title>Portfolio SerranderX</title>
           <meta name="description" content="This is a portfolio project about the author SerranderX" />
-          <link rel="icon" href="favicon.ico" />
+          <link rel="icon" href="src/public/favicon.ico" />
         </Head>
         
         <Header reference={refHeader} windowDimenion={windowDimenions}/>

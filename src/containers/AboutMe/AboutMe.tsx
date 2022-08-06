@@ -16,18 +16,22 @@ export const AboutMe: React.FC<AboutMeProps> = ({windowDimenions}) => {
     
     const opts = {
         height: 480,
-        width: 650,
         playerVars: {
             autoplay: 1,
         },
+        style: {
+            width: '-webkit-fill-available',
+        }
     };
 
     const optsMobile = {
         height: 600,
-        width: 850,
         playerVars: {
             autoplay: 1,
         },
+        style: {
+            width: '-webkit-fill-available',
+        }
     };
 
     return (
@@ -52,7 +56,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({windowDimenions}) => {
                 <motion.div
                     animate={{ opacity: [0, 1], boxShadow: `0 0 5px rgba(8, 139, 204, .8), 0 0 25px rgba(8, 139, 204, .8), 0 0 5px rgba(8, 139, 204, .8), 0 0 100px rgba(8, 139, 204, .8)`}}
                     transition={{ duration: 1, delay: .3, ease: [0.04, 0.62, 0.23, 0.98] }} 
-                    className={`${styles['hobbies-image-container']}`}
+                    className={`${styles['hobbies-video-container']}`}
                 >
                     {windowDimenions.winWidth > 1200 && <YouTube videoId="PaXH_S2AqDg" opts={opts} title={"[COVER] Radical Dreamers - Yasunori Mitsuda from Chrono Cross"} />}
                     {windowDimenions.winWidth <= 1200 && <YouTube videoId="PaXH_S2AqDg" opts={optsMobile} title={"[COVER] Radical Dreamers - Yasunori Mitsuda from Chrono Cross"} />}
