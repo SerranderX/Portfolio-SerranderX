@@ -77,6 +77,10 @@
     margin: 2rem;
 }
 
+.hobbies-video-container iframe {
+    width: -webkit-fill-available;
+}
+
 .hobbies-video-container div {
     display: flex;
 }
@@ -140,7 +144,7 @@
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto auto;
-        grid-template-areas: "image" "info";
+        grid-template-areas: "video" "info";
         row-gap: 1.5em;
     }
 
