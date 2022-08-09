@@ -17,7 +17,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({windowDimenions}) => {
     const opts = {
         height: 480,
         playerVars: {
-            autoplay: 1,
+            autoplay: 0,
         },
         style: {
             width: '-webkit-fill-available',
@@ -27,7 +27,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({windowDimenions}) => {
     const optsMobile = {
         height: 600,
         playerVars: {
-            autoplay: 1,
+            autoplay: 0,
         },
         style: {
             width: '-webkit-fill-available',
