@@ -17,7 +17,7 @@ export const es: AppLenguageData = {
             title: "Portafolio de proyectos",
             greeting1: "Bienvenido,",
             greeting2: "Yo soy ",
-            description: "Diseñador y desarrollador de software de nacionalidad Chilena, dedicado al aprendizaje continuo y a la creación de nuevos proyectos.",
+            description: "Diseñador y desarrollador de software de nacionalidad Chilena, conocido como @SerranderX, me dedico al desarrollo de software y el aprendizaje continuo de nuevas tecnologias.",
         },
         experience: {
             title: "Experiencia",
@@ -46,7 +46,7 @@ export const es: AppLenguageData = {
             },
             skills: {
                 title: "Hobbies e intereses",
-                description: "Soy un apasionado por los videojuegos en general desde que tengo memoria, sin embargo mis favoritos siempre han sido los RPG.\n Me gusta mucho leer y el genero de la fantasía, así como la literatura en su totalidad cuando encuentro algun libro interesante. También me gusta la música y desde mi adolescencia me gusta considerarme un musico amateur, toco guitarra desde los 12 años de manera autodidacta. En mi Instagram podrán ver algunas de las canciones que he grabado, aunque de todas maneras enesta seccion se encuentra un cover que grabe hace algun tiempo.",
+                description: "Soy un apasionado por los videojuegos en general desde que tengo memoria, sin embargo mis favoritos siempre han sido los RPG.\n Me gusta mucho leer y el genero de la fantasía, así como la literatura en su totalidad cuando encuentro algun libro interesante. También me gusta la música y desde mi adolescencia me gusta considerarme un musico amateur, toco guitarra desde los 12 años de manera autodidacta. En mi Instagram podrán ver algunas de las canciones que he grabado, aunque de todas maneras en esta seccion se encuentra un cover que grabe hace algun tiempo.",
             }
         },
         footer: {
