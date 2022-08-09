@@ -22,8 +22,6 @@ const Home: NextPage = () => {
       <div id="app-portfolio" className={styles.container}>
         <Head >
           <title>Portfolio SerranderX</title>
-          <meta name="description" content="This is a portfolio project about the author SerranderX" />
-          <link rel="icon" href="src/public/favicon.ico" />
         </Head>
         
         <Header reference={refHeader} windowDimenion={windowDimenions}/>
