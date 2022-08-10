@@ -17,7 +17,7 @@ export const es: AppLenguageData = {
             title: "Portafolio de proyectos",
             greeting1: "Bienvenido,",
             greeting2: "Yo soy ",
-            description: "Diseñador y desarrollador de software de nacionalidad Chilena, conocido como @SerranderX en internet, me dedico al desarrollo de software y el aprendizaje continuo de nuevas tecnologías para la creacion de proyectos.",
+            description: "Diseñador y desarrollador de software de nacionalidad Chilena, conocido como @SerranderX en internet. Me dedico al aprendizaje continuo de nuevas tecnologías para la creacion de proyectos.",
         },
         experience: {
             title: "Experiencia",
