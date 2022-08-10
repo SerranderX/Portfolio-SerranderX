@@ -1,0 +1,38 @@
+@import '_vars.scss';
+
+.fa {
+    display: inline-block;
+    border-radius: 2px;
+    color: $primary-color;
+    text-align: center;
+    margin: 5px 5px;
+    transition:all .25s;
+    border-radius: 50%;
+}
+
+.fa-instagram {
+
+}
+
+.fa-twitter {
+    filter: invert(44%) sepia(86%) saturate(2111%) hue-rotate(170deg) brightness(101%) contrast(104%);
+}
+
+.fa-linkedin {
+    filter: invert(29%) sepia(84%) saturate(1848%) hue-rotate(179deg) brightness(89%) contrast(101%);
+}
+
+.fa-github {
+    filter: invert(99%) sepia(8%) saturate(284%) hue-rotate(245deg) brightness(118%) contrast(81%);
+}
+
+.nickname {
+    color: $primary-color;
+    display: block;
+    font-size: $text-base-size;
+    position: absolute;
+}
+
+.container {
+    text-align: center;
+}

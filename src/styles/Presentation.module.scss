@@ -2,11 +2,11 @@
 
 .container-presentation {
     display: grid;
-    grid-template-columns: 57% 40%;
+    grid-template-columns: 55% 40%;
     grid-template-rows: auto;
     grid-template-areas: "Title Image";
     padding: 2rem 3rem;
-    column-gap: 3%;
+    column-gap: 5%;
 }
 
 .title {
@@ -31,7 +31,7 @@
     grid-area: Title;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-self: flex-end;
 }
 
 .title-container p {
@@ -50,6 +50,28 @@
 
 .photo {
     border-radius: 50px;
+    object-fit: cover;
+}
+
+.socialContainer {
+    margin-top: 1em; 
+    place-self: start;
+}
+
+.containerIcon {
+    margin: 0 .3em;
+}
+
+.socialSectionContainer {
+    display: inline-flex;
+    background-color: $background-color-dark-opac;
+    padding: .5em 1em;
+    border-radius: 30px;
+}
+
+.svgClass-presentation {
+    width: 4em;
+    height: 4em;
 }
 
 @media (max-width: 1200px) {
@@ -84,5 +106,20 @@
     .photo-container {
         width: fit-content;
         justify-self: center;
+    }
+
+    .socialContainer {
+        margin-top: 3em;
+        align-self: center;
+    }
+
+    .svgClass-presentation {
+        width: 7em;
+        height: 7em;
+    }
+
+    .socialSectionContainer {
+        column-gap: 1em;
+        padding: 1em;
     }
 }

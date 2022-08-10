@@ -5,7 +5,7 @@ const nextConfig = {
     GITHUB:'https://github.com/SerranderX/next-boilerplate',
     LINKEDIN:'https://www.linkedin.com/in/fdiazalburquenque/',
     TWITTER:'https://twitter.com/Serranderx',
-    FACEBOOK:'https://www.facebook.com/felipe.s.diaz.3/'
+    INSTAGRAM:'https://www.instagram.com/serrander.diaz/'
   }
 }
 

@@ -5,7 +5,7 @@ export const ENV = {
         gitHub:  String(process.env.GITHUB),
         linkedin: String(process.env.LINKEDIN),
         twitter: String(process.env.TWITTER),
-        facebook: String(process.env.FACEBOOK),
+        instagram: String(process.env.INSTAGRAM),
         email: String(process.env.EMAIL),
     },
 }

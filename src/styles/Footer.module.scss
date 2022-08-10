@@ -7,11 +7,11 @@
     width: 100%;
     text-align: left;
     font: normal 16px sans-serif;
-    padding: 45px 50px;
+    padding: 45px 65px;
   }
   
   .Footer-distributed .Footer-left p {
-    color: white;
+    color: $primary-color;
     font-size: 14px;
     margin: 0;
   }
@@ -19,7 +19,7 @@
   .Footer-distributed p.Footer-links {
     font-size: $text-base-size;
     font-weight: bold;
-    color: white;
+    color: $primary-color;
     margin: 0 0 10px;
     padding: 0;
     transition: ease .25s;
@@ -32,12 +32,6 @@
     margin: 0 .3em;
     text-decoration: none;
     color: inherit;
-    transition: ease .25s;
-  }
-  
-  .Footer-distributed p.Footer-links a:hover {
-    color: $primary-color;
-    transition: ease .25s;
   }
   
   .Footer-distributed .Footer-links .link-1:before {
@@ -47,23 +41,7 @@
   .Footer-distributed .Footer-right {
     float: right;
     margin-top: 6px;
-    max-width: 250px;
-  }
-  
-  .Footer-distributed .Footer-right a {
-    display: inline-block;
-    border-radius: 2px;
-    font-size: 20px;
-    color: $primary-color;
-    text-align: center;
-    line-height: 35px;
-    margin: 5px 5px;
-    transition:all .25s;
-    border-radius: 50%;
-  }
-
-  .fa svg {
-    filter: invert(91%) sepia(24%) saturate(122%) hue-rotate(193deg) brightness(99%) contrast(98%);
+    max-width: 350px;
   }
 
   .Footer-distributed p.Footer-powered {
@@ -71,7 +49,10 @@
       color: $secondary-color;
   }
   
-  //TODO me3dia phone footer
+  .svgClass {
+    width: 3.5em;
+    height: 3.5em;
+  }
 
   /* Media Queries */
   @media (max-width: 1200px) {
@@ -82,7 +63,7 @@
     .Footer-distributed .Footer-right {
       float: none;
       margin: 1.4rem auto;
-      max-width: 25.5rem;
+      max-width: 35rem;
     }
   
     .Footer-distributed .Footer-left p.Footer-links {
@@ -120,8 +101,8 @@
       margin: 0 0 0 1rem;
     }
 
-    .fa svg {
-        width: 5rem;
-        height: 5rem;
+    .svgClass {
+      width: 7em;
+      height: 7em;
     }
   }

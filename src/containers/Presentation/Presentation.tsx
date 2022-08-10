@@ -8,6 +8,7 @@ import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
 import { WindowSize } from '@interfaces/windowSize.interface';
 import { AppContext } from '@context/AppContext';
 import { AnimatedText } from '@components/AnimatedText/AnimatedText';
+import { SocialSection } from '@components/SocialSection/SocialSection';
 
 interface PresentationProps {
     windowDimenions:WindowSize
@@ -39,6 +40,9 @@ export const Presentation: React.FC<PresentationProps> = ({windowDimenions}) => 
                 <p className={`${styles.description}`}>
                     {presentation.description}
                 </p>
+                <div className={`${styles.socialContainer}`}>
+                    <SocialSection containerClass={styles.socialSectionContainer} svgClass={`${styles['svgClass-presentation']}`} iconContainerClass={styles.containerIcon} />
+                </div>
             </article>
             <article className={`${styles['photo-container']}`}>
                 <motion.div

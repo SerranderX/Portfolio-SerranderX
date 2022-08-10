@@ -26,10 +26,10 @@
 .general-container {
     grid-area: generalInfo;
     display: grid;
-    grid-template-columns: 38% 60%;
+    grid-template-columns: 35% 60%;
     grid-template-rows: auto;
     grid-template-areas: "image info";
-    column-gap: 2%;
+    column-gap: 5%;
 }
 
 .general-info-container {
@@ -55,12 +55,12 @@
 
 .general-image-container {
     grid-area: image;
-    margin: 2rem;
     border-radius: 50px;
     width: fit-content;
     height: fit-content;
     justify-self: center;
     display: flex;
+    align-self: center;
 }
 
 .hobbies-container {

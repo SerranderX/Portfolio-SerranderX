@@ -1,13 +1,14 @@
 import React from 'react'
+import { SvgPropsInterface } from '@interfaces/svgProps.interface';
+import styles from '@styles/SocialIcon.module.scss';
 
-function Icon() {
+export const LinkedinIcon: React.FC<SvgPropsInterface> = ({svgClass}): JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="45"
-      height="45"
       fill="none"
-      viewBox="1 1 48 48"
+      viewBox="0 0 48 48"
+      className={`${svgClass && svgClass} ${styles['fa-linkedin']}`}
     >
       <path
         fill="#000"
@@ -18,5 +19,3 @@ function Icon() {
     </svg>
   )
 }
-
-export default Icon

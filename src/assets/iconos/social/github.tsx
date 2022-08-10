@@ -1,13 +1,14 @@
 import React from 'react'
+import { SvgPropsInterface } from '@interfaces/svgProps.interface';
+import styles from '@styles/SocialIcon.module.scss';
 
-function Icon() {
+export const GitHubIcon: React.FC<SvgPropsInterface> = ({svgClass}): JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
-      viewBox="4 3 256 256"
-      height="45"
-      width="45"
+      viewBox="0 0 256 256"
+      className={`${svgClass && svgClass} ${styles['fa-github']}`}
     >
       <path
         fill="#000"
@@ -16,5 +17,3 @@ function Icon() {
     </svg>
   )
 }
-
-export default Icon

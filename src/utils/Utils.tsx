@@ -24,10 +24,16 @@ import WebpackIcon from "@iconos/skills/Webpack";
 import PythonIcon from "@iconos/skills/Python";
 import { ExperienceItems } from '@interfaces/experienceItems.interface';
 import { ProjectInterface } from '@interfaces/project.interface';
+import { SocialIconsDataInterface } from '@interfaces/socialIconsData.interface';
 import PokecardexjsSS from '@images/projects/pokecardexjs.jpg';
 import PetgramSS from '@images/projects/petgram.jpg';
 import TodoMachineSS from '@images/projects/todo-machine.jpg';
 import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
+import { ENV } from '@config/config';
+import { InstagramIcon } from '@iconos/social/instagram';
+import { GitHubIcon } from '@iconos/social/github';
+import { TwitterIcon } from '@iconos/social/twitter';
+import { LinkedinIcon } from '@iconos/social/linkedin';
 
 export const ExperienceIcons: ExperienceItems[] = [
     {
@@ -202,5 +208,32 @@ export const ProjectsData: ProjectInterface[] = [
         technologies: [ToolsTypes.REACTJS, ToolsTypes.JAVASCRIPT]
     },
 ];
+
+export const SocialIconsData: SocialIconsDataInterface[] = [
+    {
+        name: "GitHub",
+        url: ENV.developerData.gitHub,
+        Icon: GitHubIcon,
+        nickname: "@SerranderX"
+    },
+    {
+        name: "Linkedin",
+        url: ENV.developerData.linkedin,
+        Icon: LinkedinIcon,
+        nickname: "@Fdiazalburquenque"
+    },
+    {
+        name: "Instagram",
+        url: ENV.developerData.instagram,
+        Icon: InstagramIcon,
+        nickname: "@Serrander.diaz"
+    },
+    {
+        name: "Twitter",
+        url: ENV.developerData.twitter,
+        Icon: TwitterIcon,
+        nickname: "@SerranderX"
+    },
+]
 
 export const VideoURL:string = "https://youtu.be/PaXH_S2AqDg";
