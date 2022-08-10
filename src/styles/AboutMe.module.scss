@@ -26,10 +26,10 @@
 .general-container {
     grid-area: generalInfo;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 38% 60%;
     grid-template-rows: auto;
     grid-template-areas: "image info";
-    column-gap: 1em;
+    column-gap: 2%;
 }
 
 .general-info-container {
@@ -66,22 +66,26 @@
 .hobbies-container {
     grid-area: hobbiesInfo;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 38% 60%;
     grid-template-areas: "info video";
     grid-template-rows: auto;
-    column-gap: 1em;
+    column-gap: 2%;
 }
 
 .hobbies-video-container {
     grid-area: video;
-    margin: 2rem;
+    align-self: center;
 }
 
-.hobbies-video-container iframe {
+.hobbies-video {
+    margin: 0 2rem 0 2rem;
+}
+
+.hobbies-video iframe {
     width: -webkit-fill-available;
 }
 
-.hobbies-video-container div {
+.hobbies-video div {
     display: flex;
 }
 
@@ -146,6 +150,10 @@
         grid-template-rows: auto auto;
         grid-template-areas: "video" "info";
         row-gap: 1.5em;
+    }
+
+    .hobbies-video {
+        margin: 0 2rem 0 2rem;
     }
 
     .container {
