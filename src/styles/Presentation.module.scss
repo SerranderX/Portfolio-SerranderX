@@ -2,11 +2,11 @@
 
 .container-presentation {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 57% 40%;
     grid-template-rows: auto;
     grid-template-areas: "Title Image";
     padding: 2rem 3rem;
-    column-gap: 2em;
+    column-gap: 3%;
 }
 
 .title {
