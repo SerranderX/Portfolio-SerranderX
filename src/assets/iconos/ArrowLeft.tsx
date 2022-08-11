@@ -1,7 +1,6 @@
-
-
 import * as React from "react"
 import { SVGProps } from "react"
+import styles from '@styles/ArrowButton.module.scss'
 
 export const ArrowLeft = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -12,6 +11,7 @@ export const ArrowLeft = (props: SVGProps<SVGSVGElement>) => (
     fillRule="evenodd"
     clipRule="evenodd"
     viewBox="0 0 312 511.42"
+    className={`${styles.ButtonFilter} ${props.className}`}
     {...props}
   >
     <path

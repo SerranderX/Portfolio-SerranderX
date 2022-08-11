@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowLeft } from '@iconos/ArrowLeft';
 import { ArrowRight } from '@iconos/ArrowRight';
+import styles from '@styles/ArrowButton.module.scss'
 
 interface ButtonCarouselProps {
     handlePrev?:any;
@@ -25,8 +26,8 @@ export const ButtonCarousel: React.FC<ButtonCarouselProps> = ({handlePrev, handl
     
     return (
         <button onClick={handleClick} className={className} style={{display: `${carouselStop ? 'none' : 'inline-block'}`}}>
-            {left && <ArrowLeft/>}
-            {right && <ArrowRight/>}
+            {left && <ArrowLeft className={styles.ButtonFilter} />}
+            {right && <ArrowRight className={styles.ButtonFilter} />}
         </button>
     );
 };

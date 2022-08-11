@@ -22,6 +22,7 @@ import SassIcon from "@iconos/skills/Sass";
 import MysqlIcon from "@iconos/skills/Mysql";
 import WebpackIcon from "@iconos/skills/Webpack";
 import PythonIcon from "@iconos/skills/Python";
+import FramerMotionIcon from "@iconos/skills/FramerMotion";
 import { ExperienceItems } from '@interfaces/experienceItems.interface';
 import { ProjectInterface } from '@interfaces/project.interface';
 import { SocialIconsDataInterface } from '@interfaces/socialIconsData.interface';
@@ -42,42 +43,42 @@ export const ExperienceIcons: ExperienceItems[] = [
         icon: AndroidIcon,
     },
     {
-        name: "Java",
+        name: ToolsTypes.JAVA,
         url: "https://www.java.com",
         icon: JavaIcon,
     },
     {
-        name: "Spring",
+        name: ToolsTypes.SPRING,
         url: "https://spring.io",
         icon: SpringIcon,
     },
     {
-        name: "Javascript",
+        name: ToolsTypes.JAVASCRIPT,
         url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         icon: JavaScriptIcon,
     },
     {
-        name: "Reactjs",
+        name: ToolsTypes.REACTJS,
         url: "https://reactjs.org/",
         icon: ReactIcon,
     },
     {
-        name: "Nextjs",
+        name: ToolsTypes.NEXTJS,
         url: "https://nextjs.org",
         icon: NextIcon,
     },
     {
-        name: "Angular",
+        name: ToolsTypes.ANGULAR,
         url: "https://angular.io/",
         icon: AngularIcon,
     },
     {
-        name: "Nestjs",
+        name: ToolsTypes.NESTJS,
         url: "https://nestjs.com",
         icon: NestIcon,
     },
     {
-        name: "Nodejs",
+        name: ToolsTypes.NODEJS,
         url: "https://nodejs.org",
         icon: NodeIcon,
     },
@@ -137,7 +138,7 @@ export const ExperienceIcons: ExperienceItems[] = [
         icon: LinuxIcon,
     },
     {
-        name: "Styled C",
+        name: ToolsTypes.STYLEDCOMPONENTS,
         url: "https://www.styled-components.com",
         icon: StyledComponentIcon,
     },
@@ -145,6 +146,11 @@ export const ExperienceIcons: ExperienceItems[] = [
         name: "Sass",
         url: "https://sass-lang.com",
         icon: SassIcon,
+    },
+    {
+        name: "FMotion",
+        url: "https://framer.com/motion",
+        icon: FramerMotionIcon,
     },
     {
         name: "Docker",
@@ -173,7 +179,8 @@ export const ProjectsData: ProjectInterface[] = [
         ],
         url: "https://pokecarddexjs.com",
         image: PokecardexjsSS,
-        technologies: [ToolsTypes.REACTJS, ToolsTypes.TYPESCRIPT, ToolsTypes.JAVASCRIPT, ToolsTypes.FRAMERMOTION]
+        technologies: [ToolsTypes.REACTJS, ToolsTypes.JAVASCRIPT, ToolsTypes.FRAMERMOTION],
+        icons: [ReactIcon, JavaScriptIcon, FramerMotionIcon],
     },
     {
         name: "Petgram",
@@ -189,7 +196,8 @@ export const ProjectsData: ProjectInterface[] = [
         ],
         url: "https://petgram-4tsdddk6c-serranderx.vercel.app",
         image: PetgramSS,
-        technologies: [ToolsTypes.REACTJS, ToolsTypes.JAVASCRIPT, ToolsTypes.STYLEDCOMPONENTS]
+        technologies: [ToolsTypes.REACTJS, ToolsTypes.JAVASCRIPT, ToolsTypes.STYLEDCOMPONENTS],
+        icons: [ReactIcon, JavaScriptIcon, StyledComponentIcon],
     },
     {
         name: "ToDo Machine",
@@ -205,7 +213,8 @@ export const ProjectsData: ProjectInterface[] = [
         ],
         url: "https://SerranderX.github.io/ToDo-Machine",
         image: TodoMachineSS,
-        technologies: [ToolsTypes.REACTJS, ToolsTypes.JAVASCRIPT]
+        technologies: [ToolsTypes.REACTJS, ToolsTypes.JAVASCRIPT],
+        icons: [ReactIcon, JavaScriptIcon],
     },
 ];
 

@@ -1,10 +1,31 @@
 @import '_vars.scss';
 
 .container {
-    width: 100%;
     height: 600px;
     background-size: cover;
     cursor: pointer;
+}
+
+.titleBox {
+    color: $primary-color;
+    padding: 0.5rem 1rem;
+    font-size: $second-title-size;
+    background-color: $background-color-dark-opac;
+    width: fit-content;
+    height: fit-content;
+    margin: 1% 0 0 1%;
+    display: inline-flex;
+    float: left;
+}
+
+.techIcons {
+    background-color: $background-color-dark-opac;
+    padding: 1em;
+    column-gap: 1em;
+    margin: 54% 2% 0 0;
+    float: right;
+    display: inline-flex;
+    align-items: center;
 }
 
 .info-container {
@@ -66,12 +87,18 @@
     }
 }
 
+.project-icon-container {
+    width: 3em;
+    height: 3em;
+}
+
+
 @media (max-width: 1200px) {
-    
+
     .info-description h1 {
         font-size: $mobile-main-title-size;
     }
-    
+
     .info-description p {
         font-size: $mobile-text-base-size;
     }
@@ -82,6 +109,19 @@
 
     .info-container {
         margin: 5% 10%;
+    }
+
+    .titleBox {
+        font-size: 3.5em;
+    }
+
+    .techIcons {
+        margin: 53% 2% 0 0;
+    }
+    
+    .project-icon-container {
+        width: 3.7em;
+        height: 3.7em;
     }
 
 }

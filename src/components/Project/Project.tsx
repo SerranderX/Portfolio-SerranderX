@@ -1,11 +1,10 @@
-import React, { useContext, useState } from 'react';
-import PokecardexjsSS from '@images/projects/pokecardexjs.jpg';
-import styles from '@styles/Project.module.scss';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@components/Button/Button';
 import { imageVariants } from '@components/Project/variants'; 
 import { ProjectInterface } from '@interfaces/project.interface';
 import { AppContext } from '@context/AppContext';
+import styles from '@styles/Project.module.scss';
 
 interface ProjectProps {
     handleFocusProject: () => void;
@@ -28,6 +27,18 @@ export const Project: React.FC<ProjectProps> = ({handleFocusProject, projectFocu
                 animate={projectFocus ? "focus" : "blur"}
                 variants={imageVariants(project.image.src)}
             >
+                {!projectFocus && (
+                    <>
+                        <div className={styles.titleBox}>{project.name}</div>
+                        <div className={styles.techIcons}>
+                            {project.icons.map((Icon, index) => 
+                                <div key={`${project.name}-icon-${index}`} className={`${styles['project-icon-container']}`}>
+                                    <Icon />
+                                </div>
+                            )}
+                        </div>
+                    </>
+                )}
             </motion.div>
             {projectFocus &&
                 <motion.div 

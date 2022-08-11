@@ -12,16 +12,6 @@
     text-align: center;
 }
 
-.carouselContainer svg {
-    transition: all 0.3s ease-in-out;
-    filter: $svg-filter-red;
-    opacity: .5;
-
-    &:hover {
-        opacity: 1;
-    }
-}
-
 .filter-container {
     display: block;
     position: relative;
@@ -105,11 +95,6 @@
     &:hover {
         background-color: $background-color-dark-opac;
     }
-}
-
-.buttom-slide svg {
-    filter: $svg-filter-red;
-    opacity: 0.5;
 }
 
 .project-not-found-container {

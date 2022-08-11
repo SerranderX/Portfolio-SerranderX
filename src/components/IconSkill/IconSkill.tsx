@@ -5,7 +5,7 @@ import { ExperienceItems } from '@interfaces/experienceItems.interface';
 interface IconSkillProps {
     index: number;
     Item: ExperienceItems;
-    xPosition: number;
+    xPosition?: number;
 } 
 
 export const IconSkill:React.FC<IconSkillProps> = ({index, Item, xPosition}) => {

@@ -101,7 +101,7 @@ export const Projects: React.FC<ProjectsProps> = ({windowDimenions}) => {
                     >
                         <Carousel
                             autoPlay={autoPlay}
-                            interval={5000}
+                            interval={500000}
                             loop={true}
                             renderArrowLeft={(props) => (
                                 <ButtonCarousel
