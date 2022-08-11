@@ -9,5 +9,5 @@ export enum ToolsTypes {
     JAVASCRIPT = "JavaScript",
     FRAMERMOTION = "FramerMotion",
     ANGULAR = "Angular",
-    STYLEDCOMPONENTS = "Styled C",
+    STYLEDCOMPONENTS = "StyledC",
 }

@@ -29,14 +29,24 @@ export const Project: React.FC<ProjectProps> = ({handleFocusProject, projectFocu
             >
                 {!projectFocus && (
                     <>
-                        <div className={styles.titleBox}>{project.name}</div>
-                        <div className={styles.techIcons}>
+                        <motion.div 
+                            className={styles.titleBox}
+                            animate={{opacity: [0, 1]}}
+                            transition={{ duration: .5, ease: [0.04, 0.62, 0.23, 0.98] }}
+                        >
+                            {project.name}
+                        </motion.div>
+                        <motion.div 
+                            className={styles.techIcons}
+                            animate={{opacity: [0, 1]}}
+                            transition={{ duration: .5, ease: [0.04, 0.62, 0.23, 0.98] }}
+                        >
                             {project.icons.map((Icon, index) => 
                                 <div key={`${project.name}-icon-${index}`} className={`${styles['project-icon-container']}`}>
                                     <Icon />
                                 </div>
                             )}
-                        </div>
+                        </motion.div>
                     </>
                 )}
             </motion.div>

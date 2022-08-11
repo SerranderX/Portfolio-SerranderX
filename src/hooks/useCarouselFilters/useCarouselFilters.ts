@@ -8,7 +8,7 @@ import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
 export const useCarouselFilters = (): CarouselFiltersInterface => {
     const [state, dispatch] = useReducer<Reducer<CarouselStateInterface, ReducerStateInterface>>(reducer, initialState);
     
-    const { ReactJS, NextJS, NodeJS, NestJS, TypeScript, Spring, Java, JavaScript, FramerMotion, Angular, StyledComponents} = state;
+    const { ReactJS, NextJS, NodeJS, NestJS, TypeScript, Spring, Java, JavaScript, FramerMotion, Angular, StyledC} = state;
 
     //Action Creators
     const actionReactFilter = (payload: boolean) => dispatch({type: ActionTypes.SET_REACT_FILTER, payload});
@@ -34,7 +34,7 @@ export const useCarouselFilters = (): CarouselFiltersInterface => {
     const handleNodeFilter = () => actionNodeFilter(!NodeJS);
     const handleNestFilter = () => actionNestFilter(!NestJS);
     const handleSpringFilter = () => actionSpringFilter(!Spring);
-    const handleStyledComponentsFilter = () => actionStyledComponentsFilter(!StyledComponents);
+    const handleStyledComponentsFilter = () => actionStyledComponentsFilter(!StyledC);
 
     const filters = [
         {
@@ -89,7 +89,7 @@ export const useCarouselFilters = (): CarouselFiltersInterface => {
         },
         {
             name: ToolsTypes.STYLEDCOMPONENTS,
-            state: StyledComponents,
+            state: StyledC,
             handleFilter: handleStyledComponentsFilter
         }
     ]
