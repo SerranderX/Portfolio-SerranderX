@@ -48,13 +48,10 @@ export const Header: React.FC<HeaderProps> = ({
     windowDimenion,
 }) => {
     const [navState, setNavState] = useState(false);
-    const {
-        lenguageState: {
-            lenguageSelectedData: {
-                data: { header },
-            },
-        },
-    } = useContext(AppContext);
+    const { lenguageState: { lenguageSelectedData: { data: { header }, }, }, } = useContext(AppContext);
+
+    const fileUrl = "/assets/cv/2022 Curriculum Vitae - Felipe Ignacio.pdf";
+    const filename = "2022 Curriculum Vitae - Felipe Ignacio.pdf";
 
     const handleNavButton = () => {
         setNavState(!navState);
@@ -75,97 +72,108 @@ export const Header: React.FC<HeaderProps> = ({
                 )}
                 <nav className={styles.nav}>
                     {windowDimenion.winWidth < 1200 && (
-                      <div className={styles.container}>
-                                <motion.a
-                                    className={`${styles["head-section-mobile"]}`}
-                                    animate={navState ? "open" : "closed"}
-                                    variants={variantsHeadSection}
-                                    transition={{
-                                        duration: 0.8,
-                                        ease: [0.04, 0.62, 0.23, 0.98],
+                        <div className={styles.container}>
+                            <motion.a
+                                className={`${styles["head-section-mobile"]}`}
+                                animate={navState ? "open" : "closed"}
+                                variants={variantsHeadSection}
+                                transition={{
+                                    duration: 0.8,
+                                    ease: [0.04, 0.62, 0.23, 0.98],
+                                }}
+                            >
+                                <span
+                                    style={{
+                                        display: "inline-flex",
+                                        marginRight: "auto",
                                     }}
                                 >
-                                    <span
-                                        style={{
-                                            display: "inline-flex",
-                                            marginRight: "auto",
-                                        }}
-                                    >
-                                        <Image
-                                            src={LogoComplete}
-                                            alt="Logo"
-                                            width={280}
-                                            height={120}
-                                        />
-                                    </span>
-                                    <MenuToggle
-                                        show={navState}
-                                        handlerClick={handleNavButton}
+                                    <Image
+                                        src={LogoComplete}
+                                        alt="Logo"
+                                        width={280}
+                                        height={120}
                                     />
-                                </motion.a>
-                                <motion.div
-                                    className={`${styles["container-nav-mobile"]}`}
-                                    initial="collapsed"
-                                    animate={navState ? "open" : "collapsed"}
-                                    exit="collapsed"
-                                    variants={variantsSection}
-                                    transition={{
-                                        duration: 0.8,
-                                        ease: [0.04, 0.62, 0.23, 0.98],
-                                    }}
-                                >
-                                    {navState && (
-                                        <>
-                                            <motion.a
-                                                href="#about"
-                                                animate={{ opacity: [0, 1] }}
-                                                className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
-                                            >
-                                                {header.navbar.about}
-                                            </motion.a>
-                                            <motion.a
-                                                href="#experience"
-                                                animate={{ opacity: [0, 1] }}
-                                                className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
-                                            >
-                                                {header.navbar.experience}
-                                            </motion.a>
-                                            <motion.a
-                                                href="#projects"
-                                                animate={{ opacity: [0, 1] }}
-                                                className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
-                                            >
-                                                {header.navbar.projects}
-                                            </motion.a>
-                                            <motion.a
-                                                href="#contact"
-                                                animate={{ opacity: [0, 1] }}
-                                                className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
-                                            >
-                                                {header.navbar.contact}
-                                            </motion.a>
-                                        </>
-                                    )}
-                                </motion.div>
-                          </div>
-                        )}
-                        {windowDimenion.winWidth >= 1200 && (
-                            <div className={styles.container}>
-                                <a href="#about" className={styles.button}>
-                                    {header.navbar.about}
-                                </a>
-                                <a href="#experience" className={styles.button}>
-                                    {header.navbar.experience}
-                                </a>
-                                <a href="#projects" className={styles.button}>
-                                    {header.navbar.projects}
-                                </a>
-                                <a href="#contact" className={styles.button}>
-                                    {header.navbar.contact}
-                                </a>
-                            </div>
-                        )}
-                        <LenguageButton />
+                                </span>
+                                <MenuToggle
+                                    show={navState}
+                                    handlerClick={handleNavButton}
+                                />
+                            </motion.a>
+                            <motion.div
+                                className={`${styles["container-nav-mobile"]}`}
+                                initial="collapsed"
+                                animate={navState ? "open" : "collapsed"}
+                                exit="collapsed"
+                                variants={variantsSection}
+                                transition={{
+                                    duration: 0.8,
+                                    ease: [0.04, 0.62, 0.23, 0.98],
+                                }}
+                            >
+                                {navState && (
+                                    <>
+                                        <motion.a
+                                            href="#about"
+                                            animate={{ opacity: [0, 1] }}
+                                            className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
+                                        >
+                                            {header.navbar.about}
+                                        </motion.a>
+                                        <motion.a
+                                            href="#experience"
+                                            animate={{ opacity: [0, 1] }}
+                                            className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
+                                        >
+                                            {header.navbar.experience}
+                                        </motion.a>
+                                        <motion.a
+                                            href="#projects"
+                                            animate={{ opacity: [0, 1] }}
+                                            className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
+                                        >
+                                            {header.navbar.projects}
+                                        </motion.a>
+                                        <motion.a
+                                            href="#contact"
+                                            animate={{ opacity: [0, 1] }}
+                                            className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
+                                        >
+                                            {header.navbar.contact}
+                                        </motion.a>
+                                        <motion.a
+                                            animate={{ opacity: [0, 1] }}
+                                            className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
+                                            href="cv/2022 Curriculum Vitae - Felipe Ignacio.pdf"
+                                            download
+                                        >
+                                            {header.navbar.download}
+                                        </motion.a>
+                                    </>
+                                )}
+                            </motion.div>
+                        </div>
+                    )}
+                    {windowDimenion.winWidth >= 1200 && (
+                        <div className={styles.container}>
+                            <a href="#about" className={styles.button}>
+                                {header.navbar.about}
+                            </a>
+                            <a href="#experience" className={styles.button}>
+                                {header.navbar.experience}
+                            </a>
+                            <a href="#projects" className={styles.button}>
+                                {header.navbar.projects}
+                            </a>
+                            <a href="#contact" className={styles.button}>
+                                {header.navbar.contact}
+                            </a>
+                            <a href="cv/2022 Curriculum Vitae - Felipe Ignacio.pdf" className={styles.button} download>
+                                {header.navbar.download}
+                            </a>
+                        </div>
+                    )}
+                    <LenguageButton />
                 </nav>
             </header>
         </>

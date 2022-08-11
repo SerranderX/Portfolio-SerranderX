@@ -71,6 +71,7 @@ const initialState: AppInitialState = {
                         experience: "",
                         projects: "",
                         contact: "",
+                        download: "",
                     },
                 },
                 presentation: {
@@ -133,6 +134,7 @@ const initialState: AppInitialState = {
                             experience: "",
                             projects: "",
                             contact: "",
+                            download: "",
                         },
                     },
                     presentation: {

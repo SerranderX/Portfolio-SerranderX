@@ -26,6 +26,7 @@ export interface AppNavbarData {
     experience: string;
     projects: string;
     contact: string;
+    download?: string;
 }
 
 export interface AppPresentationData {

@@ -11,6 +11,7 @@ export const es: AppLenguageData = {
                 experience: "Experiencia",
                 projects: "Proyectos",
                 contact: "Contacto",
+                download: "Descargar CV",
             },
         },
         presentation: {
