@@ -74,6 +74,10 @@ export const Contact = () => {
               .then(
                 (result) => {
                     if(result.text === "OK") {
+                        setName("");
+                        setEmail("");
+                        setSubject("");
+                        setMessage("");
                         alert(contact.emailMessages.success);
                     } else {
                         alert(contact.emailMessages.error);
