@@ -2,10 +2,14 @@ export const ENV = {
     developerData: {
         signature: '{ Powered by SerranderX }',
         name: 'SerranderX',
-        gitHub:  String(process.env.GITHUB),
-        linkedin: String(process.env.LINKEDIN),
-        twitter: String(process.env.TWITTER),
-        instagram: String(process.env.INSTAGRAM),
-        email: String(process.env.EMAIL),
+        gitHub:  String(process.env.NEXT_PUBLIC_GITHUB),
+        linkedin: String(process.env.NEXT_PUBLIC_LINKEDIN),
+        twitter: String(process.env.NEXT_PUBLIC_TWITTER),
+        instagram: String(process.env.NEXT_PUBLIC_INSTAGRAM),
     },
+    emailJSData: {
+        publicKey: String(process.env.NEXT_PUBLIC_EMAILJSPUBLICKEY),
+        emailjs_service: String(process.env.NEXT_PUBLIC_EMAILJSSERVICEID),
+        emailjs_template: String(process.env.NEXT_PUBLIC_EMAILJSTEMPLATE),
+    }
 }
