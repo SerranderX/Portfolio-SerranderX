@@ -55,6 +55,10 @@ export interface AppContactData {
     inputSubject: string;
     inputMessage: string;
     inputSubmit: string;
+    emailMessages: {
+        success: string,
+        error: string,
+    }
 }
 export interface AppAboutmeData {
     title: string;

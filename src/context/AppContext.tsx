@@ -98,6 +98,10 @@ const initialState: AppInitialState = {
                     inputSubject: "",
                     inputMessage: "",
                     inputSubmit: "",
+                    emailMessages: {
+                        success: "",
+                        error: "",
+                    }
                 },
                 aboutme: {
                     title: "",
@@ -161,6 +165,10 @@ const initialState: AppInitialState = {
                         inputSubject: "",
                         inputMessage: "",
                         inputSubmit: "",
+                        emailMessages: {
+                            success: "",
+                            error: "",
+                        }
                     },
                     aboutme: {
                         title: "",

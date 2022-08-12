@@ -38,6 +38,10 @@ export const us: AppLenguageData = {
             inputSubject: "Subject",
             inputMessage: "Message",
             inputSubmit: "Send",
+            emailMessages: {
+                success: "Message sent successfully",
+                error: "Error sending message :c",
+            }
         },
         aboutme: {
             title: "About me",

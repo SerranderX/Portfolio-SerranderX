@@ -73,10 +73,14 @@ export const Contact = () => {
               )
               .then(
                 (result) => {
-                  alert(result.text);
+                    if(result.text === "OK") {
+                        alert(contact.emailMessages.success);
+                    } else {
+                        alert(contact.emailMessages.error);
+                    }
                 },
                 (error) => {
-                  alert(error.text);
+                    alert(contact.emailMessages.error);
                 }
               );
         }

@@ -38,6 +38,10 @@ export const es: AppLenguageData = {
             inputSubject: "Asunto",
             inputMessage: "Mensaje",
             inputSubmit: "Enviar",
+            emailMessages: {
+                success: "Mensaje enviado con exito",
+                error: "Error al enviar el mensaje",
+            }
         },
         aboutme: {
             title: 'Sobre mi',
