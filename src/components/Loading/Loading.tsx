@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styles from '@styles/loading.module.scss';
+import styles from '@styles/Loading.module.scss';
 import { motion } from 'framer-motion';
 import { AppContext } from '@context/AppContext';
 
