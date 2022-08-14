@@ -12,6 +12,7 @@ export const Contact = () => {
     
     const { submitButton, formRef, inputs, loading } = emailJSState;
 
+    
     return (
         <section className={styles.container} id="contact">
             <h1 className={styles.title}>{contact.title}</h1>
