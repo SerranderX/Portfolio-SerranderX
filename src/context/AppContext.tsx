@@ -1,6 +1,9 @@
 import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
+import { InputTypes } from "@hooks/useEmailJS/InputTypes";
 import { AppInitialState } from "@interfaces/appInitialStatea.interface";
+import { ButtonProps } from "@interfaces/buttona.interface";
 import { createContext, SVGProps } from "react";
+import { InputTypeNames } from "@hooks/useEmailJS/inputTypeNames";
 
 const initialState: AppInitialState = {
     projectsFilters: {
@@ -122,6 +125,7 @@ const initialState: AppInitialState = {
                         contact: "",
                     },
                 },
+                loadingMessage: "Cargando",
             },
             flagIcon: (props: SVGProps<SVGSVGElement>) => {
                 return <></>;
@@ -189,6 +193,7 @@ const initialState: AppInitialState = {
                             contact: "",
                         },
                     },
+                    loadingMessage: "Cargando",
                 },
                 flagIcon: (props: SVGProps<SVGSVGElement>) => {
                     return <></>;
@@ -196,6 +201,72 @@ const initialState: AppInitialState = {
             },
         ],
     },
+    emailJSState: {
+        inputs:[
+            {   
+                type: InputTypeNames.NAME,
+                name: InputTypes.nameINPProps,
+                state: {
+                    type: "text",
+                    name: InputTypes.nameINPProps,
+                    labelText: "",
+                    value: "",
+                },
+                changeValue: (payload: string) => {},
+                changeLabelValue: (payload: string) => {}
+            },
+            {
+                type: InputTypeNames.EMAIL,
+                name: InputTypes.emailINPProps,
+                state: {
+                    type: "email",
+                    name: InputTypes.emailINPProps,
+                    labelText: "",
+                    value: "",
+                },
+                changeValue: (payload: string) => {},
+                changeLabelValue: (payload: string) => {}
+            },
+            {
+                type: InputTypeNames.SUBJECT,
+                name: InputTypes.subjectINPProps,
+                state: {
+                    type: "text",
+                    name: InputTypes.subjectINPProps,
+                    labelText: "",
+                    value: "",
+                },
+                changeValue: (payload: string) => {},
+                changeLabelValue: (payload: string) => {}
+            },
+            {
+                type: InputTypeNames.MESSAGE,
+                name: InputTypes.messageINPProps,
+                state: {
+                    type: "textarea",
+                    name: InputTypes.messageINPProps,
+                    labelText: "",
+                    value: "",
+                    rows: 8,
+                    cols: 30,
+                },
+                changeValue: (payload: string) => {},
+                changeLabelValue: (payload: string) => {}
+            }
+        ],
+        submitButton: {
+            submitButton: {
+                text: "",
+                handleButton: (e: Event ) => {}
+            },
+            setSubmitProps: (payload: ButtonProps) => {},
+        },
+        formRef: null,
+        loading: {
+            state: false,
+            handleLoading: (state: boolean) => {},
+        }
+    }
 };
 
 export const AppContext = createContext(initialState);

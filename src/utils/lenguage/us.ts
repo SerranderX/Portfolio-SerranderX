@@ -62,6 +62,7 @@ export const us: AppLenguageData = {
                 contact: "Contact",
             }
         },
+        loadingMessage: "Cargando",
     },
     flagIcon: USIcon,
 }

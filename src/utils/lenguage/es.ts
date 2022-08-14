@@ -62,6 +62,7 @@ export const es: AppLenguageData = {
                 contact: "Contacto",
             },
         },
+        loadingMessage: "Cargando",
     },
     flagIcon: ESIcon,
 }

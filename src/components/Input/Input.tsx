@@ -5,7 +5,7 @@ import styles from '@styles/input.module.scss';
 export const Input: React.FC<InputProps> = ({type, value, labelText, name, handleValue, rows, cols}: InputProps) => {
     const [onFocus, setOnFocus] = useState(false);
 
-    const props = {type, name, rows, cols}
+    const props = {type, name, rows, cols, value}
 
     const handleFocus = () => {
         setOnFocus(true);
@@ -16,8 +16,11 @@ export const Input: React.FC<InputProps> = ({type, value, labelText, name, handl
     }
 
     const onChangeValue = (event: any): void => {
-        handleValue(event.target.value);
+        if(handleValue){
+            handleValue(event.target.value);
+        }
     }
+
 
     return (
         <div className={styles.container} >

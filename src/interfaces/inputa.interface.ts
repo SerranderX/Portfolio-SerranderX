@@ -5,7 +5,7 @@ export interface InputProps {
     value: string
     labelText: string
     name: string
-    handleValue: React.Dispatch<React.SetStateAction<string>>
+    handleValue?: (event: any) => void
     cols?: number
     rows?: number
 }

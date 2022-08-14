@@ -15,6 +15,7 @@ export interface AppData {
     contact: AppContactData;
     aboutme: AppAboutmeData;
     footer: AppFooterData;
+    loadingMessage: string;
 }
 
 export interface AppHeaderData {
