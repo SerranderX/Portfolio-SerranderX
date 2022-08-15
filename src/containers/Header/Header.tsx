@@ -1,13 +1,12 @@
 import React, {
     LegacyRef,
-    MutableRefObject,
-    RefObject,
     useContext,
     useState,
 } from "react";
 import Image from "next/image";
 import styles from "@styles/Header.module.scss";
 import LogoComplete from "@logos/logoComplete.png";
+import { motion } from "framer-motion";
 import { WindowSize } from "@interfaces/windowSize.interface";
 import { MenuToggle } from "@containers/MenuToggle/MenuToggle";
 import { LenguageButton } from "@components/LenguageButton/LenguageButton";
