@@ -24,16 +24,6 @@ const Home: NextPage = () => {
         <Head >
           <title>Portfolio SerranderX</title>
         </Head>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-14YYPXVWXJ" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-14YYPXVWXJ');
-          `}
-        </Script>
         
         <Header reference={refHeader} windowDimenion={windowDimenions}/>
         <main className={styles.main}>
