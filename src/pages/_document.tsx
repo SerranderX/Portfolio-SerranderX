@@ -18,17 +18,6 @@ export default class MyDocument extends Document {
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
                 <link rel="manifest" href="/site.webmanifest"/>
                 <link rel="icon" href="/favicon.ico" />
-                <Script src="https://www.googletagmanager.com/gtag/js?id=G-14YYPXVWXJ" strategy="afterInteractive" />
-                <Script id="google-analytics" strategy="afterInteractive">
-                  {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){window.dataLayer.push(arguments);}
-                    gtag('js', new Date());
-
-                    gtag('config', 'G-14YYPXVWXJ');
-                  `}
-                </Script>
-                
               </Head>
               <body>
                 <Main />
