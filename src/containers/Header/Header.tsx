@@ -84,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({
     return (
         <>
             <header className={styles.header} ref={reference} id="header">
-                {windowDimenion.winWidth >= 1200 && (
+                {(windowDimenion.winWidth >= 1200 && windowDimenion.winWidth != 0) && (
                     <div>
                         <Image
                             src={LogoComplete}
@@ -95,7 +95,7 @@ export const Header: React.FC<HeaderProps> = ({
                     </div>
                 )}
                 <nav className={styles.nav}>
-                    {windowDimenion.winWidth < 1200 && (
+                    {(windowDimenion.winWidth < 1200 && windowDimenion.winWidth != 0) && (
                         <div className={styles.container}>
                             <motion.a
                                 className={`${styles["head-section-mobile"]}`}
@@ -168,7 +168,7 @@ export const Header: React.FC<HeaderProps> = ({
                             </a>
                         </div>
                     )}
-                    <LenguageButton />
+                    {windowDimenion.winWidth != 0 && <LenguageButton />}
                 </nav>
             </header>
         </>
