@@ -13,6 +13,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { MenuToggle } from "@containers/MenuToggle/MenuToggle";
 import { LenguageButton } from "@components/LenguageButton/LenguageButton";
 import { AppContext } from "@context/AppContext";
+import { DownloadIcon } from '@iconos/Download';
+import { MenuItemMobile } from "@components/MenuItemMobile/MenuItemMobile";
 
 const variantsSection = {
     open: { opacity: 1, height: "auto" },
@@ -49,9 +51,31 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
     const [navState, setNavState] = useState(false);
     const { lenguageState: { lenguageSelectedData: { data: { header }, }, }, } = useContext(AppContext);
-
-    const fileUrl = "/assets/cv/2022 Curriculum Vitae - Felipe Ignacio.pdf";
-    const filename = "2022 Curriculum Vitae - Felipe Ignacio.pdf";
+    const menuItems = [
+        {
+            href:"#about",
+            download: false,
+            content: header.navbar.about
+        },
+        {
+            href:"#experience",
+            download: false,
+            content: header.navbar.experience
+        },
+        {
+            href:"#projects",
+            download: false,
+            content: header.navbar.projects
+        },{
+            href:"#contact",
+            download: false,
+            content: header.navbar.contact
+        },{
+            href:"cv/2022 Curriculum Vitae - Felipe Ignacio.pdf",
+            download: true,
+            content: header.navbar.download
+        }
+    ];
 
     const handleNavButton = () => {
         setNavState(!navState);
@@ -111,45 +135,16 @@ export const Header: React.FC<HeaderProps> = ({
                                     ease: [0.04, 0.62, 0.23, 0.98],
                                 }}
                             >
-                                {navState && (
-                                    <>
-                                        <motion.a
-                                            href="#about"
-                                            animate={{ opacity: [0, 1] }}
-                                            className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
-                                        >
-                                            {header.navbar.about}
-                                        </motion.a>
-                                        <motion.a
-                                            href="#experience"
-                                            animate={{ opacity: [0, 1] }}
-                                            className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
-                                        >
-                                            {header.navbar.experience}
-                                        </motion.a>
-                                        <motion.a
-                                            href="#projects"
-                                            animate={{ opacity: [0, 1] }}
-                                            className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
-                                        >
-                                            {header.navbar.projects}
-                                        </motion.a>
-                                        <motion.a
-                                            href="#contact"
-                                            animate={{ opacity: [0, 1] }}
-                                            className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
-                                        >
-                                            {header.navbar.contact}
-                                        </motion.a>
-                                        <motion.a
-                                            animate={{ opacity: [0, 1] }}
-                                            className={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]}`}
-                                            href="cv/2022 Curriculum Vitae - Felipe Ignacio.pdf"
-                                            download
-                                        >
-                                            {header.navbar.download}
-                                        </motion.a>
-                                    </>
+                                {menuItems.map((item, index) => 
+                                    <MenuItemMobile
+                                        key={`mobile-menu-${index}-${item}`}
+                                        i={index}
+                                        href={item.href}
+                                        classNames={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]} ${!navState && styles["button-mobile-inactive"]} ${item.download && styles["button-cv-mobile"]} ${!navState && styles["button-mobile-inactive"]}`}
+                                        download={item.download}
+                                    >
+                                        {item.content}
+                                    </MenuItemMobile>
                                 )}
                             </motion.div>
                         </div>
@@ -168,7 +163,7 @@ export const Header: React.FC<HeaderProps> = ({
                             <a href="#contact" className={styles.button}>
                                 {header.navbar.contact}
                             </a>
-                            <a href="cv/2022 Curriculum Vitae - Felipe Ignacio.pdf" className={styles.button} download>
+                            <a href="cv/2022 Curriculum Vitae - Felipe Ignacio.pdf" className={`${styles['button-cv']}`} download>
                                 {header.navbar.download}
                             </a>
                         </div>

@@ -53,9 +53,36 @@
     }
 }
 
+.button-cv {
+    padding: 0.5rem 1.2rem;
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
+
+    &:hover {
+        background: $neon-red-background;
+        border-radius: 5px;
+        box-shadow: 0 0 5px $neon-red-background,
+                    0 0 25px $neon-red-background,
+                    0 0 5px $neon-red-background,
+                    0 0 100px $neon-red-background;
+    }
+}
+
 .button-mobile {
     padding: 0.5rem 1.2rem;
     text-transform: uppercase;
+}
+
+.button-cv-mobile {
+    padding: 0.5rem 1.2rem;
+    text-transform: uppercase;
+    background-color: $neon-red-background-opac;
+    display: flex;
+    justify-content: center;
+}
+
+.button-mobile-inactive {
+    pointer-events: none;
 }
 
 .head-section-mobile {
@@ -133,7 +160,7 @@
 
     .container {
         display: flex;
-        margin: 0 0 2rem 0;
+        margin: 0 0 0 0;
         flex-flow: column;
     }
 }
