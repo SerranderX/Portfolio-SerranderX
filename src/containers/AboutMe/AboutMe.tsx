@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
-import styles from '@styles/AboutMe.module.scss';
-import imageGeneralSection from '@images/photo2.jpg';
 import { AppContext } from '@context/AppContext';
 import { motion } from 'framer-motion';
+import { WindowSize } from '@interfaces/windowSize.interface';
+import imageGeneralSection from '@images/photo2.jpg';
 import Image from 'next/image';
 import YouTube from "react-youtube";
-import { WindowSize } from '@interfaces/windowSize.interface';
+import styles from '@styles/AboutMe.module.scss';
 
 interface AboutMeProps {
     windowDimenions:WindowSize

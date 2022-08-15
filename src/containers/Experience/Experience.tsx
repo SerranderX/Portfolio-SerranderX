@@ -1,10 +1,10 @@
 import React, { SVGProps, useContext, useEffect, useState } from 'react';
-import styles from '@styles/Experience.module.scss';
 import { ExperienceIcons } from '@utils/Utils'
 import { Carousel } from '@components/Carousel/Carousel';
 import { WindowSize } from '@interfaces/windowSize.interface';
 import { ExperienceItems } from '@interfaces/experienceItems.interface';
 import { AppContext } from '@context/AppContext';
+import styles from '@styles/Experience.module.scss';
 
 interface ExperienceProps {
     windowDimenions:WindowSize

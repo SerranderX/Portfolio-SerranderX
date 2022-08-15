@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppContext.Provider value={appInitialState}>
       <Component {...pageProps} />
+      
     </AppContext.Provider>
   )
 }

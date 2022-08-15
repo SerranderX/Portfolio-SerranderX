@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import styles from '@styles/Loading.module.scss';
 import { motion } from 'framer-motion';
 import { AppContext } from '@context/AppContext';
+import styles from '@styles/Loading.module.scss';
 
 export const Loading = () => {
     const { lenguageState: { lenguageSelectedData: { data: { loadingMessage } } } } = useContext(AppContext);

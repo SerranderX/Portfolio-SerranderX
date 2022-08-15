@@ -1,14 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
-import styles from '@styles/Presentation.module.scss';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Photo from '@images/photo1.jpg';
-import { titleNameVariants } from '@containers/Presentation/animations';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
 import { WindowSize } from '@interfaces/windowSize.interface';
 import { AppContext } from '@context/AppContext';
 import { AnimatedText } from '@components/AnimatedText/AnimatedText';
 import { SocialSection } from '@components/SocialSection/SocialSection';
+import styles from '@styles/Presentation.module.scss';
 
 interface PresentationProps {
     windowDimenions:WindowSize

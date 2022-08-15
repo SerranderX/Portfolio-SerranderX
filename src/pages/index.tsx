@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styles from '@styles/Home.module.scss'
 import { Presentation } from 'containers/Presentation/Presentation';
 import { Footer } from 'containers/Footer/Footer';
 import { Header } from 'containers/Header/Header';
@@ -12,6 +11,7 @@ import { ButtonNav } from '@components/ButtonNav/ButtonNav';
 import { useNearScreen } from '@hooks/useNearScreen';
 import { WindowSize } from '@interfaces/windowSize.interface';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
+import styles from '@styles/Home.module.scss'
 
 const Home: NextPage = () => {
   const [showHeader, refHeader] = useNearScreen();

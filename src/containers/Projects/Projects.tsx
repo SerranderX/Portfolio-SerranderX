@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import styles from '@styles/Projects.module.scss';
 import Carousel from 'framer-motion-carousel';
 import { Project } from '@components/Project/Project';
 import { ButtonCarousel } from '@components/ButtonCarousel/ButtonCarousel';
@@ -14,6 +13,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import DevelopGif from '@gifs/develop.gif';
 import { WindowSize } from "@interfaces/windowSize.interface";
+import styles from '@styles/Projects.module.scss';
 
 const carouselBoxShadow = '0 0 5px rgba(8, 139, 204, .8), 0 0 5px rgba(8, 139, 204, .8), 0 0 5px rgba(8, 139, 204, .8), 0 0 25px rgba(8, 139, 204, .8)';
 

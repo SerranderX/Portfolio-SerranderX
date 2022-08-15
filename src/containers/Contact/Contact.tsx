@@ -3,9 +3,9 @@ import { Button } from "@components/Button/Button";
 import { Input } from "@components/Input/Input";
 import { AppContext } from "@context/AppContext";
 import { Loading } from "@components/Loading/Loading";
-import styles from "@styles/Contact.module.scss";
 import Image from "next/image";
 import EmailSticker from "@images/news.png";
+import styles from "@styles/Contact.module.scss";
 
 export const Contact = () => {
     const { lenguageState: { lenguageSelectedData: { data: { contact } } }, emailJSState } = useContext(AppContext);

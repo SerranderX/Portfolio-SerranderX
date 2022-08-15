@@ -9,11 +9,9 @@ import Image from "next/image";
 import styles from "@styles/Header.module.scss";
 import LogoComplete from "@logos/logoComplete.png";
 import { WindowSize } from "@interfaces/windowSize.interface";
-import { AnimatePresence, motion } from "framer-motion";
 import { MenuToggle } from "@containers/MenuToggle/MenuToggle";
 import { LenguageButton } from "@components/LenguageButton/LenguageButton";
 import { AppContext } from "@context/AppContext";
-import { DownloadIcon } from '@iconos/Download';
 import { MenuItemMobile } from "@components/MenuItemMobile/MenuItemMobile";
 
 const variantsSection = {

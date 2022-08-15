@@ -1,7 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import styles from '@styles/SocialSection.module.scss';
-import { ENV } from '@config/config';
 import { SocialIconsData } from '@utils/Utils'
 import { SocialIcon } from '@components/SocialIcon/SocialIcon';
 

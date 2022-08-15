@@ -1,8 +1,8 @@
 import React, { LegacyRef, MutableRefObject, RefObject, useContext } from 'react';
-import styles from '@styles/Footer.module.scss';
 import { ENV } from '@config/config';
 import { AppContext } from '@context/AppContext';
 import { SocialSection } from '@components/SocialSection/SocialSection';
+import styles from '@styles/Footer.module.scss';
 
 interface FooterProps {
   reference: LegacyRef<HTMLElement>

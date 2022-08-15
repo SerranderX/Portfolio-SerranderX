@@ -1,7 +1,7 @@
 import React, { LegacyRef, MutableRefObject } from 'react';
-import styles from '@styles/ButtonNav.module.scss';
 import { motion } from 'framer-motion';
 import { ArrowRight } from '@iconos/ArrowRight';
+import styles from '@styles/ButtonNav.module.scss';
 
 interface ButtonNavProps {
     showHeader: Boolean;

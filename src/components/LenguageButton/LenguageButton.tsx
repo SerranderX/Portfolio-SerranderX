@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { variantsList, buttonVariants } from "@components/LenguageButton/variants";
-import styles from "@styles/LenguageButton.module.scss";
 import { AppContext } from "@context/AppContext";
+import styles from "@styles/LenguageButton.module.scss";
 
 export const LenguageButton = () => {
     const [listaButtonState, setListaButtonState] = useState(false);
