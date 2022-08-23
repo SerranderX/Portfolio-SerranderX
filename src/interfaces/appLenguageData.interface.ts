@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { ReactElement, SVGProps } from "react";
 
 export interface AppLenguageData {
     lenguage: string;
@@ -50,7 +50,7 @@ export interface AppProjectsData {
 }
 export interface AppContactData {
     title: string;
-    description: string;
+    description: ReactElement<any, any>;
     inputName: string;
     inputEmail: string;
     inputSubject: string;
@@ -65,11 +65,11 @@ export interface AppAboutmeData {
     title: string;
     general: {
         title: string;
-        description: string;
+        description: ReactElement<any, any>;
     },
     skills: {
         title: string;
-        description: string;
+        description: ReactElement<any, any>;
     }
 }
 export interface AppFooterData {

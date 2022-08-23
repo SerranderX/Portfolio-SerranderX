@@ -95,7 +95,7 @@ const initialState: AppInitialState = {
                 },
                 contact: {
                     title: "",
-                    description: "",
+                    description: <></>,
                     inputName: "",
                     inputEmail: "",
                     inputSubject: "",
@@ -110,11 +110,11 @@ const initialState: AppInitialState = {
                     title: "",
                     general: {
                         title: "",
-                        description: "",
+                        description: <></>,
                     },
                     skills: {
                         title: "",
-                        description: "",
+                        description: <></>,
                     },
                 },
                 footer: {
@@ -163,7 +163,7 @@ const initialState: AppInitialState = {
                     },
                     contact: {
                         title: "",
-                        description: "",
+                        description: <></>,
                         inputName: "",
                         inputEmail: "",
                         inputSubject: "",
@@ -178,11 +178,11 @@ const initialState: AppInitialState = {
                         title: "",
                         general: {
                             title: "",
-                            description: "",
+                            description: <></>,
                         },
                         skills: {
                             title: "",
-                            description: "",
+                            description: <></>,
                         },
                     },
                     footer: {

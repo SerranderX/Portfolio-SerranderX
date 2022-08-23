@@ -36,6 +36,9 @@
     font-size: $text-base-size;
     text-align: $text-alignment;
     margin: 3rem;
+    line-height: 1.5;
+    text-align: justify;
+    white-space: pre-wrap;
 }
 
 .formContainer form {

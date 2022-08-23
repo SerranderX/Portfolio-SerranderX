@@ -44,6 +44,9 @@
     margin: 0;
     padding: 0;
     text-align: $text-alignment;
+    line-height: 1.5;
+    text-align: justify;
+    white-space: pre-wrap;
 }
 
 .general-info-container h2 {
@@ -78,7 +81,7 @@
 }
 
 .hobbies-video {
-    margin: 0 2rem 0 2rem;
+    margin: 0 0rem 0 3rem;
 }
 
 .hobbies-video iframe {
@@ -101,6 +104,9 @@
     margin: 0;
     padding: 0;
     text-align: $text-alignment;
+    line-height: 1.5;
+    text-align: justify;
+    white-space: pre-wrap;
 }
 
 .hobbies-info-container h2 {

@@ -32,7 +32,7 @@ export const us: AppLenguageData = {
         },
         contact: {
             title: "Contact",
-            description: "Send me a message with your email if you want to contact me. If you want to know more about me, I invite you to visit my social networks.",
+            description: <>Send me a message with your email.{'\n'} If you want to contact me. If you want to know more about me, I invite you to visit my social networks.</>,
             inputName: "Name",
             inputEmail: "Email",
             inputSubject: "Subject",
@@ -47,11 +47,11 @@ export const us: AppLenguageData = {
             title: "About me",
             general: {
                 title: "General",
-                description: "I am 26 years old and I am originally from the city of Santiago, Chile. I work formally as a software developer since 2019.\n Since I was a child I have always liked technology and computing in general. I had the privilege of studying it at the University, where I obtained the degree of 'Computer Engineer', where I found my current vocation.\n I consider one of my greatest strength is perseverance and the ability to overcome any challenge that stands in front of the goals I set.",
+                description: <>I am 26 years old and I am originally from the city of Santiago, Chile. I work formally as a software developer since 2019.{'\n'} Since I was a child I have always liked technology and computing in general. I had the privilege of studying it at the University, where I obtained the degree of &apos;Computer Engineer&apos;, where I found my current vocation.{'\n'} I consider one of my greatest strength is perseverance and the ability to overcome any challenge that stands in front of the goals I set.</>,
             },
             skills: {
                 title: "Hobbies",
-                description: "I am passionate about video games in general since I can remember, however my favorites have always been the RPGs. I love reading and the fantasy genre, as well as literature as a whole when I find an interesting book. I also like music and since I was a teenager I like to consider myself an amateur musician, I play guitar since I was 12 years old in a self-taught way. In my Instagram you can see some of the songs I've recorded, although in this section you can find a cover I recorded some time ago.",
+                description: <>I am passionate about video games in general since I can remember, however my favorites have always been the RPGs. I love reading and the fantasy genre, as well as literature as a whole when I find an interesting book. I also like music and since I was a teenager I like to consider myself an amateur musician, I play guitar since I was 12 years old in a self-taught way. In my Instagram you can see some of the songs I&apos;ve recorded, although in this section you can find a cover I recorded some time ago.</>,
             }
         },
         footer: {

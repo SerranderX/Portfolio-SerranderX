@@ -44,6 +44,8 @@ export const useAppInitialState = (): AppInitialState => {
                 }
             });
 
+            console.log(ENV.emailJSData.emailjs_service);
+
             submitButton.setSubmitProps({
                 text: contact.inputSubmit,
                 handleButton: (e: Event) => {
