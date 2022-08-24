@@ -23,7 +23,7 @@ export const Contact = () => {
                 {!loading.state && (
                     <form ref={formRef} action="">
                         {inputs.map((input, index) => 
-                            <Input key={input.type} {...input.state} handleValue={input.changeValue} changeValidEmailState={input.changeValidEmailState}/>
+                            <Input key={input.type} {...input.state} handleValue={input.changeValue}/>
                         )}
                         <Button {...submitButton.submitButton} containerClass={styles.marginButton} /> 
                     </form>

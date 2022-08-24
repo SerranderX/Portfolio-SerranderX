@@ -15,7 +15,7 @@ export const useAppInitialState = (): AppInitialState => {
     const emailJSState: EmailJSInterface = useEmailJS();
 
     const [lenguageSel, setLenguageSel] = useState("");
-    const { inputs, submitButton, formRef, loading, emailValidateTrigger } =
+    const { inputs, submitButton, formRef, loading, inputValidateTrigger } =
         emailJSState;
     const {
         lenguageSelectedData: {
@@ -23,8 +23,6 @@ export const useAppInitialState = (): AppInitialState => {
         },
         lenguageSelected,
     } = lenguageState;
-
-    console.log(inputs);
 
     useEffect(() => {
         if (lenguageSel !== lenguageSelected) {
@@ -48,17 +46,7 @@ export const useAppInitialState = (): AppInitialState => {
             });
             
             submitButton.setSubmitProps({
-                ...submitButton.submitButton,
-                text: contact.inputSubmit
-            });
-            setLenguageSel(lenguageSelected);
-        }
-    }, [formRef, lenguageState.lenguageSelectedData]);
-
-    useEffect(() => {
-        if (emailValidateTrigger.stateEmailValidate) {
-            submitButton.setSubmitProps({
-                ...submitButton.submitButton,
+                text: contact.inputSubmit,
                 handleButton: (e: Event) => {
                     e.preventDefault();
 
@@ -68,7 +56,7 @@ export const useAppInitialState = (): AppInitialState => {
                     inputs.forEach((input) => {
                         if (
                             input.type === InputTypeNames.EMAIL &&
-                            !input.state.validEmail
+                            !input.state.valid
                         ) {
                             showAlert = true;
                             alertText +=
@@ -124,9 +112,81 @@ export const useAppInitialState = (): AppInitialState => {
                     }
                 },
             });
-            emailValidateTrigger.handlerEmailValidate(false);
+            setLenguageSel(lenguageSelected);
         }
-    }, [emailValidateTrigger.stateEmailValidate]);
+
+        if (inputValidateTrigger.inputValidateTrigger) {
+            submitButton.setSubmitProps({
+                ...submitButton.submitButton,
+                handleButton: (e: Event) => {
+                    e.preventDefault();
+
+                    let alertText = "One or more values are invalids:\n";
+                    let showAlert = false;
+
+                    inputs.forEach((input) => {
+                        if (
+                            input.type === InputTypeNames.EMAIL &&
+                            !input.state.valid
+                        ) {
+                            showAlert = true;
+                            alertText +=
+                                "- Email is invalid or empty for send email\n";
+                            return;
+                        }
+
+                        if (input.state.value.length == 0) {
+                            showAlert = true;
+                            alertText += `- The input ${input.state.labelText} is required to send email\n`;
+                        }
+                    });
+
+                    if (!showAlert) {
+                        if (formRef && contact) {
+                            const { current } = formRef;
+
+                            if (current) {
+                                loading.handleLoading(true);
+                                emailjs
+                                    .sendForm(
+                                        ENV.emailJSData.emailjs_service,
+                                        ENV.emailJSData.emailjs_template,
+                                        current,
+                                        ENV.emailJSData.publicKey
+                                    )
+                                    .then(
+                                        (result) => {
+                                            if (result.text === "OK") {
+                                                inputs.forEach((input) => {
+                                                    input.changeValue("");
+                                                });
+                                                alert(
+                                                    contact.emailMessages
+                                                        .success
+                                                );
+                                            } else {
+                                                alert(
+                                                    contact.emailMessages.error
+                                                );
+                                            }
+                                            loading.handleLoading(false);
+                                        },
+                                        (error) => {
+                                            alert(contact.emailMessages.error);
+                                            loading.handleLoading(false);
+                                        }
+                                    );
+                            }
+                        }
+                    } else {
+                        alert(alertText);
+                    }
+                },
+            });
+            inputValidateTrigger.handlerInputValidateTrigger(false);
+        }
+    }, [formRef, lenguageState.lenguageSelectedData, inputValidateTrigger.inputValidateTrigger]);
+
 
     return {
         projectsFilters,

@@ -7,19 +7,21 @@ export const initialState: EmailJSStateInterface = {
         name: InputTypes.nameINPProps,
         labelText: "",
         value: "",
+        valid: false
     },
     [InputTypes.emailINPProps]: {
         type: "email",
         name: InputTypes.emailINPProps,
         labelText: "",
         value: "",
-        validEmail: false
+        valid: false
     },
     [InputTypes.subjectINPProps]: {
         type: "text",
         name: InputTypes.subjectINPProps,
         labelText: "",
         value: "",
+        valid: false
     },
     [InputTypes.messageINPProps]: {
         type: "textarea",
@@ -28,5 +30,6 @@ export const initialState: EmailJSStateInterface = {
         value: "",
         rows: 8,
         cols: 30,
+        valid: false
     },
 };

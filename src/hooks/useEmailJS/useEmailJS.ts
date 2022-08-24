@@ -7,11 +7,17 @@ import { reducer } from "@hooks/useEmailJS/reducer";
 import { initialState } from "@hooks/useEmailJS/initialState";
 import { InputTypes } from "@hooks/useEmailJS/InputTypes";
 
+const validEmailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+enum booleanString {
+    TRUE = "true",
+    FALSE = "false"
+}
+
 export const useEmailJS = (): EmailJSInterface => {
     const [state, dispatch] = useReducer<Reducer<EmailJSStateInterface, EmailJSReducerInterface>>(reducer, initialState);
     const form = useRef<HTMLFormElement>(null);
     const [loading, setLoading] = useState(false);
-    const [changeEmailValidate, setChangeEmailValidate] = useState<boolean>(false);
+    const [inputValidateTrigger, setInputValidateTrigger] = useState<boolean>(false);
     const [submitProps, setSubmitProps] = useState<ButtonProps>({
         text: "",
         handleButton: (e: Event) => {
@@ -30,20 +36,55 @@ export const useEmailJS = (): EmailJSInterface => {
     const changeEmailLabel = (payload: string) => dispatch({ type: ActionTypes.CHANGE_EMAIL_LABEL, payload: payload });
     const changeSubjectLabel = (payload: string) => dispatch({ type: ActionTypes.CHANGE_SUBJECT_LABEL, payload: payload });
     const changeMessageLabel = (payload: string) => dispatch({ type: ActionTypes.CHANGE_MESSAGE_LABEL, payload: payload });
+    const changeValidName = (payload: string) => dispatch({ type: ActionTypes.CHANGE_VALID_NAME, payload: payload });    
     const changeValidEmail = (payload: string) => dispatch({ type: ActionTypes.CHANGE_VALID_EMAIL, payload: payload });
+    const changeValidSubject = (payload: string) => dispatch({ type: ActionTypes.CHANGE_VALID_SUBJECT, payload: payload });
+    const changeValidMessage = (payload: string) => dispatch({ type: ActionTypes.CHANGE_VALID_MESSAGE, payload: payload });
 
     //Action Handlers
-    const handlerNameValue = (payload: string) => changeNameValue(payload);
-    const handlerEmailValue = (payload: string) => changeEmailValue(payload);
-    const handlerSubjectValue = (payload: string) => changeSubjectValue(payload);
-    const handlerMessageValue = (payload: string) => changeMessageValue(payload);
     const handlerNameLabel = (payload: string) => changeNameLabel(payload);
     const handlerEmailLabel = (payload: string) => changeEmailLabel(payload);
     const handlerSubjectLabel = (payload: string) => changeSubjectLabel(payload);
     const handlerMessageLabel = (payload: string) => changeMessageLabel(payload);
-    const handlerValidEmail = (payload: string) => {
-        setChangeEmailValidate(true);
-        changeValidEmail(payload);
+    const handlerNameValue = (payload: string) => {
+        if(payload.length > 0 && !nameINPProps.valid) {
+            changeValidName(booleanString.TRUE);
+            setInputValidateTrigger(true);
+        } else if (payload.length <= 0 && nameINPProps.valid) {
+            changeValidName(booleanString.FALSE);
+            setInputValidateTrigger(true);
+        }
+        changeNameValue(payload);
+    }
+    const handlerSubjectValue = (payload: string) => {
+        if(payload.length > 0 && !subjectINPProps.valid) {
+            changeValidSubject(booleanString.TRUE);
+            setInputValidateTrigger(true);
+        } else if (payload.length <= 0 && subjectINPProps.valid) {
+            changeValidSubject(booleanString.FALSE);
+            setInputValidateTrigger(true);
+        }
+        changeSubjectValue(payload);
+    }
+    const handlerMessageValue = (payload: string) => {
+        if(payload.length > 0 && !messageINPProps.valid) {
+            changeValidMessage(booleanString.TRUE);
+            setInputValidateTrigger(true);
+        } else if (payload.length <= 0 && messageINPProps.valid) {
+            changeValidMessage(booleanString.FALSE);
+            setInputValidateTrigger(true);
+        }
+        changeMessageValue(payload);
+    }
+    const handlerEmailValue = (payload: string) => {
+        if(payload.match(validEmailRegex) && !emailINPProps.valid) {
+            changeValidEmail(booleanString.TRUE);
+            setInputValidateTrigger(true);
+        } else if (!payload.match(validEmailRegex) && emailINPProps.valid) {
+            changeValidEmail(booleanString.FALSE);
+            setInputValidateTrigger(true);
+        }
+        changeEmailValue(payload);
     }
 
     return {
@@ -60,8 +101,7 @@ export const useEmailJS = (): EmailJSInterface => {
                 name: InputTypes.emailINPProps,
                 state: emailINPProps,
                 changeValue: handlerEmailValue,
-                changeLabelValue: handlerEmailLabel,
-                changeValidEmailState: handlerValidEmail
+                changeLabelValue: handlerEmailLabel
             },
             {
                 type: InputTypeNames.SUBJECT,
@@ -87,9 +127,9 @@ export const useEmailJS = (): EmailJSInterface => {
             state: loading,
             handleLoading: setLoading
         },
-        emailValidateTrigger: {
-            stateEmailValidate: changeEmailValidate,
-            handlerEmailValidate: setChangeEmailValidate
+        inputValidateTrigger: {
+            inputValidateTrigger: inputValidateTrigger,
+            handlerInputValidateTrigger: setInputValidateTrigger
         }
     };
 }

@@ -225,8 +225,7 @@ const initialState: AppInitialState = {
                     value: "",
                 },
                 changeValue: (payload: string) => {},
-                changeLabelValue: (payload: string) => {},
-                changeValidEmailState: (payload: string) => {}
+                changeLabelValue: (payload: string) => {}
             },
             {
                 type: InputTypeNames.SUBJECT,
@@ -267,9 +266,9 @@ const initialState: AppInitialState = {
             state: false,
             handleLoading: (state: boolean) => {},
         },
-        emailValidateTrigger: {
-            handlerEmailValidate: (payload: boolean) => {},
-            stateEmailValidate: false
+        inputValidateTrigger: {
+            handlerInputValidateTrigger: (payload: boolean) => {},
+            inputValidateTrigger: false
         }
     }
 };

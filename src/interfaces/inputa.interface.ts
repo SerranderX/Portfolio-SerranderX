@@ -8,6 +8,5 @@ export interface InputProps {
     handleValue?: (event: any) => void
     cols?: number
     rows?: number
-    changeValidEmailState?: (value: string) => void
-    validEmail?: boolean
+    valid?: boolean
 }

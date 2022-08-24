@@ -12,7 +12,10 @@ const reducerObject = (state:EmailJSStateInterface, payload: string): EmailJSRed
     [ActionTypes.CHANGE_EMAIL_LABEL]: { ...state, [InputTypes.emailINPProps]: { ...state[InputTypes.emailINPProps], labelText: payload } },
     [ActionTypes.CHANGE_SUBJECT_LABEL]: { ...state, [InputTypes.subjectINPProps]: { ...state[InputTypes.subjectINPProps], labelText: payload } },
     [ActionTypes.CHANGE_MESSAGE_LABEL]: { ...state, [InputTypes.messageINPProps]: { ...state[InputTypes.messageINPProps], labelText: payload } },
-    [ActionTypes.CHANGE_VALID_EMAIL]: { ...state, [InputTypes.emailINPProps]: { ...state[InputTypes.emailINPProps], validEmail: (payload === 'true') ? true : false } }
+    [ActionTypes.CHANGE_VALID_NAME]: { ...state, [InputTypes.nameINPProps]: { ...state[InputTypes.nameINPProps], valid: (payload === 'true') ? true : false } },
+    [ActionTypes.CHANGE_VALID_EMAIL]: { ...state, [InputTypes.emailINPProps]: { ...state[InputTypes.emailINPProps], valid: (payload === 'true') ? true : false } },
+    [ActionTypes.CHANGE_VALID_SUBJECT]: { ...state, [InputTypes.subjectINPProps]: { ...state[InputTypes.subjectINPProps], valid: (payload === 'true') ? true : false } },
+    [ActionTypes.CHANGE_VALID_MESSAGE]: { ...state, [InputTypes.messageINPProps]: { ...state[InputTypes.messageINPProps], valid: (payload === 'true') ? true : false } },
 })
 
 export const reducer: Reducer<EmailJSStateInterface, EmailJSReducerInterface> = (state, action) => {
