@@ -10,4 +10,5 @@ export interface ButtonProps {
     stateVariants?: boolean 
     variantsKeys?: string[]
     whileHover?: TargetAndTransition
+    containerClass?: string
 }

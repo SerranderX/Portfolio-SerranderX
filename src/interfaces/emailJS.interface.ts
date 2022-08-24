@@ -27,6 +27,8 @@ export interface EmailJSReducerObjectInterface {
     [ActionTypes.CHANGE_EMAIL_LABEL]: EmailJSStateInterface;
     [ActionTypes.CHANGE_SUBJECT_LABEL]: EmailJSStateInterface;
     [ActionTypes.CHANGE_MESSAGE_LABEL]: EmailJSStateInterface;
+    [ActionTypes.CHANGE_VALID_EMAIL]: EmailJSStateInterface;
+    
 }
 
 //EmailJS Interface - useEmailJS Hook
@@ -36,6 +38,7 @@ export interface EmailJSInputInterface {
     state: InputProps,
     changeValue: (payload: string) => void,
     changeLabelValue: (payload: string) => void
+    changeValidEmailState?: (payload: string) => void
 }
 
 export interface EmailJSInterface {

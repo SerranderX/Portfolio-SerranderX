@@ -245,4 +245,17 @@ export const SocialIconsData: SocialIconsDataInterface[] = [
     },
 ]
 
+export const getAuthorAge = () => {
+    var hoy = new Date();
+    var cumpleanos = new Date('1996/04/30');
+    var edad = hoy.getFullYear() - cumpleanos.getFullYear();
+    var m = hoy.getMonth() - cumpleanos.getMonth();
+
+    if (m < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
+        edad--;
+    }
+
+    return edad;
+}
+
 export const VideoURL:string = "https://youtu.be/PaXH_S2AqDg";

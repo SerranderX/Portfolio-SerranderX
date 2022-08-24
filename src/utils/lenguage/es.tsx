@@ -1,5 +1,6 @@
 import { ESIcon } from '@iconos/lenguage/es';
 import { AppLenguageData } from '@interfaces/appLenguageData.interface';
+import { getAuthorAge } from '@utils/Utils';
 
 export const es: AppLenguageData = {
     lenguage: "es",
@@ -47,7 +48,7 @@ export const es: AppLenguageData = {
             title: 'Sobre mi',
             general: {
                 title: 'General',
-                description: <>Tengo 26 años y soy originario de la ciudad de Santiago, de Chile. Me desempeño formalmente como desarrollador de software desde el año 2019.{"\n"} Desde pequeño siempre me ha gustado la tecnología y la computacion en general. Tuve el privilegio de estudiarla en la Universidad, donde obtuve el grado de &apos;Ingeniero en informática&apos;, en donde encontré mi actual vocación.{"\n"} Considero que mi mayor fortaleza es la perseverancia y la capacidad de sobreponerme ante cualquier reto que se interponga ante los objetivos que me propongo.</>,
+                description: <>Tengo {getAuthorAge()} años y soy originario de la ciudad de Santiago, de Chile. Me desempeño formalmente como desarrollador de software desde el año 2019.{"\n"} Desde pequeño siempre me ha gustado la tecnología y la computacion en general. Tuve el privilegio de estudiarla en la Universidad, donde obtuve el grado de &apos;Ingeniero en informática&apos;, en donde encontré mi actual vocación.{"\n"} Considero que mi mayor fortaleza es la perseverancia y la capacidad de sobreponerme ante cualquier reto que se interponga ante los objetivos que me propongo.</>,
             },
             skills: {
                 title: "Hobbies e intereses",

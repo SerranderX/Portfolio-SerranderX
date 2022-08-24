@@ -23,6 +23,7 @@ export const useAppInitialState = (): AppInitialState => {
         lenguageSelected,
     } = lenguageState;
 
+    
     useEffect(() => {
         if (lenguageSel !== lenguageSelected) {
             inputs.forEach((input) => {
@@ -44,13 +45,31 @@ export const useAppInitialState = (): AppInitialState => {
                 }
             });
 
-            console.log(ENV.emailJSData.emailjs_service);
+            setLenguageSel(lenguageSelected);
+        }
 
-            submitButton.setSubmitProps({
-                text: contact.inputSubmit,
-                handleButton: (e: Event) => {
-                    e.preventDefault();
+        submitButton.setSubmitProps({
+            text: contact.inputSubmit,
+            handleButton: (e: Event) => {
+                e.preventDefault();
+
+                let alertText = "One or more values are invalids:\n";
+                let showAlert = false;
+
+                inputs.forEach(input => {
+                    if(input.type === InputTypeNames.EMAIL && !input.state.validEmail){
+                        showAlert = true;
+                        alertText += "- Email is invalid or empty for send email\n";
+                        return;
+                    }
                     
+                    if(input.state.value.length == 0){
+                        showAlert = true;
+                        alertText += `- The input ${input.state.labelText} is required to send email\n`
+                    }
+                });
+
+                if(!showAlert){
                     if (formRef && contact) {
                         const { current } = formRef;
                         
@@ -75,12 +94,12 @@ export const useAppInitialState = (): AppInitialState => {
                                 });
                         }
                     }
-                },
-            });
-
-            setLenguageSel(lenguageSelected);
-        }
-    }, [formRef, lenguageState.lenguageSelectedData]);
+                } else {
+                    alert(alertText);
+                }
+            },
+        });
+    }, [formRef, lenguageState.lenguageSelectedData, inputs]);
 
     return {
         projectsFilters,

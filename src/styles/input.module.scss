@@ -26,7 +26,6 @@
     width: 100%;
     margin: 10px;
     padding: 13px;
-    border: 2px solid $tertiary-color;
     border-radius: 5px;
     font-size: $text-base-size;
     background-color: $background-color-light;
@@ -49,7 +48,6 @@
     width: 100%;
     padding: 13px;
     margin: 10px;
-    border: 2px solid $tertiary-color;
     border-radius: 5px;
     font-size: $text-base-size;
     background-color: $background-color-light;
@@ -60,6 +58,18 @@
     &:focus {
         outline: none;
     }
+}
+
+.isValid {
+    border: 2px solid $tertiary-color;
+}
+
+.isInvalid {
+    border: 2px solid $neon-red-background;
+}
+
+.inputBorder {
+    border: 2px solid $quaternary-color;
 }
 
 @media (max-width: 1200px) {

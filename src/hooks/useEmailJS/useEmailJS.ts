@@ -29,6 +29,7 @@ export const useEmailJS = (): EmailJSInterface => {
     const changeEmailLabel = (payload: string) => dispatch({ type: ActionTypes.CHANGE_EMAIL_LABEL, payload: payload });
     const changeSubjectLabel = (payload: string) => dispatch({ type: ActionTypes.CHANGE_SUBJECT_LABEL, payload: payload });
     const changeMessageLabel = (payload: string) => dispatch({ type: ActionTypes.CHANGE_MESSAGE_LABEL, payload: payload });
+    const changeValidEmail = (payload: string) => dispatch({ type: ActionTypes.CHANGE_VALID_EMAIL, payload: payload });
 
     //Action Handlers
     const handlerNameValue = (payload: string) => changeNameValue(payload);
@@ -39,6 +40,7 @@ export const useEmailJS = (): EmailJSInterface => {
     const handlerEmailLabel = (payload: string) => changeEmailLabel(payload);
     const handlerSubjectLabel = (payload: string) => changeSubjectLabel(payload);
     const handlerMessageLabel = (payload: string) => changeMessageLabel(payload);
+    const handlerValidEmail = (payload: string) => changeValidEmail(payload);
 
     return {
         inputs:[
@@ -54,7 +56,8 @@ export const useEmailJS = (): EmailJSInterface => {
                 name: InputTypes.emailINPProps,
                 state: emailINPProps,
                 changeValue: handlerEmailValue,
-                changeLabelValue: handlerEmailLabel
+                changeLabelValue: handlerEmailLabel,
+                changeValidEmailState: handlerValidEmail
             },
             {
                 type: InputTypeNames.SUBJECT,

@@ -1,6 +1,5 @@
 import { InputTypes } from "@hooks/useEmailJS/InputTypes";
 import { EmailJSStateInterface } from "@interfaces/emailJS.interface";
-import { InputTypeNames } from "@hooks/useEmailJS/inputTypeNames";
 
 export const initialState: EmailJSStateInterface = {
     [InputTypes.nameINPProps]: {
@@ -14,6 +13,7 @@ export const initialState: EmailJSStateInterface = {
         name: InputTypes.emailINPProps,
         labelText: "",
         value: "",
+        validEmail: false
     },
     [InputTypes.subjectINPProps]: {
         type: "text",

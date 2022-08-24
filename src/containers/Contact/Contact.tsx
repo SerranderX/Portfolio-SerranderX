@@ -11,7 +11,6 @@ export const Contact = () => {
     const { lenguageState: { lenguageSelectedData: { data: { contact } } }, emailJSState } = useContext(AppContext);
     
     const { submitButton, formRef, inputs, loading } = emailJSState;
-
     
     return (
         <section className={styles.container} id="contact">
@@ -24,9 +23,9 @@ export const Contact = () => {
                 {!loading.state && (
                     <form ref={formRef} action="">
                         {inputs.map((input, index) => 
-                            <Input key={input.type} {...input.state} handleValue={input.changeValue} />
+                            <Input key={input.type} {...input.state} handleValue={input.changeValue} changeValidEmailState={input.changeValidEmailState}/>
                         )}
-                        <Button {...submitButton.submitButton} /> 
+                        <Button {...submitButton.submitButton} containerClass={styles.marginButton} /> 
                     </form>
                 )}
                 {loading.state && (

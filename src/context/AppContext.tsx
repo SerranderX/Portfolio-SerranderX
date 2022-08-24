@@ -225,7 +225,8 @@ const initialState: AppInitialState = {
                     value: "",
                 },
                 changeValue: (payload: string) => {},
-                changeLabelValue: (payload: string) => {}
+                changeLabelValue: (payload: string) => {},
+                changeValidEmailState: (payload: string) => {}
             },
             {
                 type: InputTypeNames.SUBJECT,
