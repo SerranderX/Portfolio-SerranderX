@@ -19,7 +19,7 @@ export const us: AppLenguageData = {
             title: "Portfolio of projects",
             greeting1: "Welcome,",
             greeting2: "I'm ",
-            description: "Designer and software developer of Chilean nationality, known as @SerranderX on the internet, I am dedicated to software development and continuous learning of new technologies for the creation of projects.",
+            description: "Designer and software developer of Chilean nationality, known as @SerranderX on the internet, I am dedicated to software development and continuous learning of new technologies for the creation of IT solutions.",
         },
         experience: {
             title: "Experience",
