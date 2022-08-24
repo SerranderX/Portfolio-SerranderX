@@ -51,5 +51,9 @@ export interface EmailJSInterface {
     loading: {
         state: boolean;
         handleLoading: (payload: boolean) => void;
+    },
+    emailValidateTrigger: {
+        stateEmailValidate: boolean;
+        handlerEmailValidate: (payload: boolean) => void;
     }
 }

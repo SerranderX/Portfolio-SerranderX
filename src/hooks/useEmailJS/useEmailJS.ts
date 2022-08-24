@@ -11,6 +11,7 @@ export const useEmailJS = (): EmailJSInterface => {
     const [state, dispatch] = useReducer<Reducer<EmailJSStateInterface, EmailJSReducerInterface>>(reducer, initialState);
     const form = useRef<HTMLFormElement>(null);
     const [loading, setLoading] = useState(false);
+    const [changeEmailValidate, setChangeEmailValidate] = useState<boolean>(false);
     const [submitProps, setSubmitProps] = useState<ButtonProps>({
         text: "",
         handleButton: (e: Event) => {
@@ -40,7 +41,10 @@ export const useEmailJS = (): EmailJSInterface => {
     const handlerEmailLabel = (payload: string) => changeEmailLabel(payload);
     const handlerSubjectLabel = (payload: string) => changeSubjectLabel(payload);
     const handlerMessageLabel = (payload: string) => changeMessageLabel(payload);
-    const handlerValidEmail = (payload: string) => changeValidEmail(payload);
+    const handlerValidEmail = (payload: string) => {
+        setChangeEmailValidate(true);
+        changeValidEmail(payload);
+    }
 
     return {
         inputs:[
@@ -82,6 +86,10 @@ export const useEmailJS = (): EmailJSInterface => {
         loading: {
             state: loading,
             handleLoading: setLoading
+        },
+        emailValidateTrigger: {
+            stateEmailValidate: changeEmailValidate,
+            handlerEmailValidate: setChangeEmailValidate
         }
     };
 }

@@ -266,6 +266,10 @@ const initialState: AppInitialState = {
         loading: {
             state: false,
             handleLoading: (state: boolean) => {},
+        },
+        emailValidateTrigger: {
+            handlerEmailValidate: (payload: boolean) => {},
+            stateEmailValidate: false
         }
     }
 };
