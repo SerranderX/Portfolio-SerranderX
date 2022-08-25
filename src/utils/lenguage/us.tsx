@@ -42,6 +42,13 @@ export const us: AppLenguageData = {
             emailMessages: {
                 success: "Message sent successfully",
                 error: "Error sending message :c",
+            },
+            inputMessages: {
+                title: "One or more values are invalids for send email:\n",
+                name: "- The input 'Name' is required.\n",
+                email: "- The input 'Email' is invalid or empty.\n",
+                subject: "- The input 'Subject' is required.\n",
+                message: "- The input 'Message' is required.\n",
             }
         },
         aboutme: {

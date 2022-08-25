@@ -50,23 +50,31 @@ export const useAppInitialState = (): AppInitialState => {
                 handleButton: (e: Event) => {
                     e.preventDefault();
 
-                    let alertText = "One or more values are invalids:\n";
+                    let alertText = contact.inputMessages.title;
                     let showAlert = false;
 
                     inputs.forEach((input) => {
-                        if (
-                            input.type === InputTypeNames.EMAIL &&
-                            !input.state.valid
-                        ) {
+                        if (input.type === InputTypeNames.EMAIL && !input.state.valid) {
                             showAlert = true;
-                            alertText +=
-                                "- Email is invalid or empty for send email\n";
+                            alertText += contact.inputMessages.email;
                             return;
                         }
 
-                        if (input.state.value.length == 0) {
+                        if (input.state.value.length == 0 && input.type !== InputTypeNames.EMAIL) {
                             showAlert = true;
-                            alertText += `- The input ${input.state.labelText} is required to send email\n`;
+                            switch(input.type){
+                                case InputTypeNames.SUBJECT:
+                                    alertText += contact.inputMessages.subject;
+                                    break;
+                                case InputTypeNames.NAME:
+                                    alertText += contact.inputMessages.name;
+                                    break;
+                                case InputTypeNames.MESSAGE:
+                                    alertText += contact.inputMessages.message;
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
                     });
 
@@ -121,23 +129,31 @@ export const useAppInitialState = (): AppInitialState => {
                 handleButton: (e: Event) => {
                     e.preventDefault();
 
-                    let alertText = "One or more values are invalids:\n";
+                    let alertText = contact.inputMessages.title;
                     let showAlert = false;
 
                     inputs.forEach((input) => {
-                        if (
-                            input.type === InputTypeNames.EMAIL &&
-                            !input.state.valid
-                        ) {
+                        if (input.type === InputTypeNames.EMAIL && !input.state.valid) {
                             showAlert = true;
-                            alertText +=
-                                "- Email is invalid or empty for send email\n";
+                            alertText += contact.inputMessages.email;
                             return;
                         }
 
-                        if (input.state.value.length == 0) {
+                        if (input.state.value.length == 0 && input.type !== InputTypeNames.EMAIL) {
                             showAlert = true;
-                            alertText += `- The input ${input.state.labelText} is required to send email\n`;
+                            switch(input.type){
+                                case InputTypeNames.SUBJECT:
+                                    alertText += contact.inputMessages.subject;
+                                    break;
+                                case InputTypeNames.NAME:
+                                    alertText += contact.inputMessages.name;
+                                    break;
+                                case InputTypeNames.MESSAGE:
+                                    alertText += contact.inputMessages.message;
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
                     });
 

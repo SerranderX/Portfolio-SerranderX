@@ -42,6 +42,13 @@ export const es: AppLenguageData = {
             emailMessages: {
                 success: "Mensaje enviado con exito",
                 error: "Error al enviar el mensaje",
+            },
+            inputMessages: {
+                title: "Uno o mas campos son requeridos para poder enviar el email:\n",
+                name: "- El campo 'Nombre' es requerido.\n",
+                email: "- El campo 'Email' es invalido o se encuentra vacio.\n",
+                subject: "- El campo 'Asunto' es requerido.\n",
+                message: "- El campo 'Mensaje' es requerido.\n",
             }
         },
         aboutme: {

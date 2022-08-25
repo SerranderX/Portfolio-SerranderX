@@ -104,6 +104,13 @@ const initialState: AppInitialState = {
                     emailMessages: {
                         success: "",
                         error: "",
+                    },
+                    inputMessages: {
+                        title: "",
+                        name: "",
+                        email: "",
+                        subject: "",
+                        message: "",
                     }
                 },
                 aboutme: {
@@ -172,6 +179,13 @@ const initialState: AppInitialState = {
                         emailMessages: {
                             success: "",
                             error: "",
+                        },
+                        inputMessages: {
+                            title: "",
+                            name: "",
+                            email: "",
+                            subject: "",
+                            message: "",
                         }
                     },
                     aboutme: {
