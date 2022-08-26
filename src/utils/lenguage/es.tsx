@@ -33,7 +33,7 @@ export const es: AppLenguageData = {
         },
         contact: {
             title: "Contacto",
-            description: "Enviame un mensaje con tu correo electronico si quieres contactar conmigo.\n Si quieres saber mas sobre mi, te invito a visitar mis redes sociales.",
+            description: "Enviame un mensaje con tu correo electronico si quieres contactar conmigo.\nSi quieres saber mas sobre mi, te invito a visitar mis redes sociales.",
             inputName: "Nombre",
             inputEmail: "Correo electronico",
             inputSubject: "Asunto",
@@ -55,7 +55,7 @@ export const es: AppLenguageData = {
             title: 'Sobre mi',
             general: {
                 title: 'General',
-                description: `Tengo ${getAuthorAge()} años y soy originario de la ciudad de Santiago, de Chile. Me desempeño formalmente como desarrollador de software desde el año 2019.\n Desde pequeño siempre me ha gustado la tecnología y la computacion en general. Tuve el privilegio de estudiarla en la Universidad, donde obtuve el grado de &apos;Ingeniero en informática&apos;, en donde encontré mi actual vocación.\n Considero que mi mayor fortaleza es la perseverancia y la capacidad de sobreponerme ante cualquier reto que se interponga ante los objetivos que me propongo.`,
+                description: `Tengo ${getAuthorAge()} años y soy originario de la ciudad de Santiago, de Chile. Me desempeño formalmente como desarrollador de software desde el año 2019.\nDesde pequeño siempre me ha gustado la tecnología y la computacion en general. Tuve el privilegio de estudiarla en la Universidad, donde obtuve el grado de &apos;Ingeniero en informática&apos;, en donde encontré mi actual vocación.\nConsidero que mi mayor fortaleza es la perseverancia y la capacidad de sobreponerme ante cualquier reto que se interponga ante los objetivos que me propongo.`,
             },
             skills: {
                 title: "Hobbies e intereses",

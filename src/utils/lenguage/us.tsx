@@ -33,7 +33,7 @@ export const us: AppLenguageData = {
         },
         contact: {
             title: "Contact",
-            description: "Send me a message with your email.\n If you want to contact me. If you want to know more about me, I invite you to visit my social networks.",
+            description: "Send me a message with your email.\nIf you want to contact me. If you want to know more about me, I invite you to visit my social networks.",
             inputName: "Name",
             inputEmail: "Email",
             inputSubject: "Subject",
@@ -55,7 +55,7 @@ export const us: AppLenguageData = {
             title: "About me",
             general: {
                 title: "General",
-                description: `I am ${getAuthorAge()} years old and I am originally from the city of Santiago, Chile. I work formally as a software developer since 2019.\n Since I was a child I have always liked technology and computing in general. I had the privilege of studying it at the University, where I obtained the degree of &apos;Computer Engineer&apos;, where I found my current vocation.\n I consider one of my greatest strength is perseverance and the ability to overcome any challenge that stands in front of the goals I set.`,
+                description: `I am ${getAuthorAge()} years old and I am originally from the city of Santiago, Chile. I work formally as a software developer since 2019.\nSince I was a child I have always liked technology and computing in general. I had the privilege of studying it at the University, where I obtained the degree of &apos;Computer Engineer&apos;, where I found my current vocation.\nI consider one of my greatest strength is perseverance and the ability to overcome any challenge that stands in front of the goals I set.`,
             },
             skills: {
                 title: "Hobbies",

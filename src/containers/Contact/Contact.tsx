@@ -32,7 +32,7 @@ export const Contact = () => {
                     </form>
                 )}
                 {loading.state && (
-                    <Loading />
+                    <Loading showMessage={true} />
                 )}
             </article>
         </section>

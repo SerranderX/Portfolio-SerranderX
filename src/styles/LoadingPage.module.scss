@@ -1,0 +1,11 @@
+.container {
+    min-height: 100vh; 
+    margin: 20em 0;
+}
+
+@media (max-width: 1200px) { 
+    .container {
+        min-height: 150vh; 
+        margin: 20em 0;
+    }
+}

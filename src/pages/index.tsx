@@ -12,12 +12,22 @@ import { ButtonNav } from '@components/ButtonNav/ButtonNav';
 import { useNearScreen } from '@hooks/useNearScreen';
 import { WindowSize } from '@interfaces/windowSize.interface';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
+import { motion } from "framer-motion";
 import styles from '@styles/Home.module.scss'
+import { useEffect, useState } from 'react';
+import { LoadingPage } from '@containers/LoadingPage/LoadingPage';
 
 const Home: NextPage = () => {
   const [showHeader, refHeader] = useNearScreen();
   const [showFooter, refFooter] = useNearScreen();
+  const [loading, setLoading] = useState<boolean>(true);
   const windowDimenions:WindowSize = useWindowsDimensions();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+  },[]);
 
   return (
       <div id="app-portfolio" className={styles.container}>
@@ -26,13 +36,22 @@ const Home: NextPage = () => {
         </Head>
         
         <Header reference={refHeader} windowDimenion={windowDimenions}/>
-        <main className={styles.main}>
-          <Presentation windowDimenions={windowDimenions} />
-          <Experience windowDimenions={windowDimenions} />
-          <Projects windowDimenions={windowDimenions} />
-          <Contact />
-          <AboutMe windowDimenions={windowDimenions} />
-        </main>
+        {!loading && 
+          <motion.main 
+            className={styles.main}
+            animate={{opacity: [0,1]}}
+            transition={{ duration: .6, ease: [0.04, 0.62, 0.23, 0.98], delay: .5 }}
+          >
+            <Presentation windowDimenions={windowDimenions} />
+            <Experience windowDimenions={windowDimenions} />
+            <Projects windowDimenions={windowDimenions} />
+            <Contact />
+            <AboutMe windowDimenions={windowDimenions} />
+          </motion.main>
+        }
+        {loading && 
+          <LoadingPage />
+        }
         <Footer reference={refFooter}/>
         <ButtonNav showHeader={showHeader} showFooter={showFooter}/>
       </div>

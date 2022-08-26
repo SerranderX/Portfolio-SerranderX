@@ -18,7 +18,7 @@ export const Presentation: React.FC<PresentationProps> = ({windowDimenions}) => 
     const name = ['Felipe Diaz', 'SerranderX'];
     const widnowsDimensions: WindowSize = useWindowsDimensions();
     const { lenguageState: { lenguageSelectedData: {data: { presentation }} } } = useContext(AppContext);
-    const [imageSize, setImageSize] = useState({width: 0, height: 0});
+    const [ imageSize, setImageSize ] = useState({width: 0, height: 0});
 
     useEffect(() => {
         if(windowDimenions.winWidth > 1200 ){
@@ -26,7 +26,7 @@ export const Presentation: React.FC<PresentationProps> = ({windowDimenions}) => 
         } else {
             setImageSize({width: 470, height: 600});
         }
-    } , [windowDimenions]);
+    }, [windowDimenions]);
 
     return (
         <section className={`${styles['container-presentation']}`}>
