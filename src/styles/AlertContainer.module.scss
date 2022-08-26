@@ -1,0 +1,28 @@
+@import '_vars.scss';
+
+.container {
+    margin: 2em;
+    text-align: center;
+}
+
+.message {
+    font-size: $text-base-size;
+    color: $primary-color;
+    margin: 2em .5em;
+    text-align: center;
+}
+
+.title {
+    font-size: $second-title-size;
+    color: $primary-color;
+}
+
+@media (max-width: 1200px) {
+    .message {
+        font-size: $mobile-text-base-size;
+    }
+    
+    .title {
+        font-size: $mobile-second-title-size;
+    }
+}

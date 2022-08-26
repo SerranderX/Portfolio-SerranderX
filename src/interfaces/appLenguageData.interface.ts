@@ -16,6 +16,7 @@ export interface AppData {
     aboutme: AppAboutmeData;
     footer: AppFooterData;
     loadingMessage: string;
+    alertContent: AlertContentData
 }
 
 export interface AppHeaderData {
@@ -50,7 +51,7 @@ export interface AppProjectsData {
 }
 export interface AppContactData {
     title: string;
-    description: ReactElement<any, any>;
+    description: string;
     inputName: string;
     inputEmail: string;
     inputSubject: string;
@@ -72,13 +73,22 @@ export interface AppAboutmeData {
     title: string;
     general: {
         title: string;
-        description: ReactElement<any, any>;
+        description: string;
     },
     skills: {
         title: string;
-        description: ReactElement<any, any>;
+        description: string;
     }
 }
 export interface AppFooterData {
     navbar: AppNavbarData;
+}
+
+export interface AlertContentData {
+    closeButton: string;
+    alertTitleType: {
+        warning: string,
+        error: string,
+        success: string
+    }
 }

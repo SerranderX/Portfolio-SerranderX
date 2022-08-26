@@ -258,4 +258,8 @@ export const getAuthorAge = () => {
     return edad;
 }
 
+export function replaceWithBr(message:string) {
+    return message.replace(/\n/g, "<br />")
+}
+
 export const VideoURL:string = "https://youtu.be/PaXH_S2AqDg";

@@ -5,6 +5,7 @@ import { WindowSize } from '@interfaces/windowSize.interface';
 import imageGeneralSection from '@images/photo2.jpg';
 import Image from 'next/image';
 import YouTube from "react-youtube";
+import { replaceWithBr } from "@utils/Utils"
 import styles from '@styles/AboutMe.module.scss';
 
 interface AboutMeProps {
@@ -49,7 +50,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({windowDimenions}) => {
                 </motion.div>
                 <div className={`${styles['general-info-container']}`}>
                     <h2>{aboutme.general.title}</h2>
-                    <p>{aboutme.general.description}</p>
+                    <p dangerouslySetInnerHTML={{__html: replaceWithBr(aboutme.general.description)}} />
                 </div>
             </article>
             <article className={`${styles['hobbies-container']}`}>
@@ -65,7 +66,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({windowDimenions}) => {
                 </div>
                 <div className={`${styles['hobbies-info-container']}`}>
                     <h2>{aboutme.skills.title}</h2>
-                    <p>{aboutme.skills.description}</p>
+                    <p dangerouslySetInnerHTML={{__html: replaceWithBr(aboutme.skills.description)}} />
                 </div>
             </article>
         </section>

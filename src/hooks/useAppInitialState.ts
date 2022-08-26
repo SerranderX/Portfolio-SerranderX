@@ -8,18 +8,20 @@ import { InputTypeNames } from "@hooks/useEmailJS/inputTypeNames";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ENV } from "@config/config";
+import { useAlert, AlertInterface } from "@hooks/useAlert";
 
 export const useAppInitialState = (): AppInitialState => {
     const projectsFilters: CarouselFiltersInterface = useCarouselFilters();
     const lenguageState: AppLenguageInterface = useLenguage();
     const emailJSState: EmailJSInterface = useEmailJS();
+    const alertState:AlertInterface = useAlert();
 
     const [lenguageSel, setLenguageSel] = useState("");
     const { inputs, submitButton, formRef, loading, inputValidateTrigger } =
         emailJSState;
     const {
         lenguageSelectedData: {
-            data: { contact },
+            data: { contact, alertContent },
         },
         lenguageSelected,
     } = lenguageState;
@@ -97,26 +99,21 @@ export const useAppInitialState = (): AppInitialState => {
                                                 inputs.forEach((input) => {
                                                     input.changeValue("");
                                                 });
-                                                alert(
-                                                    contact.emailMessages
-                                                        .success
-                                                );
+                                                alertState.showAlert( alertContent.alertTitleType.success, contact.emailMessages.success, true);
                                             } else {
-                                                alert(
-                                                    contact.emailMessages.error
-                                                );
+                                                alertState.showAlert( alertContent.alertTitleType.error, contact.emailMessages.error, true);
                                             }
                                             loading.handleLoading(false);
                                         },
                                         (error) => {
-                                            alert(contact.emailMessages.error);
+                                            alertState.showAlert( alertContent.alertTitleType.error, contact.emailMessages.error, true);
                                             loading.handleLoading(false);
                                         }
                                     );
                             }
                         }
                     } else {
-                        alert(alertText);
+                        alertState.showAlert(alertContent.alertTitleType.warning, alertText, true);
                     }
                 },
             });
@@ -176,26 +173,21 @@ export const useAppInitialState = (): AppInitialState => {
                                                 inputs.forEach((input) => {
                                                     input.changeValue("");
                                                 });
-                                                alert(
-                                                    contact.emailMessages
-                                                        .success
-                                                );
+                                                alertState.showAlert( alertContent.alertTitleType.success, contact.emailMessages.success, true);
                                             } else {
-                                                alert(
-                                                    contact.emailMessages.error
-                                                );
+                                                alertState.showAlert( alertContent.alertTitleType.error, contact.emailMessages.error, true);
                                             }
                                             loading.handleLoading(false);
                                         },
                                         (error) => {
-                                            alert(contact.emailMessages.error);
+                                            alertState.showAlert( alertContent.alertTitleType.error, contact.emailMessages.error, true);
                                             loading.handleLoading(false);
                                         }
                                     );
                             }
                         }
                     } else {
-                        alert(alertText);
+                        alertState.showAlert(alertContent.alertTitleType.warning, alertText, true);
                     }
                 },
             });
@@ -208,5 +200,6 @@ export const useAppInitialState = (): AppInitialState => {
         projectsFilters,
         lenguageState,
         emailJSState,
+        alertState
     };
 };

@@ -7,6 +7,7 @@ import { WindowSize } from '@interfaces/windowSize.interface';
 import { AppContext } from '@context/AppContext';
 import { AnimatedText } from '@components/AnimatedText/AnimatedText';
 import { SocialSection } from '@components/SocialSection/SocialSection';
+import { replaceWithBr } from "@utils/Utils";
 import styles from '@styles/Presentation.module.scss';
 
 interface PresentationProps {
@@ -36,9 +37,7 @@ export const Presentation: React.FC<PresentationProps> = ({windowDimenions}) => 
                     {presentation.greeting2} {' '}
                     <AnimatedText textData={name} />
                 </h1>
-                <p className={`${styles.description}`}>
-                    {presentation.description}
-                </p>
+                <p className={`${styles.description}`} dangerouslySetInnerHTML={{__html: replaceWithBr(presentation.description)}} />
                 <div className={`${styles.socialContainer}`}>
                     <SocialSection containerClass={styles.socialSectionContainer} svgClass={`${styles['svgClass-presentation']}`} iconContainerClass={styles.containerIcon} />
                 </div>

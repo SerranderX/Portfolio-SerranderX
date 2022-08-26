@@ -95,7 +95,7 @@ const initialState: AppInitialState = {
                 },
                 contact: {
                     title: "",
-                    description: <></>,
+                    description: "",
                     inputName: "",
                     inputEmail: "",
                     inputSubject: "",
@@ -117,11 +117,11 @@ const initialState: AppInitialState = {
                     title: "",
                     general: {
                         title: "",
-                        description: <></>,
+                        description: "",
                     },
                     skills: {
                         title: "",
-                        description: <></>,
+                        description: "",
                     },
                 },
                 footer: {
@@ -133,6 +133,14 @@ const initialState: AppInitialState = {
                     },
                 },
                 loadingMessage: "Cargando",
+                alertContent: {
+                    closeButton: "Cerrar",
+                    alertTitleType: {
+                        warning: "Advertencia",
+                        error: "Error",
+                        success: "Felicidades"
+                    }
+                }
             },
             flagIcon: (props: SVGProps<SVGSVGElement>) => {
                 return <></>;
@@ -170,7 +178,7 @@ const initialState: AppInitialState = {
                     },
                     contact: {
                         title: "",
-                        description: <></>,
+                        description: "",
                         inputName: "",
                         inputEmail: "",
                         inputSubject: "",
@@ -192,11 +200,11 @@ const initialState: AppInitialState = {
                         title: "",
                         general: {
                             title: "",
-                            description: <></>,
+                            description: "",
                         },
                         skills: {
                             title: "",
-                            description: <></>,
+                            description: "",
                         },
                     },
                     footer: {
@@ -208,6 +216,14 @@ const initialState: AppInitialState = {
                         },
                     },
                     loadingMessage: "Cargando",
+                    alertContent: {
+                        closeButton: "Cerrar",
+                        alertTitleType: {
+                            warning: "Advertencia",
+                            error: "Error",
+                            success: "Felicidades"
+                        }
+                    }
                 },
                 flagIcon: (props: SVGProps<SVGSVGElement>) => {
                     return <></>;
@@ -284,6 +300,13 @@ const initialState: AppInitialState = {
             handlerInputValidateTrigger: (payload: boolean) => {},
             inputValidateTrigger: false
         }
+    },
+    alertState: {
+        modalState: false,
+        title: "",
+        message: "",
+        showAlert: (title:string, message:string, state:boolean) => {},
+        closeAlert: () => {}
     }
 };
 
