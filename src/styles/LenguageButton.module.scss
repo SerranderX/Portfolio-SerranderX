@@ -60,16 +60,17 @@
         display: block;
         height: auto;
         border-radius: 10px;
-        margin: 0 0em 0 46em;
+        margin: 0 0em 0 45em;
     }
 
     .lenguage-button {
-        padding: .4em .5em;
-        font-size: $mobile-text-base-size;
+        padding: .2em .5em;
+        font-size: $mobile-fourth-title-size;
     }
 
     .lenguage-container ul li {
-        font-size: $mobile-text-min-size;
+        font-size: $mobile-text-base-size;
+        place-content: center;
     } 
 
     .lenguage-button svg {
