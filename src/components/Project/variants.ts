@@ -4,6 +4,7 @@ export const imageVariants = (src:any) => ({
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
         filter: 'brightness(0.1)',
+        maxWidth: '936px'
         
     },
     blur: { 
@@ -11,5 +12,6 @@ export const imageVariants = (src:any) => ({
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
         filter: 'brightness(1)',
+        maxWidth: '936px'
     },
 })

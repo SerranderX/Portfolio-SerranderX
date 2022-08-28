@@ -16,11 +16,13 @@ import PostgresIcon from "@iconos/skills/Postgresql";
 import ReactIcon from "@iconos/skills/Reactjs";
 import SpringIcon from "@iconos/skills/Spring";
 import StyledComponentIcon from "@iconos/skills/StyledComponents";
+import Typescript from "@iconos/skills/Typescript";
 import LinuxIcon from "@iconos/skills/Linux";
 import OracleIcon from "@iconos/skills/Oracle";
 import SassIcon from "@iconos/skills/Sass";
 import MysqlIcon from "@iconos/skills/Mysql";
 import WebpackIcon from "@iconos/skills/Webpack";
+import Plantspedia from '@images/projects/plantspedia.jpg';
 import PythonIcon from "@iconos/skills/Python";
 import FramerMotionIcon from "@iconos/skills/FramerMotion";
 import { ExperienceItems } from '@interfaces/experienceItems.interface';
@@ -56,6 +58,11 @@ export const ExperienceIcons: ExperienceItems[] = [
         name: ToolsTypes.JAVASCRIPT,
         url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         icon: JavaScriptIcon,
+    },
+    {
+        name: ToolsTypes.TYPESCRIPT,
+        url: "",
+        icon: Typescript
     },
     {
         name: ToolsTypes.REACTJS,
@@ -181,6 +188,23 @@ export const ProjectsData: ProjectInterface[] = [
         image: PokecardexjsSS,
         technologies: [ToolsTypes.REACTJS, ToolsTypes.JAVASCRIPT, ToolsTypes.FRAMERMOTION],
         icons: [ReactIcon, JavaScriptIcon, FramerMotionIcon],
+    },
+    {
+        name: "Plantspedia",
+        description: [
+            {
+                lenguage: "es",
+                data: "Una aplicacion web con informacion sobre el cuidado, curiosidades y mantencion de plantas."
+            },
+            {
+                lenguage: "us",
+                data: "A web application with information about the care, curiosities and maintenance of plants."
+            }
+        ],
+        url: "https://plantspedia-zeta.vercel.app",
+        image: Plantspedia,
+        technologies: [ToolsTypes.NEXTJS, ToolsTypes.TYPESCRIPT],
+        icons: [NextIcon, Typescript],
     },
     {
         name: "Petgram",
