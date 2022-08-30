@@ -9,6 +9,7 @@ interface IconSkillProps {
 } 
 
 export const IconSkill:React.FC<IconSkillProps> = ({index, Item, xPosition}) => {
+
     return (
         <motion.li animate={{x:xPosition}} transition={{ duration: .2 }}>
             <Item.icon />

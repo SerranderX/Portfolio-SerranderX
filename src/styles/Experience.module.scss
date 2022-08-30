@@ -87,6 +87,7 @@
     padding: 0em 1em;
     place-self: center;
     text-align: -webkit-center;
+    min-width: 105px;
 }
 
 .icons ul li svg {
@@ -115,6 +116,10 @@
 
     .content {
         grid-gap: $mobile-grid-gap-content-title;
+    }
+
+    .icons ul li {
+        min-width: 115px;
     }
 
     .icons ul li svg {

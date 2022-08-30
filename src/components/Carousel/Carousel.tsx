@@ -42,6 +42,13 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
         if (children) {
             const childrenLength = children.length;
             if(childrenLength > 0){
+                let maxWidth = 0;
+                Array.from(children).forEach(item => {
+                    if(item.clientWidth > maxWidth){
+                        maxWidth = item.clientWidth
+                    }
+                })
+
                 const childWidth = children[0].clientWidth;
                 setChildWidth(childWidth);
             }
