@@ -22,6 +22,7 @@ import OracleIcon from "@iconos/skills/Oracle";
 import SassIcon from "@iconos/skills/Sass";
 import MysqlIcon from "@iconos/skills/Mysql";
 import WebpackIcon from "@iconos/skills/Webpack";
+import TailwindIcon from "@iconos/skills/Tailwind";
 import Plantspedia from '@images/projects/plantspedia.jpg';
 import PythonIcon from "@iconos/skills/Python";
 import FramerMotionIcon from "@iconos/skills/FramerMotion";
@@ -155,6 +156,11 @@ export const ExperienceIcons: ExperienceItems[] = [
         icon: SassIcon,
     },
     {
+        name: "Tailwind",
+        url: "https://tailwindcss.com",
+        icon: TailwindIcon,
+    },
+    {
         name: "FMotion",
         url: "https://framer.com/motion",
         icon: FramerMotionIcon,
@@ -204,7 +210,7 @@ export const ProjectsData: ProjectInterface[] = [
         url: "https://plantspedia-zeta.vercel.app",
         image: Plantspedia,
         technologies: [ToolsTypes.NEXTJS, ToolsTypes.TYPESCRIPT],
-        icons: [NextIcon, Typescript],
+        icons: [NextIcon, Typescript, TailwindIcon],
     },
     {
         name: "Petgram",
