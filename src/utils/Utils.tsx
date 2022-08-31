@@ -23,6 +23,7 @@ import SassIcon from "@iconos/skills/Sass";
 import MysqlIcon from "@iconos/skills/Mysql";
 import WebpackIcon from "@iconos/skills/Webpack";
 import TailwindIcon from "@iconos/skills/Tailwind";
+import CSSIcon from "@iconos/skills/Css"
 import Plantspedia from '@images/projects/plantspedia.jpg';
 import PythonIcon from "@iconos/skills/Python";
 import FramerMotionIcon from "@iconos/skills/FramerMotion";
@@ -151,6 +152,11 @@ export const ExperienceIcons: ExperienceItems[] = [
         icon: StyledComponentIcon,
     },
     {
+        name: "CSS3",
+        url: "https://www.w3schools.com/css/",
+        icon: CSSIcon,
+    },
+    {
         name: "Sass",
         url: "https://sass-lang.com",
         icon: SassIcon,
@@ -244,7 +250,7 @@ export const ProjectsData: ProjectInterface[] = [
         url: "https://SerranderX.github.io/ToDo-Machine",
         image: TodoMachineSS,
         technologies: [ToolsTypes.REACTJS, ToolsTypes.JAVASCRIPT],
-        icons: [ReactIcon, JavaScriptIcon],
+        icons: [ReactIcon, JavaScriptIcon, CSSIcon],
     },
 ];
 
