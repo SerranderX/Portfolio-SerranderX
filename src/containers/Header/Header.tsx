@@ -50,11 +50,6 @@ export const Header: React.FC<HeaderProps> = ({
     const { lenguageState: { lenguageSelectedData: { data: { header }, }, }, } = useContext(AppContext);
     const menuItems = [
         {
-            href:"#about",
-            download: false,
-            content: header.navbar.about
-        },
-        {
             href:"#experience",
             download: false,
             content: header.navbar.experience
@@ -67,6 +62,10 @@ export const Header: React.FC<HeaderProps> = ({
             href:"#contact",
             download: false,
             content: header.navbar.contact
+        },{
+            href:"#about",
+            download: false,
+            content: header.navbar.about
         },{
             href:"cv/2022 Curriculum Vitae - Felipe Ignacio.pdf",
             download: true,
@@ -138,6 +137,7 @@ export const Header: React.FC<HeaderProps> = ({
                                         i={index}
                                         href={item.href}
                                         classNames={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]} ${!navState && styles["button-mobile-inactive"]} ${item.download && styles["button-cv-mobile"]} ${!navState && styles["button-mobile-inactive"]}`}
+                                        onClick={() => handleNavButton()}
                                         download={item.download}
                                     >
                                         {item.content}
@@ -148,9 +148,6 @@ export const Header: React.FC<HeaderProps> = ({
                     )}
                     {windowDimenion.winWidth >= 1200 && (
                         <div className={styles.container}>
-                            <a href="#about" className={styles.button}>
-                                {header.navbar.about}
-                            </a>
                             <a href="#experience" className={styles.button}>
                                 {header.navbar.experience}
                             </a>
@@ -159,6 +156,9 @@ export const Header: React.FC<HeaderProps> = ({
                             </a>
                             <a href="#contact" className={styles.button}>
                                 {header.navbar.contact}
+                            </a>
+                            <a href="#about" className={styles.button}>
+                                {header.navbar.about}
                             </a>
                             <a href="cv/2022 Curriculum Vitae - Felipe Ignacio.pdf" className={`${styles['button-cv']}`} download>
                                 {header.navbar.download}
