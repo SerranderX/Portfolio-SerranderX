@@ -7,7 +7,7 @@ interface MenuItemMobileProps {
     href: string;
     children: React.ReactNode;
     i: number;
-    onClick: () => void
+    handleClick: () => void
     download: boolean;
 }
 
@@ -28,14 +28,14 @@ const variantsMenuItems = {
     },
   }
 
-export const MenuItemMobile: React.FC<MenuItemMobileProps> = ({classNames, children, href, i, download, onClick}): JSX.Element => {
+export const MenuItemMobile: React.FC<MenuItemMobileProps> = ({classNames, children, href, i, download, handleClick}): JSX.Element => {
     return (
         <motion.a
             href={href}
             className={classNames}
             variants={variantsMenuItems}
             download={download}
-            onClick={onClick}
+            onClick={handleClick}
         >
             {download && <DownloadIcon style={{width: '1.5em', height: '1.5em', margin: '0 .3em 0 0' }} />}
             {children}

@@ -137,7 +137,7 @@ export const Header: React.FC<HeaderProps> = ({
                                         i={index}
                                         href={item.href}
                                         classNames={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]} ${!navState && styles["button-mobile-inactive"]} ${item.download && styles["button-cv-mobile"]} ${!navState && styles["button-mobile-inactive"]}`}
-                                        onClick={() => handleNavButton()}
+                                        handleClick={() => handleNavButton()}
                                         download={item.download}
                                     >
                                         {item.content}
