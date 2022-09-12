@@ -27,28 +27,24 @@ export const Project: React.FC<ProjectProps> = ({handleFocusProject, projectFocu
                 animate={projectFocus ? "focus" : "blur"}
                 variants={imageVariants(project.image.src)}
             >
-                {!projectFocus && (
-                    <>
-                        <motion.div 
-                            className={styles.titleBox}
-                            animate={{opacity: [0, 1]}}
-                            transition={{ duration: .5, ease: [0.04, 0.62, 0.23, 0.98] }}
-                        >
-                            {project.name}
-                        </motion.div>
-                        <motion.div 
-                            className={styles.techIcons}
-                            animate={{opacity: [0, 1]}}
-                            transition={{ duration: .5, ease: [0.04, 0.62, 0.23, 0.98] }}
-                        >
-                            {project.icons.map((Icon, index) => 
-                                <div key={`${project.name}-icon-${index}`} className={`${styles['project-icon-container']}`}>
-                                    <Icon />
-                                </div>
-                            )}
-                        </motion.div>
-                    </>
-                )}
+                <motion.div 
+                    className={`${styles.titleBox} ${projectFocus && styles.behind}`}
+                    animate={{opacity: [0, 1]}}
+                    transition={{ duration: .5, ease: [0.04, 0.62, 0.23, 0.98] }}
+                >
+                    {project.name}
+                </motion.div>
+                <motion.div 
+                    className={`${styles.techIcons} ${projectFocus && styles.behind}`}
+                    animate={{opacity: [0, 1]}}
+                    transition={{ duration: .5, ease: [0.04, 0.62, 0.23, 0.98] }}
+                >
+                    {project.icons.map((Icon, index) => 
+                        <div key={`${project.name}-icon-${index}`} className={`${styles['project-icon-container']}`}>
+                            <Icon />
+                        </div>
+                    )}
+                </motion.div>
             </motion.div>
             {projectFocus &&
                 <motion.div 

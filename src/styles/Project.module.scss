@@ -32,10 +32,14 @@
     display: flex;
 }
 
+.behind {
+    z-index: -1;
+}
+
 .info-container {
     position: absolute;
     top: 0px;
-    margin: 10% 25%;
+    margin: 10% 15%;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
@@ -59,7 +63,7 @@
 }
 
 .info-description p {
-    font-size: $text-base-size;
+    font-size: $third-title-size;
     color: $primary-color;
 }
 
@@ -112,7 +116,7 @@
     }
 
     .info-container {
-        margin: 5% 10%;
+        margin: 5% 4%;
     }
 
     .titleBox {
