@@ -48,6 +48,7 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
     const [navState, setNavState] = useState(false);
     const { lenguageState: { lenguageSelectedData: { data: { header }, }, }, } = useContext(AppContext);
+    const CVhref = "cv/2023 Curriculum Vitae - Felipe Ignacio.pdf";
     const menuItems = [
         {
             href:"#experience",
@@ -67,7 +68,7 @@ export const Header: React.FC<HeaderProps> = ({
             download: false,
             content: header.navbar.about
         },{
-            href:"cv/2022 Curriculum Vitae - Felipe Ignacio.pdf",
+            href:CVhref,
             download: true,
             content: header.navbar.download
         }
@@ -81,7 +82,7 @@ export const Header: React.FC<HeaderProps> = ({
         <>
             <header className={styles.header} ref={reference} id="header">
                 {(windowDimenion.winWidth >= 1200 && windowDimenion.winWidth != 0) && (
-                    <div>
+                    <div style={{minWidth:'150px'}}>
                         <Image
                             src={LogoComplete}
                             alt="LogoComplete"
@@ -160,7 +161,7 @@ export const Header: React.FC<HeaderProps> = ({
                             <a href="#about" className={styles.button}>
                                 {header.navbar.about}
                             </a>
-                            <a href="cv/2022 Curriculum Vitae - Felipe Ignacio.pdf" className={`${styles['button-cv']}`} download>
+                            <a href={CVhref} className={`${styles['button-cv']}`} download>
                                 {header.navbar.download}
                             </a>
                         </div>

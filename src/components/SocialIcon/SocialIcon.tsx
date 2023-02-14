@@ -27,7 +27,7 @@ export const SocialIcon: React.FC<SocialIconInterface> = ({iconContainerClass, s
             <i className={`${classFilter && classFilter} ${styles.fa}`}>
               <SvgIconElement svgClass={svgClass} />
             </i>
-            {hover && <motion.span animate={{opacity: [0,1], transition: { dutarion: .1, ease: [0.04, 0.62, 0.23, 0.98] } }} style={{marginLeft: `${marginLeftNickname}px`}}className={styles.nickname}>{nickname}</motion.span>}
+            {hover && <motion.span animate={{opacity: [0,1], transition: { dutarion: .1, ease: [0.04, 0.62, 0.23, 0.98] } }} style={{marginLeft: `${marginLeftNickname}px`}} className={styles.nickname}>{nickname}</motion.span>}
           </motion.a>
     );
 };

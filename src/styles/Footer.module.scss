@@ -41,6 +41,7 @@
   .Footer-distributed .Footer-right {
     float: right;
     max-width: 350px;
+    display: inline-flex;
   }
 
   .Footer-distributed p.Footer-powered {
@@ -63,6 +64,7 @@
       float: none;
       margin: 1.4rem auto;
       max-width: 35rem;
+      display: block;
     }
   
     .Footer-distributed .Footer-left p.Footer-links {
