@@ -1,8 +1,4 @@
-import React, {
-    LegacyRef,
-    useContext,
-    useState,
-} from "react";
+import React, { LegacyRef, useContext, useState } from "react";
 import Image from "next/image";
 import styles from "@styles/Header.module.scss";
 import LogoComplete from "@logos/logoComplete.png";
@@ -47,31 +43,40 @@ export const Header: React.FC<HeaderProps> = ({
     windowDimenion,
 }) => {
     const [navState, setNavState] = useState(false);
-    const { lenguageState: { lenguageSelectedData: { data: { header }, }, }, } = useContext(AppContext);
+    const {
+        lenguageState: {
+            lenguageSelectedData: {
+                data: { header },
+            },
+        },
+    } = useContext(AppContext);
     const CVhref = "cv/2023 Curriculum Vitae - Felipe Ignacio.pdf";
     const menuItems = [
         {
-            href:"#experience",
+            href: "#experience",
             download: false,
-            content: header.navbar.experience
+            content: header.navbar.experience,
         },
         {
-            href:"#projects",
+            href: "#projects",
             download: false,
-            content: header.navbar.projects
-        },{
-            href:"#contact",
+            content: header.navbar.projects,
+        },
+        {
+            href: "#contact",
             download: false,
-            content: header.navbar.contact
-        },{
-            href:"#about",
+            content: header.navbar.contact,
+        },
+        {
+            href: "#about",
             download: false,
-            content: header.navbar.about
-        },{
-            href:CVhref,
+            content: header.navbar.about,
+        },
+        {
+            href: CVhref,
             download: true,
-            content: header.navbar.download
-        }
+            content: header.navbar.download,
+        },
     ];
 
     const handleNavButton = () => {
@@ -81,72 +86,91 @@ export const Header: React.FC<HeaderProps> = ({
     return (
         <>
             <header className={styles.header} ref={reference} id="header">
-                {(windowDimenion.winWidth >= 1200 && windowDimenion.winWidth != 0) && (
-                    <div style={{minWidth:'150px'}}>
-                        <Image
-                            src={LogoComplete}
-                            alt="LogoComplete"
-                            width={200}
-                            height={75}
-                        />
-                    </div>
-                )}
-                <nav className={styles.nav}>
-                    {(windowDimenion.winWidth < 1200 && windowDimenion.winWidth != 0) && (
-                        <div className={styles.container}>
-                            <motion.a
-                                className={`${styles["head-section-mobile"]}`}
-                                animate={navState ? "open" : "closed"}
-                                variants={variantsHeadSection}
-                                transition={{
-                                    duration: 0.8,
-                                    ease: [0.04, 0.62, 0.23, 0.98],
-                                }}
-                            >
-                                <span
-                                    style={{
-                                        display: "inline-flex",
-                                        marginRight: "auto",
-                                    }}
-                                >
-                                    <Image
-                                        src={LogoComplete}
-                                        alt="Logo"
-                                        width={280}
-                                        height={120}
-                                    />
-                                </span>
-                                <MenuToggle
-                                    show={navState}
-                                    handlerClick={handleNavButton}
-                                />
-                            </motion.a>
-                            <motion.div
-                                className={`${styles["container-nav-mobile"]}`}
-                                initial="collapsed"
-                                animate={navState ? "open" : "collapsed"}
-                                exit="collapsed"
-                                variants={variantsSection}
-                                transition={{
-                                    duration: 0.8,
-                                    ease: [0.04, 0.62, 0.23, 0.98],
-                                }}
-                            >
-                                {menuItems.map((item, index) => 
-                                    <MenuItemMobile
-                                        key={`mobile-menu-${index}-${item}`}
-                                        i={index}
-                                        href={item.href}
-                                        classNames={`${styles["button-mobile"]} ${styles["button-mobile-text-center"]} ${!navState && styles["button-mobile-inactive"]} ${item.download && styles["button-cv-mobile"]} ${!navState && styles["button-mobile-inactive"]}`}
-                                        handleClick={() => handleNavButton()}
-                                        download={item.download}
-                                    >
-                                        {item.content}
-                                    </MenuItemMobile>
-                                )}
-                            </motion.div>
+                {windowDimenion.winWidth >= 1200 &&
+                    windowDimenion.winWidth != 0 && (
+                        <div style={{ minWidth: "150px" }}>
+                            <Image
+                                src={LogoComplete}
+                                alt="LogoComplete"
+                                width={200}
+                                height={75}
+                            />
                         </div>
                     )}
+                <nav className={styles.nav}>
+                    {windowDimenion.winWidth < 1200 &&
+                        windowDimenion.winWidth != 0 && (
+                            <div className={styles.container}>
+                                <motion.a
+                                    className={`${styles["head-section-mobile"]}`}
+                                    animate={navState ? "open" : "closed"}
+                                    variants={variantsHeadSection}
+                                    transition={{
+                                        duration: 0.8,
+                                        ease: [0.04, 0.62, 0.23, 0.98],
+                                    }}
+                                >
+                                    <span
+                                        style={{
+                                            display: "inline-flex",
+                                            marginRight: "auto",
+                                        }}
+                                    >
+                                        <Image
+                                            src={LogoComplete}
+                                            alt="Logo"
+                                            width={280}
+                                            height={120}
+                                        />
+                                    </span>
+                                    <MenuToggle
+                                        show={navState}
+                                        handlerClick={handleNavButton}
+                                    />
+                                </motion.a>
+                                <motion.div
+                                    className={`${styles["container-nav-mobile"]}`}
+                                    initial="collapsed"
+                                    animate={navState ? "open" : "collapsed"}
+                                    exit="collapsed"
+                                    variants={variantsSection}
+                                    transition={{
+                                        duration: 0.8,
+                                        ease: [0.04, 0.62, 0.23, 0.98],
+                                    }}
+                                >
+                                    {menuItems.map((item, index) => (
+                                        <MenuItemMobile
+                                            key={`mobile-menu-${index}-${item}`}
+                                            i={index}
+                                            href={item.href}
+                                            classNames={`${
+                                                styles["button-mobile"]
+                                            } ${
+                                                styles[
+                                                    "button-mobile-text-center"
+                                                ]
+                                            } ${
+                                                !navState &&
+                                                styles["button-mobile-inactive"]
+                                            } ${
+                                                item.download &&
+                                                styles["button-cv-mobile"]
+                                            } ${
+                                                !navState &&
+                                                styles["button-mobile-inactive"]
+                                            }`}
+                                            handleClick={() =>
+                                                handleNavButton()
+                                            }
+                                            download={item.download}
+                                        >
+                                            {item.content}
+                                        </MenuItemMobile>
+                                    ))}
+                                </motion.div>
+                            </div>
+                        )}
                     {windowDimenion.winWidth >= 1200 && (
                         <div className={styles.container}>
                             <a href="#experience" className={styles.button}>
@@ -161,7 +185,11 @@ export const Header: React.FC<HeaderProps> = ({
                             <a href="#about" className={styles.button}>
                                 {header.navbar.about}
                             </a>
-                            <a href={CVhref} className={`${styles['button-cv']}`} download>
+                            <a
+                                href={CVhref}
+                                className={`${styles["button-cv"]}`}
+                                download
+                            >
                                 {header.navbar.download}
                             </a>
                         </div>
