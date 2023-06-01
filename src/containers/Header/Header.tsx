@@ -8,6 +8,7 @@ import { MenuToggle } from "@containers/MenuToggle/MenuToggle";
 import { LenguageButton } from "@components/LenguageButton/LenguageButton";
 import { AppContext } from "@context/AppContext";
 import { MenuItemMobile } from "@components/MenuItemMobile/MenuItemMobile";
+import { ENV } from "@config/config";
 
 const variantsSection = {
     open: { opacity: 1, height: "auto" },
@@ -50,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({
             },
         },
     } = useContext(AppContext);
-    const CVhref = "cv/2023 Curriculum Vitae - Felipe Ignacio.pdf";
+    const CVhref = ENV.cvname;
     const menuItems = [
         {
             href: "#experience",
