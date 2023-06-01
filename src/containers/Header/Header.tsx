@@ -51,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({
             },
         },
     } = useContext(AppContext);
-    const CVhref = ENV.cvname;
+    const CVhref = `cv/${ENV.cvname}`;
     const menuItems = [
         {
             href: "#experience",
