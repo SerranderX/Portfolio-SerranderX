@@ -21,6 +21,7 @@ export interface AppData {
 
 export interface AppHeaderData {
     navbar: AppNavbarData;
+    resumeModal: AppResumeModal;
 }
 
 export interface AppNavbarData {
@@ -91,4 +92,14 @@ export interface AlertContentData {
         error: string;
         success: string;
     };
+}
+
+export interface AppResumeModal {
+    instruction: string;
+    lenguages: AppResumeLenguagesModal;
+}
+
+export interface AppResumeLenguagesModal {
+    english: string;
+    spanish: string;
 }

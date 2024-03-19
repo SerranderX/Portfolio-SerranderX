@@ -13,8 +13,15 @@ export const us: AppLenguageData = {
                 experience: "Experience",
                 projects: "Projects",
                 contact: "Contact",
-                download: "Download CV",
+                download: "Download Resume",
                 cvhref: `cv/${ENV.resumehref}`,
+            },
+            resumeModal: {
+                instruction: "Select the document lenguage",
+                lenguages: {
+                    english: "English",
+                    spanish: "Spanish",
+                },
             },
         },
         presentation: {
@@ -75,6 +82,7 @@ export const us: AppLenguageData = {
                 experience: "Experience",
                 projects: "Projects",
                 contact: "Contact",
+                cvhref: "",
             },
         },
         loadingMessage: "Cargando",

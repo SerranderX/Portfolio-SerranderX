@@ -16,6 +16,13 @@ export const es: AppLenguageData = {
                 download: "Descargar CV",
                 cvhref: `cv/${ENV.cvhref}`,
             },
+            resumeModal: {
+                instruction: "Seleccione el idioma del documento",
+                lenguages: {
+                    english: "Ingles",
+                    spanish: "Español",
+                },
+            },
         },
         presentation: {
             title: "Portafolio de proyectos",
@@ -76,6 +83,7 @@ export const es: AppLenguageData = {
                 experience: "Experiencia",
                 projects: "Proyectos",
                 contact: "Contacto",
+                cvhref: "",
             },
         },
         loadingMessage: "Cargando",

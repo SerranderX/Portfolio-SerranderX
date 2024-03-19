@@ -28,11 +28,29 @@
                 0 0 100px $neon-blue-border;
 }
 
+.container {
+    margin: 2em;
+    text-align: center;
+}
+
+.title {
+    font-size: $second-title-size;
+    color: $primary-color;
+}
+
 @media (max-width: 1200px) {
     .content {
         width: 85%;
         top: 20%;
         left: 7.5%;
         right: 7.5%;
+    }
+
+    .message {
+        font-size: $mobile-text-base-size;
+    }
+    
+    .title {
+        font-size: $mobile-second-title-size;
     }
 }

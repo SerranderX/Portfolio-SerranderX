@@ -9,6 +9,8 @@ import { LenguageButton } from "@components/LenguageButton/LenguageButton";
 import { AppContext } from "@context/AppContext";
 import { MenuItemMobile } from "@components/MenuItemMobile/MenuItemMobile";
 import { ENV } from "@config/config";
+import { Modal } from "@containers/Modal/Modal";
+import { ResumeDownload } from "@components/ResumeDownload";
 
 const variantsSection = {
     open: { opacity: 1, height: "auto" },
@@ -44,6 +46,7 @@ export const Header: React.FC<HeaderProps> = ({
     windowDimenion,
 }) => {
     const [navState, setNavState] = useState(false);
+    const [resumeModal, setResumeModal] = useState(false);
     const {
         lenguageState: {
             lenguageSelectedData: {
@@ -73,14 +76,20 @@ export const Header: React.FC<HeaderProps> = ({
             content: header.navbar.about,
         },
         {
-            href: header.navbar.cvhref,
+            href: "#",
             download: true,
             content: header.navbar.download,
         },
     ];
 
-    const handleNavButton = () => {
-        setNavState(!navState);
+    const handleNavButton = (openModal: boolean = false) => {
+        if (!openModal) setNavState(!navState);
+        else setResumeModal(!resumeModal);
+    };
+
+    const handleCloseModal = () => {
+        setResumeModal(!resumeModal);
+        if (navState) setNavState(!navState);
     };
 
     return (
@@ -125,7 +134,7 @@ export const Header: React.FC<HeaderProps> = ({
                                     </span>
                                     <MenuToggle
                                         show={navState}
-                                        handlerClick={handleNavButton}
+                                        handlerClick={() => handleNavButton()}
                                     />
                                 </motion.a>
                                 <motion.div
@@ -161,7 +170,7 @@ export const Header: React.FC<HeaderProps> = ({
                                                 styles["button-mobile-inactive"]
                                             }`}
                                             handleClick={() =>
-                                                handleNavButton()
+                                                handleNavButton(item.download)
                                             }
                                             download={item.download}
                                         >
@@ -186,9 +195,9 @@ export const Header: React.FC<HeaderProps> = ({
                                 {header.navbar.about}
                             </a>
                             <a
-                                href={header.navbar.cvhref}
+                                href="#"
                                 className={`${styles["button-cv"]}`}
-                                download
+                                onClick={() => handleCloseModal()}
                             >
                                 {header.navbar.download}
                             </a>
@@ -197,6 +206,13 @@ export const Header: React.FC<HeaderProps> = ({
                     {windowDimenion.winWidth != 0 && <LenguageButton />}
                 </nav>
             </header>
+            <Modal
+                show={resumeModal}
+                handlerClose={() => handleCloseModal()}
+                title={header.navbar.download}
+            >
+                <ResumeDownload />
+            </Modal>
         </>
     );
 };

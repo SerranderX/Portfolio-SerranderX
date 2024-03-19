@@ -1,0 +1,63 @@
+@import '_vars.scss';
+
+.button {
+    width: 65%;
+    margin: 2% 12.5%;
+    padding: 13px;
+    border: 2px solid $quaternary-color;
+    border-radius: 5px;
+    font-size: $text-base-size;
+    background-color: $background-color-light-opac;
+    color: $primary-color;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
+
+    &:hover {
+        border-radius: 5px;
+        box-shadow: 0 0 5px $neon-blue-background,
+                    0 0 25px $neon-blue-background,
+                    0 0 5px $neon-blue-background,
+                    0 0 100px $neon-blue-background;
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+        display: inline-flex;
+        align-items: center;
+        text-transform: none;
+    }
+
+    p svg {
+        margin-left: 1rem;
+        width: 34px;
+        height: 34px;
+    }
+}
+
+.message {
+    font-size: $text-base-size;
+    color: $primary-color;
+    margin: 1em .5em;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .message {
+        font-size: $mobile-text-base-size;
+    }
+
+    .button {
+        p {
+            font-size: 2.2em;
+            padding: 1rem;
+        }
+
+        p svg {
+            width: 52px;
+            height: 52px;
+            margin-left: 1.5rem;
+        }
+    }
+}
