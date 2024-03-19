@@ -3,8 +3,8 @@ import { ReactElement, SVGProps } from "react";
 export interface AppLenguageData {
     lenguage: string;
     lenguageName: string;
-    data: AppData,
-    flagIcon: (props: SVGProps<SVGSVGElement>) => JSX.Element,
+    data: AppData;
+    flagIcon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
 }
 
 export interface AppData {
@@ -16,7 +16,7 @@ export interface AppData {
     aboutme: AppAboutmeData;
     footer: AppFooterData;
     loadingMessage: string;
-    alertContent: AlertContentData
+    alertContent: AlertContentData;
 }
 
 export interface AppHeaderData {
@@ -29,6 +29,7 @@ export interface AppNavbarData {
     projects: string;
     contact: string;
     download?: string;
+    cvhref: string;
 }
 
 export interface AppPresentationData {
@@ -37,7 +38,6 @@ export interface AppPresentationData {
     greeting2: string;
     description: string;
 }
-
 
 export interface AppExperienceData {
     title: string;
@@ -58,27 +58,27 @@ export interface AppContactData {
     inputMessage: string;
     inputSubmit: string;
     emailMessages: {
-        success: string,
-        error: string,
-    },
+        success: string;
+        error: string;
+    };
     inputMessages: {
-        title: string,
-        name: string,
-        email: string,
-        subject: string,
-        message: string,
-    }
+        title: string;
+        name: string;
+        email: string;
+        subject: string;
+        message: string;
+    };
 }
 export interface AppAboutmeData {
     title: string;
     general: {
         title: string;
         description: string;
-    },
+    };
     skills: {
         title: string;
         description: string;
-    }
+    };
 }
 export interface AppFooterData {
     navbar: AppNavbarData;
@@ -87,8 +87,8 @@ export interface AppFooterData {
 export interface AlertContentData {
     closeButton: string;
     alertTitleType: {
-        warning: string,
-        error: string,
-        success: string
-    }
+        warning: string;
+        error: string;
+        success: string;
+    };
 }

@@ -51,7 +51,6 @@ export const Header: React.FC<HeaderProps> = ({
             },
         },
     } = useContext(AppContext);
-    const CVhref = `cv/${ENV.cvname}`;
     const menuItems = [
         {
             href: "#experience",
@@ -74,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({
             content: header.navbar.about,
         },
         {
-            href: CVhref,
+            href: header.navbar.cvhref,
             download: true,
             content: header.navbar.download,
         },
@@ -187,7 +186,7 @@ export const Header: React.FC<HeaderProps> = ({
                                 {header.navbar.about}
                             </a>
                             <a
-                                href={CVhref}
+                                href={header.navbar.cvhref}
                                 className={`${styles["button-cv"]}`}
                                 download
                             >

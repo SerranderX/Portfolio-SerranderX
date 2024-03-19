@@ -1,11 +1,12 @@
-import { USIcon } from '@iconos/lenguage/us';
-import { AppLenguageData } from '@interfaces/appLenguageData.interface';
-import { getAuthorAge } from '@utils/Utils';
+import { ENV } from "@config/config";
+import { USIcon } from "@iconos/lenguage/us";
+import { AppLenguageData } from "@interfaces/appLenguageData.interface";
+import { getAuthorAge } from "@utils/Utils";
 
 export const us: AppLenguageData = {
     lenguage: "us",
     lenguageName: "English",
-    data:{
+    data: {
         header: {
             navbar: {
                 about: "About",
@@ -13,27 +14,32 @@ export const us: AppLenguageData = {
                 projects: "Projects",
                 contact: "Contact",
                 download: "Download CV",
-            }
+                cvhref: `cv/${ENV.resumehref}`,
+            },
         },
         presentation: {
             title: "Portfolio of projects",
             greeting1: "Welcome,",
             greeting2: "I'm ",
-            description: "Designer and software developer of Chilean nationality, known as @SerranderX on the internet, I am dedicated to software development and continuous learning of new technologies for the creation of IT solutions.",
+            description:
+                "Designer and software developer of Chilean nationality, known as @SerranderX on the internet, I am dedicated to software development and continuous learning of new technologies for the creation of IT solutions.",
         },
         experience: {
             title: "Experience",
-            description: "In this section you will find some of the tools and technologies in which I frequently work in the development of projects."
+            description:
+                "In this section you will find some of the tools and technologies in which I frequently work in the development of projects.",
         },
         projects: {
             title: "Projects",
             description: "Some of the projects that I have developed.",
-            notFoundMessage1: "At the moment there are no projects for the selected filters",
+            notFoundMessage1:
+                "At the moment there are no projects for the selected filters",
             notFoundMessage2: "I am working on new projects for the future",
         },
         contact: {
             title: "Contact",
-            description: "Send me a message with your email.\nIf you want to contact me. If you want to know more about me, I invite you to visit my social networks.",
+            description:
+                "Send me a message with your email.\nIf you want to contact me. If you want to know more about me, I invite you to visit my social networks.",
             inputName: "Name",
             inputEmail: "Email",
             inputSubject: "Subject",
@@ -49,7 +55,7 @@ export const us: AppLenguageData = {
                 email: "• The input 'Email' is invalid or empty.\n",
                 subject: "• The input 'Subject' is required.\n",
                 message: "• The input 'Message' is required.\n",
-            }
+            },
         },
         aboutme: {
             title: "About me",
@@ -59,8 +65,9 @@ export const us: AppLenguageData = {
             },
             skills: {
                 title: "Hobbies",
-                description: "I am passionate about video games in general since I can remember, however my favorites have always been the RPGs. I love reading and the fantasy genre, as well as literature as a whole when I find an interesting book. I also like music and since I was a teenager I like to consider myself an amateur musician, I play guitar since I was 12 years old in a self-taught way. In my Instagram you can see some of the songs I've recorded, although in this section you can find a cover I recorded some time ago.",
-            }
+                description:
+                    "I am passionate about video games in general since I can remember, however my favorites have always been the RPGs. I love reading and the fantasy genre, as well as literature as a whole when I find an interesting book. I also like music and since I was a teenager I like to consider myself an amateur musician, I play guitar since I was 12 years old in a self-taught way. In my Instagram you can see some of the songs I've recorded, although in this section you can find a cover I recorded some time ago.",
+            },
         },
         footer: {
             navbar: {
@@ -68,7 +75,7 @@ export const us: AppLenguageData = {
                 experience: "Experience",
                 projects: "Projects",
                 contact: "Contact",
-            }
+            },
         },
         loadingMessage: "Cargando",
         alertContent: {
@@ -76,9 +83,9 @@ export const us: AppLenguageData = {
             alertTitleType: {
                 warning: "Warning",
                 error: "Error",
-                success: "Success"
-            }
-        }
+                success: "Success",
+            },
+        },
     },
     flagIcon: USIcon,
-}
+};

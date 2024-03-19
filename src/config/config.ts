@@ -12,5 +12,6 @@ export const ENV = {
         emailjs_service: String(process.env.NEXT_PUBLIC_EMAILJSSERVICEID),
         emailjs_template: String(process.env.NEXT_PUBLIC_EMAILJSTEMPLATE),
     },
-    cvname: String(process.env.NEXT_PUBLIC_CVNAME),
+    cvhref: String(process.env.NEXT_PUBLIC_CVNAME),
+    resumehref: String(process.env.NEXT_PUBLIC_RESUMENAME),
 };

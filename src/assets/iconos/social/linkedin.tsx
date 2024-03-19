@@ -1,21 +1,40 @@
-import React from 'react'
-import { SvgPropsInterface } from '@interfaces/svgProps.interface';
-import styles from '@styles/SocialIcon.module.scss';
+import React from "react";
+import { SvgPropsInterface } from "@interfaces/svgProps.interface";
+import styles from "@styles/SocialIcon.module.scss";
 
-export const LinkedinIcon: React.FC<SvgPropsInterface> = ({svgClass}): JSX.Element => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 48 48"
-      className={`${svgClass && svgClass} ${styles['fa-linkedin']}`}
-    >
-      <path
-        fill="#000"
-        fillRule="evenodd"
-        d="M24 0C10.745 0 0 10.745 0 24s10.745 24 24 24 24-10.745 24-24S37.255 0 24 0zM11.522 19.878h5.438V36.22h-5.438V19.878zm5.797-5.055C17.284 13.22 16.138 12 14.277 12c-1.86 0-3.077 1.22-3.077 2.823 0 1.569 1.18 2.824 3.006 2.824h.035c1.897 0 3.078-1.255 3.078-2.824zm12.994 4.671c3.58 0 6.262 2.336 6.262 7.356v9.37h-5.439v-8.743c0-2.196-.787-3.695-2.755-3.695-1.503 0-2.398 1.01-2.791 1.986-.144.35-.18.837-.18 1.325v9.127h-5.439s.072-14.808 0-16.342h5.44v2.315c.721-1.113 2.014-2.699 4.902-2.699z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  )
-}
+export const LinkedinIcon: React.FC<SvgPropsInterface> = ({
+    svgClass,
+}): JSX.Element => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            className={`${svgClass && svgClass}`}
+        >
+            <g
+                fill="none"
+                strokeMiterlimit="10"
+                strokeWidth="1"
+                transform="matrix(2.81 0 0 2.81 1.407 1.407)"
+            >
+                <path
+                    fill="#069"
+                    d="M45 0C20.147 0 0 20.147 0 45s20.147 45 45 45 45-20.147 45-45S69.853 0 45 0z"
+                ></path>
+                <rect
+                    width="10.37"
+                    height="33.34"
+                    x="20.82"
+                    y="36.62"
+                    fill="#FFF"
+                    rx="0"
+                    ry="0"
+                ></rect>
+                <path
+                    fill="#FFF"
+                    d="M26.005 32.062A6.005 6.005 0 0120 26.055a6.007 6.007 0 016.005-6.011 6.01 6.01 0 016.005 6.011 6.01 6.01 0 01-6.005 6.007zM70 69.956H59.643V53.743c0-3.867-.067-8.84-5.385-8.84-5.392 0-6.215 4.215-6.215 8.562v16.491H37.686V36.617h9.939v4.559h.141c1.383-2.622 4.764-5.385 9.804-5.385 10.493 0 12.43 6.903 12.43 15.88v18.285z"
+                ></path>
+            </g>
+        </svg>
+    );
+};
