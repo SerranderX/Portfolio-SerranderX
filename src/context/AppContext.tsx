@@ -75,6 +75,14 @@ const initialState: AppInitialState = {
                         projects: "",
                         contact: "",
                         download: "",
+                        cvhref: "",
+                    },
+                    resumeModal: {
+                        instruction: "",
+                        lenguages: {
+                            english: "",
+                            spanish: "",
+                        },
                     },
                 },
                 presentation: {
@@ -111,7 +119,7 @@ const initialState: AppInitialState = {
                         email: "",
                         subject: "",
                         message: "",
-                    }
+                    },
                 },
                 aboutme: {
                     title: "",
@@ -130,6 +138,7 @@ const initialState: AppInitialState = {
                         experience: "",
                         projects: "",
                         contact: "",
+                        cvhref: "",
                     },
                 },
                 loadingMessage: "Cargando",
@@ -138,9 +147,9 @@ const initialState: AppInitialState = {
                     alertTitleType: {
                         warning: "Advertencia",
                         error: "Error",
-                        success: "Felicidades"
-                    }
-                }
+                        success: "Felicidades",
+                    },
+                },
             },
             flagIcon: (props: SVGProps<SVGSVGElement>) => {
                 return <></>;
@@ -158,6 +167,14 @@ const initialState: AppInitialState = {
                             projects: "",
                             contact: "",
                             download: "",
+                            cvhref: "",
+                        },
+                        resumeModal: {
+                            instruction: "",
+                            lenguages: {
+                                english: "",
+                                spanish: "",
+                            },
                         },
                     },
                     presentation: {
@@ -194,7 +211,7 @@ const initialState: AppInitialState = {
                             email: "",
                             subject: "",
                             message: "",
-                        }
+                        },
                     },
                     aboutme: {
                         title: "",
@@ -213,6 +230,7 @@ const initialState: AppInitialState = {
                             experience: "",
                             projects: "",
                             contact: "",
+                            cvhref: "",
                         },
                     },
                     loadingMessage: "Cargando",
@@ -221,9 +239,9 @@ const initialState: AppInitialState = {
                         alertTitleType: {
                             warning: "Advertencia",
                             error: "Error",
-                            success: "Felicidades"
-                        }
-                    }
+                            success: "Felicidades",
+                        },
+                    },
                 },
                 flagIcon: (props: SVGProps<SVGSVGElement>) => {
                     return <></>;
@@ -232,8 +250,8 @@ const initialState: AppInitialState = {
         ],
     },
     emailJSState: {
-        inputs:[
-            {   
+        inputs: [
+            {
                 type: InputTypeNames.NAME,
                 name: InputTypes.nameINPProps,
                 state: {
@@ -243,7 +261,7 @@ const initialState: AppInitialState = {
                     value: "",
                 },
                 changeValue: (payload: string) => {},
-                changeLabelValue: (payload: string) => {}
+                changeLabelValue: (payload: string) => {},
             },
             {
                 type: InputTypeNames.EMAIL,
@@ -255,7 +273,7 @@ const initialState: AppInitialState = {
                     value: "",
                 },
                 changeValue: (payload: string) => {},
-                changeLabelValue: (payload: string) => {}
+                changeLabelValue: (payload: string) => {},
             },
             {
                 type: InputTypeNames.SUBJECT,
@@ -267,7 +285,7 @@ const initialState: AppInitialState = {
                     value: "",
                 },
                 changeValue: (payload: string) => {},
-                changeLabelValue: (payload: string) => {}
+                changeLabelValue: (payload: string) => {},
             },
             {
                 type: InputTypeNames.MESSAGE,
@@ -281,13 +299,13 @@ const initialState: AppInitialState = {
                     cols: 30,
                 },
                 changeValue: (payload: string) => {},
-                changeLabelValue: (payload: string) => {}
-            }
+                changeLabelValue: (payload: string) => {},
+            },
         ],
         submitButton: {
             submitButton: {
                 text: "",
-                handleButton: (e: Event ) => {}
+                handleButton: (e: Event) => {},
             },
             setSubmitProps: (payload: ButtonProps) => {},
         },
@@ -298,16 +316,16 @@ const initialState: AppInitialState = {
         },
         inputValidateTrigger: {
             handlerInputValidateTrigger: (payload: boolean) => {},
-            inputValidateTrigger: false
-        }
+            inputValidateTrigger: false,
+        },
     },
     alertState: {
         modalState: false,
         title: "",
         message: "",
-        showAlert: (title:string, message:string, state:boolean) => {},
-        closeAlert: () => {}
-    }
+        showAlert: (title: string, message: string, state: boolean) => {},
+        closeAlert: () => {},
+    },
 };
 
 export const AppContext = createContext(initialState);
