@@ -69,12 +69,12 @@ export const es: AppLenguageData = {
             title: "Sobre mi",
             general: {
                 title: "General",
-                description: `Tengo ${getAuthorAge()} años y soy originario de la ciudad de Santiago, de Chile. Me desempeño formalmente como desarrollador de software desde el año 2019.\nDesde pequeño siempre me ha gustado la tecnología y la computacion en general. Tuve el privilegio de estudiarla en la Universidad, donde obtuve el grado de &apos;Ingeniero en informática&apos;, en donde encontré mi actual vocación.\nConsidero que mi mayor fortaleza es la perseverancia y la capacidad de sobreponerme ante cualquier reto que se interponga ante los objetivos que me propongo.`,
+                description: `Tengo ${getAuthorAge()} años y soy originario de la ciudad de Santiago, de Chile. Me desempeño formalmente como desarrollador de software desde el año 2019.\nDesde pequeño siempre me ha gustado la tecnología y la computación en general. Tuve el privilegio de estudiarla en la Universidad, donde obtuve el grado de &apos;Ingeniero en informática&apos;, en donde encontré mi actual vocación.\nConsidero que mi mayor fortaleza es la perseverancia y la capacidad de sobreponerme ante cualquier reto que se interponga ante los objetivos que me propongo.`,
             },
             skills: {
                 title: "Hobbies e intereses",
                 description:
-                    "Soy un apasionado por los videojuegos en general desde que tengo memoria, sin embargo mis favoritos siempre han sido los RPG. Me gusta mucho leer y el genero de la fantasía así como la literatura en su totalidad, sobre todo cuando encuentro algun libro interesante que capte mi atención. También me gusta la música, toco guitarra desde los 12 años de manera autodidacta y desde mi adolescencia me gusta considerarme un musico amateur. En mi Instagram podrán ver algunas de las canciones que he grabado, aunque de todas maneras en esta seccion quize dejar un cover que grabe hace algun tiempo.",
+                    "Soy un apasionado por los videojuegos en general desde que tengo memoria. Sin embargo, mis favoritos siempre han sido los RPG con sus inolvidables historias que me acompañaron mientras crecía. Me gusta mucho leer y el género de la fantasía, así como la literatura en su totalidad, sobre todo cuando encuentro algún libro interesante que capte mi atención. También me gusta la música, toco guitarra desde los 12 años de manera autodidacta y desde mi adolescencia me gusta considerarme un musico amateur. En mi Instagram podrán ver algunas de las canciones que he grabado, aunque de todas maneras en esta sección quise dejar un cover que grabe hace algún tiempo.",
             },
         },
         footer: {
