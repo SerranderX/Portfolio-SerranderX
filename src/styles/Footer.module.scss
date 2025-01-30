@@ -1,8 +1,8 @@
 @import '_vars.scss';
 
   .Footer-distributed {
-    background-color: rgba(0,0,0,.54);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    background-color: $black-overlay;
+    box-shadow: 0 1px 1px 0 $black-shadow;
     box-sizing: border-box;
     width: 100%;
     text-align: left;

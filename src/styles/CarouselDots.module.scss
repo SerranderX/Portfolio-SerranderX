@@ -2,10 +2,10 @@
 
 .active {
     background: $quaternary-color;
-    box-shadow: 0 0 5px rgb(8, 139, 204, .8),
-    0 0 25px rgb(8, 139, 204, .8),
-    0 0 5px rgb(8, 139, 204, .8),
-    0 0 100px rgb(8, 139, 204, .8);
+    box-shadow: 0 0 5px $neon-blue-border,
+    0 0 25px $neon-blue-border,
+    0 0 5px $neon-blue-border,
+    0 0 100px $neon-blue-border;
 }
 
 .inactive {

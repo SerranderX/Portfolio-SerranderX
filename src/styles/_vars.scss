@@ -5,10 +5,10 @@ $tertiary-color-opac: rgba(19, 185, 169, .5);
 $quaternary-color: rgb(27, 179, 255);
 $quaternary-color-dark: rgb(13, 44, 70);
 $background-color-light: rgb(16, 0, 64);
-$background-color-light-opac: rgb(20, 1, 82, .6);
-$background-color-light-opac-two: rgb(20, 1, 82, .3);
+$background-color-light-opac: rgba(20, 1, 82, .6);
+$background-color-light-opac-two: rgba(20, 1, 82, .3);
 $background-color-dark: rgb(2, 1, 10);
-$background-color-dark-opac: rgb(2, 1, 10, .8);
+$background-color-dark-opac: rgba(2, 1, 10, .8);
 $font-family: 'Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif';
 $text-alignment: center;
 // The size of text never will be minus than 16px or in this case 1rem.
@@ -41,5 +41,12 @@ $neon-blue-background: rgb(8, 139, 204);
 $neon-blue-background-opac:rgba(8, 139, 204, .1);
 $neon-blue-border: rgba(8, 139, 204, .8);
 $neon-red-background: rgb(128, 19, 85);
-$neon-red-background-opac: rgb(128, 19, 85, .3);
+$neon-red-background-opac: rgba(128, 19, 85, .3);
 
+// Common transparency values
+$transparent: rgba(0, 0, 0, 0);
+$black-overlay: rgba(0, 0, 0, .54);
+$black-shadow: rgba(0, 0, 0, .12);
+
+// Gradients
+$main-gradient: linear-gradient(180deg, $background-color-dark 25%, $background-color-light 75%);

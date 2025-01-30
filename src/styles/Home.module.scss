@@ -33,7 +33,7 @@
     min-width: 63rem;
     margin: 0 auto 0 auto;
     display: grid;
-    background: linear-gradient(180deg, rgb(2 1 10) 25%, 75%, rgb(20 1 82));
+    background: $main-gradient;
     background-repeat: no-repeat;
     background-attachment: fixed;
     row-gap: 4rem;
