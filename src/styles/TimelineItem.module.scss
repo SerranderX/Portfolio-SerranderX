@@ -1,0 +1,140 @@
+@import '_vars.scss';
+
+.timelineItem {
+    height: 100%;
+    position: relative;
+    // width: 250px;
+    margin: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    background: $background-color-light-opac;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid $quaternary-color;
+    text-align: left;
+    transition: transform 0.3s ease;
+    z-index: 10;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 5px $neon-blue-border,
+                   0 0 25px $neon-blue-border,
+                   0 0 5px $neon-blue-border,
+                   0 0 100px $neon-blue-border;
+    }
+}
+
+.date {
+    color: $secondary-color;
+    font-size: $text-min-size;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.title {
+    color: $primary-color;
+    font-size: $third-title-size;
+    margin: 0.5rem 0;
+}
+
+.company {
+    color: $tertiary-color;
+    font-size: $text-base-size;
+    margin: 0.5rem 0;
+}
+
+.description {
+    color: $primary-color;
+    font-size: $text-base-size;
+    margin: 0.5rem 0 0;
+}
+
+.point {
+    width: 20px;
+    height: 20px;
+    background: $quaternary-color-dark;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.pointInner {
+    width: 12px;
+    height: 12px;
+    background: $neon-red-background;
+    border-radius: 50%;
+    box-shadow: 0 0 5px $neon-red-background,
+                0 0 25px $neon-red-background,
+                0 0 5px $neon-red-background,
+                0 0 100px $neon-red-background;
+}
+
+.top {
+    justify-content: start;
+    .content {
+        margin-bottom: 3rem;
+    }
+    .point {
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+}
+
+.bottom {
+    justify-content: end;
+    .content {
+        margin-top: 3rem;
+    }
+    .point {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media (max-width: 1200px) {
+    .timelineItem {
+        width: 85%;
+        margin: 2rem 0;
+    }
+
+    .content {
+        width: 100%;
+        margin: 0 0 0 4rem;
+    }
+
+    .point {
+        left: 0;
+        top: 50% !important;
+        transform: translateY(-50%);
+    }
+
+    .date {
+        font-size: $mobile-text-min-size;
+    }
+
+    .title {
+        font-size: $mobile-third-title-size;
+    }
+
+    .company {
+        font-size: $mobile-text-base-size;
+    }
+
+    .description {
+        font-size: $mobile-text-base-size;
+    }
+
+    .top, .bottom {
+        .content {
+            margin: 0 0 0 4rem;
+        }
+    }
+}

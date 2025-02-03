@@ -100,6 +100,18 @@
     color: $primary-color;
 }
 
+.timelineSection {
+    margin-top: 4rem;
+    width: 100%;
+    
+    h2 {
+        color: $primary-color;
+        font-size: $second-title-size;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
 @media (max-width: 1200px) {
     .content h1 {
         font-size: $mobile-main-title-size;
@@ -132,4 +144,12 @@
         display: none;
     }
 
+    .timelineSection {
+        margin-top: 6rem;
+        
+        h2 {
+            font-size: $mobile-second-title-size;
+            margin-bottom: 3rem;
+        }
+    }
 }
