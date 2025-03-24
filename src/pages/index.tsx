@@ -6,6 +6,7 @@ import { Footer } from 'containers/Footer/Footer';
 import { Header } from 'containers/Header/Header';
 import { Projects } from '@containers/Projects/Projects';
 import { Experience } from '@containers/Experience/Experience';
+import { Timeline } from '@containers/Timeline/Timeline';
 import { Contact } from '@containers/Contact/Contact';
 import { AboutMe } from '@containers/AboutMe/AboutMe';
 import { ButtonNav } from '@components/ButtonNav/ButtonNav'; 

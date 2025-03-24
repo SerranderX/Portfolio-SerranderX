@@ -1,4 +1,5 @@
 export enum ToolsTypes {
+    GOLANG = "Golang",
     REACTJS = "ReactJS",
     NEXTJS = "NextJS",
     NODEJS = "NodeJS",

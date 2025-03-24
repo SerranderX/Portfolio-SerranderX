@@ -22,6 +22,7 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
     const [currentPosition, setCurrentPosition] = useState<number>(0);
     const [ulWidth, setUlWidth] = useState<number>(resizeVisibleElements(childWidth, visibleItems));
 
+
     useEffect(() => {
         if(autoPlay){
             const intervalInst = setInterval(() => {
@@ -48,7 +49,6 @@ export const Carousel: React.FC<CarouselProps> = ({ items, visibleItems, contain
                         maxWidth = item.clientWidth
                     }
                 })
-
                 const childWidth = children[0].clientWidth;
                 setChildWidth(childWidth);
             }

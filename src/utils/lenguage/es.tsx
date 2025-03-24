@@ -1,7 +1,7 @@
 import { ENV } from "@config/config";
 import { ESIcon } from "@iconos/lenguage/es";
 import { AppLenguageData } from "@interfaces/appLenguageData.interface";
-import { getAuthorAge } from "@utils/Utils";
+import { getAuthorAge, workHistoryES } from "@utils/Utils";
 
 export const es: AppLenguageData = {
     lenguage: "es",
@@ -35,6 +35,16 @@ export const es: AppLenguageData = {
             title: "Experiencia",
             description:
                 "En esta seccion se encuentran algunas de las herramientas y tecnologias en las cuales me desempeño con frecuencia en el desarrollo de proyectos.",
+        },
+        timeline: {
+            title: "Historial de trabajo",
+            description: "Algunos de los proyectos en los que he participado.",
+            workHistory: workHistoryES.map((entry) => ({
+                date: entry.date,
+                title: entry.title,
+                company: entry.company,
+                description: entry.description,
+            })),
         },
         projects: {
             title: "Proyectos",

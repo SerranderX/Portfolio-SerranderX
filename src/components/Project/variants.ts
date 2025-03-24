@@ -5,7 +5,6 @@ export const imageVariants = (src:any) => ({
         backgroundSize: 'cover',
         filter: 'brightness(0.1)',
         maxWidth: '936px'
-        
     },
     blur: { 
         background: `radial-gradient(circle, transparent 25%, #000000a0 100%), url(${src}) `,

@@ -3,7 +3,6 @@
 .timelineItem {
     height: 100%;
     position: relative;
-    // width: 250px;
     margin: 0 .5rem;
     display: flex;
     flex-direction: column;
@@ -11,20 +10,24 @@
 }
 
 .content {
-    background: $background-color-light-opac;
+    background: $background-color-light;
     padding: 1.5rem;
     border-radius: 8px;
+    min-width: 230px; //TODO tocar para ajustar a responsive
+    min-height: 185px;
     border: 2px solid $quaternary-color;
     text-align: left;
     transition: transform 0.3s ease;
     z-index: 10;
 
     &:hover {
+        background: $background-color-light;
         transform: translateY(-5px);
         box-shadow: 0 0 5px $neon-blue-border,
                    0 0 25px $neon-blue-border,
                    0 0 5px $neon-blue-border,
                    0 0 100px $neon-blue-border;
+        z-index: 99999;
     }
 }
 
@@ -38,7 +41,7 @@
 
 .title {
     color: $primary-color;
-    font-size: $third-title-size;
+    font-size: $fourth-title-size;
     margin: 0.5rem 0;
 }
 
@@ -77,25 +80,43 @@
                 0 0 100px $neon-red-background;
 }
 
+.lineToBox {
+    position: absolute;
+    width: 7px;
+    background-color: $tertiary-color;
+    opacity: 0.8;
+    border-radius: 15px;
+}
+
 .top {
     justify-content: start;
-    .content {
-        margin-bottom: 3rem;
-    }
+
     .point {
         bottom: 50%;
+        left: 35%;
         transform: translateY(50%);
+    }
+
+    .lineToBox {
+        left: -65%;
+        bottom: 82%;
+        transform: rotate(-35deg);
     }
 }
 
 .bottom {
     justify-content: end;
-    .content {
-        margin-top: 3rem;
-    }
+
     .point {
         top: 50%;
+        right: 5%;
         transform: translateY(-50%);
+    }
+
+    .lineToBox {
+        left: -65%;
+        top: 85%;
+        transform: rotate(35deg);
     }
 }
 
@@ -106,14 +127,24 @@
     }
 
     .content {
-        width: 100%;
+        background: $background-color-light;
+        width: 80%;
         margin: 0 0 0 4rem;
+        z-index: 0;
+
+        &:hover {
+            z-index: 0;
+        }
     }
 
     .point {
-        left: 0;
-        top: 50% !important;
-        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+    }
+
+    .pointInner {
+        width: 24px;
+        height: 24px;
     }
 
     .date {
@@ -121,20 +152,48 @@
     }
 
     .title {
-        font-size: $mobile-third-title-size;
+        font-size: $mobile-text-base-size;
     }
 
     .company {
-        font-size: $mobile-text-base-size;
+        font-size: $mobile-text-min-size;
     }
 
     .description {
         font-size: $mobile-text-base-size;
     }
 
+    .lineToBox {
+        display: none;
+    }
+
     .top, .bottom {
         .content {
             margin: 0 0 0 4rem;
+        }
+
+        .point {
+            bottom: 0%;
+            left: 47.5%;
+            top: -8%;
+            bottom: 0%;
+            transform: translateY(0%);
+        }
+    }
+
+    .top {
+        right: 5%;
+
+        .point {
+            left: 53.2%;
+        }
+    } 
+    
+    .bottom {
+        right: -5%;
+
+        .point {
+            left: 41.5%;
         }
     }
 }

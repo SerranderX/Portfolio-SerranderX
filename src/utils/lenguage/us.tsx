@@ -1,7 +1,7 @@
 import { ENV } from "@config/config";
 import { USIcon } from "@iconos/lenguage/us";
 import { AppLenguageData } from "@interfaces/appLenguageData.interface";
-import { getAuthorAge } from "@utils/Utils";
+import { getAuthorAge, workHistoryUS } from "@utils/Utils";
 
 export const us: AppLenguageData = {
     lenguage: "us",
@@ -35,6 +35,16 @@ export const us: AppLenguageData = {
             title: "Experience",
             description:
                 "In this section you will find some of the tools and technologies in which I frequently work in the development of projects.",
+        },
+        timeline: {
+            title: "Work history",
+            description: "Some of the projects in which I have participated.",
+            workHistory: workHistoryUS.map((entry) => ({
+                date: entry.date,
+                title: entry.title,
+                company: entry.company,
+                description: entry.description,
+            })),
         },
         projects: {
             title: "Projects",

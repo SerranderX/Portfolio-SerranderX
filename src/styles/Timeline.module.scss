@@ -1,19 +1,89 @@
 @import '_vars.scss';
 
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "content" "icons";
+    row-gap: 2rem;
+}
+
+.timelineSection {
+    width: 100%;
+    
+    h2 {
+        color: $primary-color;
+        font-size: $third-title-size;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.description {
+    font-size: $text-base-size;
+    color: $primary-color;
+    margin: 0 8rem;
+    padding: 0;
+    text-align: $text-alignment;
+    line-height: 1.5;
+}
+
 .timelineContainer {
     width: 100%;
     padding: 2rem 0;
-    height: 530px;
+    height: 560px;
 }
 
 .timeline {
-    position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    display: inline-flex;
+    width: 1026px;
+
+    &:before {
+        content: '';
+        width: 25px;
+        height: 7px;
+        background: $tertiary-color; 
+        border-radius: 20px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        right: 0px;
+        justify-content: center;
+        z-index: 1;
+        transform: translateY(-100%);
+        rotate: 145deg;
+
+        box-shadow: 0 0 5px $neon-green-border,
+                   0 0 10px $neon-green-border,
+                   0 0 5px $neon-green-border,
+                   0 0 1px $neon-green-border;
+    }
+    
+    &:after {
+        content: '';
+        width: 25px;
+        height: 7px;
+        border-radius: 20px;
+        background: $tertiary-color; 
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        transform: translateY(100%);
+        right: 0px;
+        rotate: 220deg;
+        box-shadow: 0 0 5px $neon-green-border,
+                   0 0 10px $neon-green-border,
+                   0 0 5px $neon-green-border,
+                   0 0 1px $neon-green-border;
+    }
 }
 
 .line {
@@ -27,16 +97,78 @@
                 0 0 25px $neon-blue-border,
                 0 0 5px $neon-blue-border,
                 0 0 100px $neon-blue-border;
+
+    &:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: $tertiary-color; 
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        left: -1%;
+        transform: translateY(-50%);
+        box-shadow: 0 0 5px $neon-green-border,
+                   0 0 10px $neon-green-border,
+                   0 0 5px $neon-green-border,
+                   0 0 1px $neon-green-border;
+    }
 }
 
 @media (max-width: 1200px) {
+    .container {
+        grid-gap: $mobile-grid-gap-content-title;
+    }
+    .timelineSection {
+        margin-top: 6rem;
+        
+        h2 {
+            font-size: $mobile-second-title-size;
+            margin-bottom: 3rem;
+        }
+    }
+
     .timelineContainer {
         height: auto;
+    }
+
+    .description {
+        margin: 0;
+        font-size: $mobile-text-base-size;
     }
 
     .timeline {
         flex-direction: column;
         padding: 2rem 0;
+
+        &:before {
+            width: 40px;
+            height: 12px;
+            bottom: .6%;
+            right: 48%;
+            transform: translateY(-100%);
+            rotate: 130deg;
+            box-shadow: 0 0 15px $neon-green-border,
+                       0 0 15px $neon-green-border,
+                       0 0 15px $neon-green-border,
+                       0 0 5px $neon-green-border;
+        }
+        
+        &:after {
+            width: 40px;
+            height: 12px;
+            transform: translateY(100%);
+            right: 50.1%;
+            bottom: 0;
+            rotate: 230deg;
+            box-shadow: 0 0 15px $neon-green-border,
+                       0 0 15px $neon-green-border,
+                       0 0 15px $neon-green-border,
+                       0 0 5px $neon-green-border;
+        }
     }
 
     .line {
@@ -45,5 +177,16 @@
         left: 50%;
         top: 0;
         transform: translateX(-50%);
+
+        &:before {
+            width: 35px;
+            height: 35px;
+            translate: -45% 0 ;
+            
+            box-shadow: 0 0 15px $neon-green-border,
+                       0 0 25px $neon-green-border,
+                       0 0 15px $neon-green-border,
+                       0 0 1px $neon-green-border;
+        }
     }
 }

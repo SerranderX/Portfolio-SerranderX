@@ -1,4 +1,5 @@
 import { ReactElement, SVGProps } from "react";
+import { TimelineEntry } from "./timelineEntries.interface";
 
 export interface AppLenguageData {
     lenguage: string;
@@ -11,6 +12,7 @@ export interface AppData {
     header: AppHeaderData;
     presentation: AppPresentationData;
     experience: AppExperienceData;
+    timeline: AppTimelineData;
     projects: AppProjectsData;
     contact: AppContactData;
     aboutme: AppAboutmeData;
@@ -43,6 +45,12 @@ export interface AppPresentationData {
 export interface AppExperienceData {
     title: string;
     description: string;
+}
+
+export interface AppTimelineData {
+    title: string;
+    description: string;
+    workHistory: TimelineEntry[];
 }
 export interface AppProjectsData {
     title: string;

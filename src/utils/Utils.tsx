@@ -18,6 +18,7 @@ import SpringIcon from "@iconos/skills/Spring";
 import StyledComponentIcon from "@iconos/skills/StyledComponents";
 import Typescript from "@iconos/skills/Typescript";
 import LinuxIcon from "@iconos/skills/Linux";
+import GolangIcon from "@iconos/skills/Golang";
 import OracleIcon from "@iconos/skills/Oracle";
 import SassIcon from "@iconos/skills/Sass";
 import MysqlIcon from "@iconos/skills/Mysql";
@@ -39,6 +40,7 @@ import { InstagramIcon } from '@iconos/social/instagram';
 import { GitHubIcon } from '@iconos/social/github';
 import { TwitterIcon } from '@iconos/social/twitter';
 import { LinkedinIcon } from '@iconos/social/linkedin';
+import { TimelineEntry } from "@interfaces/timelineEntries.interface";
 
 export const ExperienceIcons: ExperienceItems[] = [
     {
@@ -57,13 +59,18 @@ export const ExperienceIcons: ExperienceItems[] = [
         icon: SpringIcon,
     },
     {
+        name: ToolsTypes.GOLANG,
+        url: "https://go.dev",
+        icon: GolangIcon,
+    },
+    {
         name: ToolsTypes.JAVASCRIPT,
         url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         icon: JavaScriptIcon,
     },
     {
         name: ToolsTypes.TYPESCRIPT,
-        url: "",
+        url: "https://www.typescriptlang.org",
         icon: Typescript
     },
     {
@@ -251,6 +258,96 @@ export const ProjectsData: ProjectInterface[] = [
         image: TodoMachineSS,
         technologies: [ToolsTypes.REACTJS, ToolsTypes.JAVASCRIPT],
         icons: [ReactIcon, JavaScriptIcon, CSSIcon],
+    },
+];
+
+export const workHistoryES: TimelineEntry[] = [
+    {
+        date: "2019 - Presente",
+        title: "Full Stack Developer",
+        company: "Xintec LTDA",
+        description: "Desarrollador de software multiplataforma comenzando su carrera profesional en la consultora de software Xintec LTDA."
+    },
+    {
+        date: "2019 - 2022",
+        title: "Full Stack Developer",
+        company: "Fiscalia Nacional de Chile",
+        description: "Desarrollo, mantención e implementación de software para sistema centralizado de administración y seguimiento de causas judiciales a nivel nacional."
+    },
+    {
+        date: "2022 - 2023",
+        title: "Senior Full Stack Developer",
+        company: "Clinica Alemana S.A.",
+        description: "Desarrollo, mantención e implementación de software con respecto a las necesidades del servicio presentado a los sistemas de salud a nivel nacional."
+    },
+    {
+        date: "2023 - 2023",
+        title: "Senior Full Stack Developer",
+        company: "Sodimac S.A.",
+        description: "Desarrollo, mantención e implementación de soluciones logísticas y pago a proveedores mediante microservicios."
+    },
+    {
+        date: "2023 - 2024",
+        title: "Senior Full Stack Developer",
+        company: "Cencosud S.A.",
+        description: "Desarrollo de sistema de automatismo para el área de logística, correspondiente al análisis, manejo de datos y mejoras operacionales."
+    },
+    {
+        date: "2024 - 2024",
+        title: "Senior Mobile Developer",
+        company: "Sodimac S.A.",
+        description: "Desarrollo de soluciones mobiles y backend para APP encargada de la gestion de ventas y procesos internos en las tiendas de Sodimac."
+    },
+    {
+        date: "2024 - Present",
+        title: "Senior Full Stack Developer",
+        company: "Falabella S.A.",
+        description: "Desarrollando soluciones competitivas con herramientas en la nube y APIs en el area de retail, administrando Big Data y analiticas."
+    },
+];
+
+export const workHistoryUS: TimelineEntry[] = [
+    {
+        date: "2019 - Presente",
+        title: "Full Stack Developer",
+        company: "Xintec LTDA",
+        description: "Developer of multi-platform software starting his professional career in the software consulting company Xintec LTDA."
+    },
+    {
+        date: "2019 - 2022",
+        title: "Full Stack Developer",
+        company: "Fiscalia Nacional de Chile",
+        description: "Development, maintenance and implementation of software for a national judicial administrative system."
+    },
+    {
+        date: "2022 - 2023",
+        title: "Senior Full Stack Developer",
+        company: "Clinica Alemana S.A.",
+        description: "Development, maintenance and implementation of software for national health service systems."
+    },
+    {
+        date: "2023 - 2023",
+        title: "Senior Full Stack Developer",
+        company: "Sodimac S.A.",
+        description: "Development, maintenance and implementation of logistics and payment solutions for suppliers through microservices."
+    },
+    {
+        date: "2023 - 2024",
+        title: "Senior Full Stack Developer",
+        company: "Cencosud S.A.",
+        description: "Development of automation system for the logistics area, corresponding to analysis, data management and operational improvements."
+    },
+    {
+        date: "2024 - 2024",
+        title: "Senior Mobile Developer",
+        company: "Sodimac S.A.",
+        description: "Development of mobile solutions and backend for the APP responsible for sales and internal processes in Sodimac stores."
+    },
+    {
+        date: "2024 - Present",
+        title: "Senior Full Stack Developer",
+        company: "Falabella S.A.",
+        description: "Developing competitive solutions with Cloud Tools and APIs in the retail area managing big data and analytics."
     },
 ];
 
