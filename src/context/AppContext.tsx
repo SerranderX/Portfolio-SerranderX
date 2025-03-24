@@ -95,6 +95,11 @@ const initialState: AppInitialState = {
                     title: "",
                     description: "",
                 },
+                timeline: {
+                    title: "",
+                    description: "",
+                    workHistory: [],
+                },
                 projects: {
                     title: "",
                     description: "",
@@ -186,6 +191,11 @@ const initialState: AppInitialState = {
                     experience: {
                         title: "",
                         description: "",
+                    },
+                    timeline: {
+                        title: "",
+                        description: "",
+                        workHistory: [],
                     },
                     projects: {
                         title: "",
