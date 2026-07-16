@@ -47,7 +47,7 @@ Stack de origen (mediados de 2022):
 | `framer-motion` → `motion` | Solo cambia el import source en 20 archivos. **No se usa ninguna API rota** (sin `AnimatePresence`, `exitBeforeEnter`, `LazyMotion`, `AnimateSharedLayout`, `motion.custom`). | Bajo |
 | `framer-motion-carousel` | Sin mantenimiento; trae su propio `framer-motion@6`, peer React 16-18 → incompatible con React 19. Reemplazo propio. | Medio |
 | React 18 → 19 | Namespace global `JSX.Element` deprecado en `@types/react` 19 → `React.JSX.Element` en ~11 archivos. | Medio |
-| Next → 16 (Pages Router) | Async request APIs (App Router) **no aplican** aquí. `next lint` deprecado → ESLint CLI + flat config. | Medio |
+| Next → 16 (Pages Router) | Async request APIs (App Router) **no aplican** aquí. `next lint` deprecado → ESLint CLI + flat config. **Next ya NO inyecta el `<meta name="viewport">` por defecto** (lo hacía en Next 12) → hay que agregarlo manual en `_app.tsx`, si no la web se ve en formato desktop en móvil. | Medio |
 | TS → 7 / `target: es5` | Subir `target` a `es2022`. Sin sintaxis incompatible detectada. | Bajo |
 | ESLint → 10 | Requiere flat config (`eslint.config.mjs`). | Bajo |
 | `@emailjs/browser` 3 → 4 | Firma de `sendForm` cambió (ver §7). | Bajo-medio |
