@@ -2,7 +2,6 @@ import type { AppProps } from "next/app";
 import { useAppInitialState } from "@hooks/useAppInitialState";
 import { AppContext } from "@context/AppContext";
 import "@styles/globals.scss";
-import Head from "next/head";
 import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -10,9 +9,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <AppContext.Provider value={appInitialState}>
-            <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-            </Head>
             <Script
                 src="https://www.googletagmanager.com/gtag/js?id=G-14YYPXVWXJ"
                 strategy="afterInteractive"

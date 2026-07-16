@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto auto;
 }
 
@@ -28,19 +28,14 @@
   }
 
   .container {
-    max-width: 100%;
+    max-width: 64rem;
+    min-width: 63rem;
     margin: 0 auto 0 auto;
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
     background: $main-gradient;
     background-repeat: no-repeat;
     background-attachment: fixed;
     row-gap: 4rem;
-  }
-
-  .main > *,
-  .container > * {
-    min-width: 0;
   }
 }
 
