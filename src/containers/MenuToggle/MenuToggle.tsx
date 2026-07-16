@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, Transition, Variants } from "framer-motion";
+import { motion, Transition, Variants } from "motion/react";
 
 interface MenuToggleProps {
     show: boolean;

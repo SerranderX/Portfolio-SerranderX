@@ -13,7 +13,7 @@ import { ButtonNav } from '@components/ButtonNav/ButtonNav';
 import { useNearScreen } from '@hooks/useNearScreen';
 import { WindowSize } from '@interfaces/windowSize.interface';
 import { useWindowsDimensions } from '@hooks/useWindowsDimensions';
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import styles from '@styles/Home.module.scss'
 import { useEffect, useState } from 'react';
 import { LoadingPage } from '@containers/LoadingPage/LoadingPage';

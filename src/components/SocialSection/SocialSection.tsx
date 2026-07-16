@@ -9,7 +9,7 @@ interface SocialSectionInterface {
     iconContainerClass: string;
 }
 
-export const SocialSection: React.FC<SocialSectionInterface> = ({containerClass, svgClass, iconContainerClass}): JSX.Element => {
+export const SocialSection: React.FC<SocialSectionInterface> = ({containerClass, svgClass, iconContainerClass}): React.JSX.Element => {
 
     return (
         <div className={`${containerClass}`}>

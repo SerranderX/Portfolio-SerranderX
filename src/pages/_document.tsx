@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
         return { ...initialProps };
       }
 
-    render(): JSX.Element {
+    render(): React.JSX.Element {
         return (
             <Html>
               <Head>

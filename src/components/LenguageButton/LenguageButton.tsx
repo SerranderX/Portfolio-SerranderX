@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { variantsList, buttonVariants } from "@components/LenguageButton/variants";
 import { AppContext } from "@context/AppContext";
 import styles from "@styles/LenguageButton.module.scss";

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from '@context/AppContext';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { WindowSize } from '@interfaces/windowSize.interface';
 import imageGeneralSection from '@images/photo2.jpg';
 import Image from 'next/image';

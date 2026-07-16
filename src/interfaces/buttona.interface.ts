@@ -1,4 +1,4 @@
-import { TargetAndTransition, Variants } from "framer-motion";
+import { TargetAndTransition, Variants } from "motion/react";
 import { ReactNode, RefObject } from "react";
 import { AppContactData } from "./appLenguageData.interface";
 

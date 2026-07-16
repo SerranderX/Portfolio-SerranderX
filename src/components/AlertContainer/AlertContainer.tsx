@@ -8,7 +8,7 @@ interface AlertContainerProps {
 
 export const AlertContainer: React.FC<AlertContainerProps> = ({
     message,
-}): JSX.Element => {
+}): React.JSX.Element => {
     return (
         <p
             className={styles.message}

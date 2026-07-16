@@ -1,11 +1,11 @@
-import { ReactElement, SVGProps } from "react";
+import React, { ReactElement, SVGProps } from "react";
 import { TimelineEntry } from "./timelineEntries.interface";
 
 export interface AppLenguageData {
     lenguage: string;
     lenguageName: string;
     data: AppData;
-    flagIcon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+    flagIcon: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
 }
 
 export interface AppData {

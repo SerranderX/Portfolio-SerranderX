@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import styles from "@styles/TimelineItem.module.scss";
 import { CardSize } from "@interfaces/timelineEntries.interface";
 import { WindowSize } from "@interfaces/windowSize.interface";

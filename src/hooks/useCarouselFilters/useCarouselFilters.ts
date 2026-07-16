@@ -1,4 +1,4 @@
-import React, { Reducer, useReducer } from "react";
+import React, { useReducer } from "react";
 import { initialState } from "@hooks/useCarouselFilters/initialState";
 import { reducer } from "@hooks/useCarouselFilters/reducer";
 import { CarouselStateInterface, ReducerStateInterface, CarouselFiltersInterface } from "@interfaces/carouselFiltersa.interface";
@@ -6,7 +6,7 @@ import { ActionTypes } from "@hooks/useCarouselFilters/actionTypes";
 import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
 
 export const useCarouselFilters = (): CarouselFiltersInterface => {
-    const [state, dispatch] = useReducer<Reducer<CarouselStateInterface, ReducerStateInterface>>(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState);
     
     const { ReactJS, NextJS, NodeJS, NestJS, TypeScript, Spring, Java, JavaScript, FramerMotion, Angular, StyledC} = state;
 

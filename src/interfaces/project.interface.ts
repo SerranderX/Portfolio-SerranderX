@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 import { ToolsTypes } from "@hooks/useCarouselFilters/ToolsTypes";
-import { SVGProps } from "react";
+import React, { SVGProps } from "react";
 
 export interface ProjectInterface {
     name: string;
@@ -8,7 +8,7 @@ export interface ProjectInterface {
     url: string;
     image: StaticImageData;
     technologies: ToolsTypes[];
-    icons: ((props: SVGProps<SVGSVGElement>) => JSX.Element)[]
+    icons: ((props: SVGProps<SVGSVGElement>) => React.JSX.Element)[]
 }
 
 interface lenguegeData {

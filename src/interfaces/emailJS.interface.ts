@@ -48,7 +48,7 @@ export interface EmailJSInterface {
         submitButton: ButtonProps,
         setSubmitProps: (payload: ButtonProps) => void
     };
-    formRef: React.RefObject<HTMLFormElement> | null;
+    formRef: React.RefObject<HTMLFormElement | null> | null;
     loading: {
         state: boolean;
         handleLoading: (payload: boolean) => void;

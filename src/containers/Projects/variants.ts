@@ -1,4 +1,4 @@
-import { Variants } from "framer-motion";
+import { Variants, TargetAndTransition } from "motion/react";
 
 export const filterButtonVariantsKeys = ["on", "off"];
 
@@ -23,7 +23,7 @@ export const filterButtonVariants: Variants = {
     }
 }
 
-export const filterButtonWhileHover = {
+export const filterButtonWhileHover: TargetAndTransition = {
     backgroundColor: 'rgb(8, 139, 204)',
     boxShadow: `0 0 10px rgb(8, 139, 204),
                 0 0 20px rgb(8, 139, 204),

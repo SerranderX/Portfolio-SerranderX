@@ -2,7 +2,7 @@ import React from 'react'
 import { SvgPropsInterface } from '@interfaces/svgProps.interface';
 import styles from '@styles/SocialIcon.module.scss';
 
-export const GitHubIcon: React.FC<SvgPropsInterface> = ({svgClass}): JSX.Element => {
+export const GitHubIcon: React.FC<SvgPropsInterface> = ({svgClass}): React.JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

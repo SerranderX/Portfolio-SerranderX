@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import ReactDOM from "react-dom";
 import styles from "@styles/Modal.module.scss";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { AppContext } from "@context/AppContext";
 import { Button } from "@components/Button/Button";
 

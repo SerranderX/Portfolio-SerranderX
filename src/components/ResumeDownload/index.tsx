@@ -4,7 +4,7 @@ import { AppContext } from "@context/AppContext";
 import { Button } from "@components/Button/Button";
 import { ENV } from "@config/config";
 
-export const ResumeDownload = (): JSX.Element => {
+export const ResumeDownload = (): React.JSX.Element => {
     const {
         lenguageState: {
             lenguageSelectedData: {

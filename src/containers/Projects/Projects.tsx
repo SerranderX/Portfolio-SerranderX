@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import Carousel from 'framer-motion-carousel';
+import { ProjectsCarousel } from '@components/Carousel/ProjectsCarousel';
 import { Project } from '@components/Project/Project';
 import { ButtonCarousel } from '@components/ButtonCarousel/ButtonCarousel';
 import { CarouselDots } from '@components/CarouselDots/CarouselDots';
@@ -9,7 +9,7 @@ import { filterButtonVariantsKeys, filterButtonVariants, filterButtonWhileHover 
 import { AppInitialState } from "@interfaces/appInitialStatea.interface";
 import { ProjectsData } from "@utils/Utils";
 import { ProjectInterface } from "@interfaces/project.interface";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Image from "next/image";
 import DevelopGif from '@gifs/develop.gif';
 import { WindowSize } from "@interfaces/windowSize.interface";
@@ -99,7 +99,7 @@ export const Projects: React.FC<ProjectsProps> = ({windowDimenions}) => {
                         animate={{placeSelf: 'center', opacity: [0, 1]}} 
                         transition={{ duration: .5, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
-                        <Carousel
+                        <ProjectsCarousel
                             autoPlay={autoPlay}
                             interval={5000}
                             loop={true}
@@ -137,7 +137,7 @@ export const Projects: React.FC<ProjectsProps> = ({windowDimenions}) => {
                                     projectFocus={focus}
                                 />
                             ))}
-                        </Carousel>
+                        </ProjectsCarousel>
                     </motion.div>
                 }
                 {projectsList.length == 0 && (

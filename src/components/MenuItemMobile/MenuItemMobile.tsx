@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { DownloadIcon } from "@iconos/Download";
 
 interface MenuItemMobileProps {
@@ -35,7 +35,7 @@ export const MenuItemMobile: React.FC<MenuItemMobileProps> = ({
     i,
     download,
     handleClick,
-}): JSX.Element => {
+}): React.JSX.Element => {
     return (
         <motion.a
             href={href}

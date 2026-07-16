@@ -1,5 +1,5 @@
 import React, { SVGProps } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { ExperienceItems } from '@interfaces/experienceItems.interface';
 
 interface IconSkillProps {

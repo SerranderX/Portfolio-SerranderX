@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Button } from '@components/Button/Button';
 import { imageVariants } from '@components/Project/variants'; 
 import { ProjectInterface } from '@interfaces/project.interface';

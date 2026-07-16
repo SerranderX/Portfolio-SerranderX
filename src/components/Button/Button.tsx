@@ -1,6 +1,6 @@
 import React from "react";
 import { ButtonProps } from "@interfaces/buttona.interface";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import styles from "@styles/button.module.scss";
 
 export const Button: React.FC<ButtonProps> = ({

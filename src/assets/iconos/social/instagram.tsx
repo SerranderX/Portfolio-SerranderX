@@ -1,7 +1,7 @@
 import React from "react";
 import { SvgPropsInterface } from '@interfaces/svgProps.interface';
 
-export const InstagramIcon: React.FC<SvgPropsInterface> = ({ svgClass }): JSX.Element => {
+export const InstagramIcon: React.FC<SvgPropsInterface> = ({ svgClass }): React.JSX.Element => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

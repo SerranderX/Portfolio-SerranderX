@@ -1,4 +1,4 @@
-import { Reducer, useReducer, useRef, useState } from "react";
+import { useReducer, useRef, useState } from "react";
 import { InputTypeNames } from "@hooks/useEmailJS/inputTypeNames";
 import { ButtonProps } from "@interfaces/buttona.interface";
 import { ActionTypes } from "@hooks/useEmailJS/actionTypes";
@@ -14,7 +14,7 @@ enum booleanString {
 }
 
 export const useEmailJS = (): EmailJSInterface => {
-    const [state, dispatch] = useReducer<Reducer<EmailJSStateInterface, EmailJSReducerInterface>>(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState);
     const form = useRef<HTMLFormElement>(null);
     const [loading, setLoading] = useState(false);
     const [inputValidateTrigger, setInputValidateTrigger] = useState<boolean>(false);

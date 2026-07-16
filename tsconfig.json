@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -9,32 +13,72 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
-    "baseUrl": "src",
     "typeRoots": [
-      "node_modules/@types",
-      "typings"
+      "./node_modules/@types",
+      "./typings"
     ],
     "paths": {
-        "@pages/*": ["pages/*"],
-        "@interfaces/*": ["interfaces/*"],
-        "@components/*": ["components/*"],
-        "@containers/*": ["containers/*"],
-        "@logos/*": ["assets/logos/*"],
-        "@iconos/*": ["assets/iconos/*"],
-        "@images/*": ["assets/images/*"],
-        "@gifs/*": ["assets/gifs/*"],
-        "@styles/*": ["styles/*"],
-        "@hooks/*": ["hooks/*"],
-        "@config/*": ["config/*"],
-        "@utils/*": ["utils/*"],
-        "@context/*": ["context/*"],
-    }
+      "*": [
+        "./src/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+      "@interfaces/*": [
+        "./src/interfaces/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@containers/*": [
+        "./src/containers/*"
+      ],
+      "@logos/*": [
+        "./src/assets/logos/*"
+      ],
+      "@iconos/*": [
+        "./src/assets/iconos/*"
+      ],
+      "@images/*": [
+        "./src/assets/images/*"
+      ],
+      "@gifs/*": [
+        "./src/assets/gifs/*"
+      ],
+      "@styles/*": [
+        "./src/styles/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@config/*": [
+        "./src/config/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@context/*": [
+        "./src/context/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.interface.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

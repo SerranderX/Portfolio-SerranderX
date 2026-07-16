@@ -2,7 +2,7 @@ import React, { LegacyRef, useContext, useState } from "react";
 import Image from "next/image";
 import styles from "@styles/Header.module.scss";
 import LogoComplete from "@logos/logoComplete.png";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { WindowSize } from "@interfaces/windowSize.interface";
 import { MenuToggle } from "@containers/MenuToggle/MenuToggle";
 import { LenguageButton } from "@components/LenguageButton/LenguageButton";

@@ -1,5 +1,5 @@
 import React, { LegacyRef, MutableRefObject } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { ArrowRight } from '@iconos/ArrowRight';
 import styles from '@styles/ButtonNav.module.scss';
 
