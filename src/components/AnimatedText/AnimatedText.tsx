@@ -1,51 +1,34 @@
 import { useEffect, useState } from "react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import styles from "@styles/AnimatedText.module.scss";
 
-export const titleNameVariants = {
-    enter: {
-        opacity: [0, 0.5, 1],
-        y: 0,
-        display: "inline-block",
-    },
-    exit: {
-        opacity: [1, 0.5, 0],
-        y: -50,
-        display: "none",
-    },
-};
-
 export const AnimatedText: React.FC<AnimatedTextProps> = ({ textData }) => {
-    const [text, setText] = useState(0);
+    const [index, setIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setText(text < textData.length - 1 ? text + 1 : 0);
+            setIndex((prev) => (prev < textData.length - 1 ? prev + 1 : 0));
         }, 3000);
         return () => clearInterval(interval);
-    }, [text]);
+    }, [textData.length]);
 
     return (
-        <>
-            {textData.map((txt: string, i: number) => {
-                return (
-                    <motion.span
-                        variants={titleNameVariants}
-                        key={`${i}-${txt}`}
-                        animate={text === i ? "enter" : "exit"}
-                        transition={{
-                            duration: 0.3,
-                            ease: [0.04, 0.62, 0.23, 0.98],
-                        }}
-                        className={styles.authorName}
-                    >
-                        {txt}
-                    </motion.span>
-                )
-        })}
-        </>
+        <AnimatePresence mode="wait">
+            <motion.span
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+                className={styles.authorName}
+                style={{ display: "inline-block" }}
+            >
+                {textData[index]}
+            </motion.span>
+        </AnimatePresence>
     );
 };
+
 interface AnimatedTextProps {
     textData: string[];
 }

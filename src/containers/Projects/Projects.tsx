@@ -95,7 +95,7 @@ export const Projects: React.FC<ProjectsProps> = ({windowDimenions}) => {
                     <motion.div 
                         className={styles.carouselContainer} 
                         ref={refCarousel} 
-                        style={{boxShadow: `${projectsList.length > 0 ? carouselBoxShadow : 'none'}`, maxWidth: '936px' }}
+                        style={{boxShadow: `${projectsList.length > 0 ? carouselBoxShadow : 'none'}`, maxWidth: '936px', width: '100%' }}
                         animate={{placeSelf: 'center', opacity: [0, 1]}} 
                         transition={{ duration: .5, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >

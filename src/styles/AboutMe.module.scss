@@ -59,11 +59,17 @@
 .general-image-container {
     grid-area: image;
     border-radius: 50px;
-    width: fit-content;
+    width: 100%;
+    max-width: 500px;
     height: fit-content;
     justify-self: center;
     display: flex;
     align-self: center;
+}
+
+.general-image-container img {
+    width: 100%;
+    height: auto;
 }
 
 .hobbies-container {
