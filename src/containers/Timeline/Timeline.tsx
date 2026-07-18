@@ -1,23 +1,21 @@
 import { AppContext } from "@context/AppContext";
 import { WindowSize } from "@interfaces/windowSize.interface";
 import { useContext, useEffect, useRef, useState } from "react";
-import styles from '@styles/Timeline.module.scss';
+import styles from "@styles/Timeline.module.scss";
 import TimelineItem from "@components/Timeline/TimelineItem";
 import { CardSize } from "@interfaces/timelineEntries.interface";
 
 interface TimelineProps {
-    windowDimenions:WindowSize
+    windowDimenions: WindowSize;
 }
 
-export const Timeline: React.FC<TimelineProps> = ({windowDimenions}) => {
+export const Timeline: React.FC<TimelineProps> = ({ windowDimenions }) => {
     const {
         lenguageState: {
             lenguageSelectedData: {
-                data: { timeline: {
-                    title,
-                    description,
-                    workHistory
-                } },
+                data: {
+                    timeline: { title, description, workHistory },
+                },
             },
         },
     } = useContext(AppContext);
@@ -27,23 +25,31 @@ export const Timeline: React.FC<TimelineProps> = ({windowDimenions}) => {
     const [maxCardWidth, setMaxCardWidth] = useState<number>(0);
     const [maxCardHeight, setMaxCardHeight] = useState<number>(0);
     const [cardsSizes, setCardsSizes] = useState<CardSize[]>([]);
+    const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
     useEffect(() => {
         if (container.current) {
-            if(container.current.children.length > 1) {
+            if (container.current.children.length > 1) {
                 let maxWidth = 0;
                 let maxHeight = 0;
                 for (let i = 0; i < container.current.children.length; i++) {
-                    if(i > 0) {
-                        const width = container.current.children[i].children[0].clientWidth;
-                        const height = container.current.children[i].children[0].clientHeight;
-                        if(width > maxWidth) {
+                    if (i > 0) {
+                        const width =
+                            container.current.children[i].children[0]
+                                .clientWidth;
+                        const height =
+                            container.current.children[i].children[0]
+                                .clientHeight;
+                        if (width > maxWidth) {
                             maxWidth = width;
                         }
-                        if(height > maxHeight) {
+                        if (height > maxHeight) {
                             maxHeight = height;
                         }
-                        setCardsSizes(prev => [...prev, { cardWidth: width, cardHeight: height }]);
+                        setCardsSizes((prev) => [
+                            ...prev,
+                            { cardWidth: width, cardHeight: height },
+                        ]);
                     }
                 }
                 setMaxCardWidth(maxWidth);
@@ -56,7 +62,10 @@ export const Timeline: React.FC<TimelineProps> = ({windowDimenions}) => {
     }, [container, timeline, windowDimenions]);
 
     useEffect(() => {
-        if (timeline.current && currentTimelineWidth < timeline.current.clientWidth) {
+        if (
+            timeline.current &&
+            currentTimelineWidth < timeline.current.clientWidth
+        ) {
             setCurrentTimelineWidth(timeline.current.clientWidth);
         }
     }, [windowDimenions]);
@@ -66,28 +75,44 @@ export const Timeline: React.FC<TimelineProps> = ({windowDimenions}) => {
             <article className={styles.timelineSection}>
                 <h2>{title}</h2>
                 <p className={styles.description}>{description}</p>
-                <div className={styles.timelineContainer}>
-                    <div className={styles.timeline}  ref={container}>
+                <div
+                    className={`${styles.timelineContainer} ${isExpanded ? styles.expanded : ""}`}
+                >
+                    <div
+                        className={`${styles.timeline} ${isExpanded ? styles.expandedTimeline : ""}`}
+                        ref={container}
+                    >
                         <div className={styles.line} ref={timeline}></div>
-                            {workHistory.map((entry, index) => (
-                                <TimelineItem
-                                    key={index}
-                                    date={entry.date}
-                                    title={entry.title}
-                                    company={entry.company}
-                                    description={entry.description}
-                                    idx={index}
-                                    itemsLength={workHistory.length}
-                                    containerWidth={currentTimelineWidth}
-                                    windowDimenions={windowDimenions}
-                                    maxCardWidth={maxCardWidth}
-                                    maxCardHeight={maxCardHeight}
-                                    cardsSizes={cardsSizes}
-                                    position={index % 2 === 0 ? 'top' : 'bottom'}
-                                />
-                            ))}
+                        {workHistory.map((entry, index) => (
+                            <TimelineItem
+                                key={index}
+                                date={entry.date}
+                                title={entry.title}
+                                company={entry.company}
+                                description={entry.description}
+                                idx={index}
+                                itemsLength={workHistory.length}
+                                containerWidth={currentTimelineWidth}
+                                windowDimenions={windowDimenions}
+                                maxCardWidth={maxCardWidth}
+                                maxCardHeight={maxCardHeight}
+                                cardsSizes={cardsSizes}
+                                position={index % 2 === 0 ? "top" : "bottom"}
+                            />
+                        ))}
                     </div>
                 </div>
+                <button
+                    type="button"
+                    className={styles.expandTextButton}
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    aria-expanded={isExpanded}
+                    aria-label={
+                        isExpanded ? "Colapsar timeline" : "Expandir timeline"
+                    }
+                >
+                    {isExpanded ? "Colapsar" : "Expandir"}
+                </button>
             </article>
         </section>
     );

@@ -1,5 +1,15 @@
 @import '_vars.scss';
 
+@keyframes timelineArrowDipIn {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes timelineArrowDipOut {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
 .container {
     display: grid;
     grid-template-columns: auto;
@@ -32,6 +42,14 @@
     width: 100%;
     padding: 2rem 0;
     height: 560px;
+}
+
+.expandButton {
+    display: none;
+}
+
+.expandTextButton {
+    display: none;
 }
 
 .timeline {
@@ -133,6 +151,13 @@
 
     .timelineContainer {
         height: auto;
+        max-height: 378px;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+
+        &.expanded {
+            max-height: 5000px;
+        }
     }
 
     .description {
@@ -147,27 +172,68 @@
         &:before {
             width: 40px;
             height: 12px;
-            bottom: 0%;
-            right: 47%;
+            bottom: 83.5%;
+            right: 46.9%;
             transform: translateY(-100%);
             rotate: 130deg;
+            z-index: 2;
+            animation: timelineArrowDipOut 0.5s ease;
+            transition: bottom 0.5s ease;
             box-shadow: 0 0 15px $neon-green-border,
                        0 0 15px $neon-green-border,
                        0 0 15px $neon-green-border,
                        0 0 5px $neon-green-border;
         }
-        
+
         &:after {
             width: 40px;
             height: 12px;
             transform: translateY(100%);
-            right: 49%;
-            bottom: 1%;
+            right: 49.1%;
+            bottom: 84.5%;
+            z-index: 2;
             rotate: 230deg;
+            animation: timelineArrowDipOut 0.5s ease;
+            transition: bottom 0.5s ease;
             box-shadow: 0 0 15px $neon-green-border,
                        0 0 15px $neon-green-border,
                        0 0 15px $neon-green-border,
                        0 0 5px $neon-green-border;
+        }
+
+        &.expandedTimeline {
+            &:before {
+                bottom: 0%;
+                z-index: 1;
+                animation: timelineArrowDipIn 0.8s ease;
+            }
+
+            &:after {
+                bottom: 1%;
+                z-index: 1;
+                animation: timelineArrowDipIn 0.8s ease;
+            }
+        }
+    }
+
+    .expandTextButton {
+        display: block;
+        margin: 3rem auto;
+        background: transparent;
+        border: 2px solid $tertiary-color;
+        border-radius: 20px;
+        color: $tertiary-color;
+        font-size: $mobile-fourth-title-size;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 1rem 8rem;
+        box-shadow: 0 0 5px $neon-blue-border,
+                   0 0 10px $neon-blue-border,
+                   0 0 5px $neon-blue-border;
+
+        &:hover {
+            background: $tertiary-color;
+            color: $background-color-dark;
         }
     }
 
