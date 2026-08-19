@@ -97,9 +97,9 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 
         if (isMaxCardWidth) {
             const par = idx % 2;
-            setLineToBox({ height: "25px", left: "-20%", top: par === 0 ? "auto" : "100%", bottom: par === 0 ? "100%" : "auto" });
+            setLineToBox({ height: "45px", left: "-20%", top: par === 0 ? "auto" : "100%", bottom: par === 0 ? "100%" : "auto" });
         } else {
-            setLineToBox({ height: "55px" });
+            setLineToBox({ height: "75px" });
         }
     }, [cardsSizes, windowDimenions, idx, isMaxCardWidth, maxCardHeight]);
     

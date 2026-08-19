@@ -71,11 +71,11 @@
         position: absolute;
         display: flex;
         align-items: center;
-        right: 0px;
+        right: -1px;
         justify-content: center;
         z-index: 1;
         transform: translateY(-100%);
-        rotate: 145deg;
+        rotate: 40deg;
 
         box-shadow: 0 0 5px $neon-green-border,
                    0 0 10px $neon-green-border,
@@ -95,8 +95,8 @@
         justify-content: center;
         z-index: 1;
         transform: translateY(100%);
-        right: 0px;
-        rotate: 220deg;
+        right: -1px;
+        rotate: 140deg;
         box-shadow: 0 0 5px $neon-green-border,
                    0 0 10px $neon-green-border,
                    0 0 5px $neon-green-border,
